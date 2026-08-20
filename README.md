@@ -1,12 +1,5 @@
 # Toutiao_Project — 热点新闻 + RAG AI 助手平台
 
-> 面向「AI 测试开发工程师」岗位的个人全栈项目。
-> 项目亮点不在于「把业务跑通」，而在于提供了一套**可复现、可量化、可追溯**的测试体系
-> （接口契约测试 / RAG 质量评测 / MySQL × Chroma 双存储一致性 / Redis 缓存与 JMeter 性能基线 / Allure 可视化报告），
-> 可以作为简历上的 GitHub 链接、部署链接、面试时的 Demo 直接展示。
-
----
-
 ## 🚀 快速访问（部署后把占位链接替换成真实链接）
 
 | 模块 | 地址 | 说明 |
@@ -14,7 +7,7 @@
 | 🌐 前端 Demo | https://your-frontend.oss-cn-hangzhou.aliyuncs.com/index.html | Vue3 + Vant 移动端 UI，部署在阿里云 OSS |
 | ⚙️ 后端 API | https://api.your-domain.com | FastAPI 服务（阿里云 ECS） |
 | 📖 Swagger 文档 | https://api.your-domain.com/docs | 所有接口在线可调试 |
-| 📊 Allure 测试报告 | https://allure.your-domain.com | **面试重点展示：可视化测试报告** |
+| 📊 Allure 测试报告 | https://allure.your-domain.com | *** |
 | 🧪 CI 流水线 | https://github.com/你的用户名/Toutiao_Project/actions | GitHub Actions：每次 push 自动跑测试 |
 
 ---
