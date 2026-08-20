@@ -1,33 +1,50 @@
-aiomysql==0.3.2
-aioredis==2.0.1
-annotated-doc==0.0.4
-annotated-types==0.7.0
-anyio==4.12.0
-async-timeout==5.0.1
-bcrypt==3.2.2
-cffi==2.0.0
+# ============ FastAPI / Web 基础依赖 ============
+aiomysql>=0.3.0
+aioredis>=2.0.0
+annotated-types>=0.7.0
+anyio>=4.0.0
+async-timeout>=5.0.0
+bcrypt>=3.2.0
+cffi>=1.15.0
 click>=8.0
-cryptography==46.0.3
-fastapi==0.125.0
-greenlet==3.3.0
-h11==0.16.0
-httptools==0.7.1
-idna==3.11
-passlib==1.7.4
-pycparser==2.23
-pydantic==2.12.5
-pydantic_core==2.41.5
-PyMySQL==1.1.2
-python-dotenv==1.2.1
-PyYAML==6.0.3
-redis==7.1.0
-SQLAlchemy==2.0.45
-starlette==0.50.0
-typing-inspection==0.4.2
-typing_extensions==4.15.0
-uvicorn==0.38.0
-#uvloop==0.22.1
-watchfiles==1.1.1
-websockets==15.0.1
-httpx>=0.27.0
+cryptography>=40.0.0
+fastapi>=0.100.0
+greenlet>=3.0.0,<3.1.0  # Python3.9 需要预编译 wheel，3.1.x 没有 cp39 wheel 会尝试源码编译
+h11>=0.14.0
+httptools>=0.7.0
+idna>=3.0.0
+passlib>=1.7.0
+pycparser>=2.20.0
+pydantic>=2.0.0
+pydantic_core>=2.0.0
+PyMySQL>=1.0.0
 python-dotenv>=1.0.0
+PyYAML>=6.0.0
+redis>=7.0.0
+SQLAlchemy>=2.0.0
+starlette>=0.27.0
+typing-inspection>=0.4.0
+typing_extensions>=4.0.0
+uvicorn>=0.20.0
+watchfiles>=1.0.0
+websockets>=10.0.0
+
+# ============ HTTP 客户端 / 测试 ============
+httpx>=0.27.0
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+allure-pytest>=2.13.0
+
+# ============ RAG / 向量 / Agent ============
+numpy>=1.24.0,<2.0.0    # chromadb 0.4.x 用了 np.float_，NumPy 2.0 已移除该别名
+chromadb>=0.4.24,<0.5.0  # 0.5.x 不兼容旧版 collections 结构
+dashscope>=1.20.0        # 阿里云通义（可选，作为 LLM 兜底；PyPI 最高 1.26.x）
+langchain-core>=0.1.0
+# BGE 本地中文向量（推荐，ONNX 推理，不依赖 torch）
+fastembed>=0.3.0
+onnxruntime>=1.18.0
+tokenizers>=0.19.0
+modelscope>=1.18.0      # 国内镜像下载 BGE 模型
+
+# ============ 工具 / 可选 ============
+rich>=13.0.0             # 测试报告控制台美化

@@ -1,0 +1,69 @@
+# ==========================================================================
+# Toutiao Project 根目录 .gitignore（不要上传到 GitHub 的东西全部列在这）
+# 注意：.gitignore 不支持行内注释，# 必须放在行首
+# ==========================================================================
+
+# ---- 环境变量 / 密钥（绝对不能提交）----
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+*.crt
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+venv/
+.venv/
+env/
+ENV/
+.eggs/
+pip-wheel-metadata/
+
+# ---- Node / 前端 ----
+node_modules/
+dist/
+dist-ssr/
+.local
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---- IDE / 编辑器 ----
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ---- 项目运行产物（不要提交）----
+# 后端
+toutiao_backend/chroma_data/
+toutiao_backend/vector_store/bge_model/
+toutiao_backend/test_reports/
+toutiao_backend/pytest_cache/
+toutiao_backend/.pytest_cache/
+toutiao_backend/logs/
+*.log
+
+# ---- Redis 持久化 ----
+dump.rdb
+*.rdb
+
+# ---- 数据库 / 临时 ----
+# 只保留根目录的 database.sql（建库脚本），其它 .sql 视为备份不提交
+backup_*.sql
+*_backup.sql
+*.sqlite
+*.sqlite3

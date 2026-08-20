@@ -1,9 +1,11 @@
+from typing import Optional
+
 from fastapi.encoders import jsonable_encoder
 from sqlalchemy import select, func, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from cache.news_cache import get_cached_categories, set_cache_categories, get_cache_news_list, set_cache_news_list, \
-    get_cached_news_detail, cache_news_detail, get_cached_related_news, cache_related_news
+    get_cached_news_detail, cache_news_detail, get_cached_related_news, cache_related_news, get_cache_news_count, set_cache_news_count
 from models.news import Category, News
 from schemas.base import NewsItemBase
 from schemas.news import NewsDetailResponse, RelatedNewsResponse
@@ -28,28 +30,32 @@ async def get_categories(db: AsyncSession, skip: int = 0, limit: int = 100):
     return categories
 
 
-async def get_news_list(db: AsyncSession, category_id: int, skip: int = 0, limit: int = 10):
-    # 先尝试从缓存获取新闻列表
-    # 跳过的数量skip = (页码 -1) * 每页数量 → 页码 = 跳过的数量 // 每页数量 + 1
-    # await get_cache_news_list(分类id, 页码, 每页数量)
-    page = skip // limit + 1
-    cached_list = await get_cache_news_list(category_id, page, limit)  # 缓存数据 json
+async def get_news_list(db: AsyncSession, category_id: int, page: int = 1, page_size: int = 10, offset: Optional[int] = None):
+    """
+    获取新闻列表（带缓存）
+
+    关键修复: 不再通过 skip//limit+1 推导 page，而是直接接收调用方传过来的 page 参数，
+    避免 offset/page 换算错位导致缓存键不一致、命中率为 0 的问题。
+    """
+    # 1. 直接基于真实的 page 与 page_size 命中缓存
+    cached_list = await get_cache_news_list(category_id, page, page_size)
     if cached_list:
-        # return cached_list  # 要的是 ORM
+        print(f"[缓存命中] 分类ID:{category_id}, 页码:{page}, 每页:{page_size}, 缓存数据条数:{len(cached_list)}")
         return [News(**item) for item in cached_list]
 
-    # 查询的是指定分类下的所有新闻
-    stmt = select(News).where(News.category_id == category_id).offset(skip).limit(limit)
+    # 2. 缓存未命中时计算 offset（调用方传了就直接用，没传自己算）
+    if offset is None:
+        offset = (page - 1) * page_size
+
+    print(f"[缓存未命中] 分类ID:{category_id}, 页码:{page}, 每页:{page_size}, 正在查询数据库...")
+    stmt = select(News).where(News.category_id == category_id).offset(offset).limit(page_size)
     result = await db.execute(stmt)
     news_list = result.scalars().all()
 
-    # 写入缓存
     if news_list:
-        # 先把 ORM 数据 转换 字典才能写入缓存
-        # ORM 转成 Pydantic，再转为 字典
-        # by_alias=False 不适用别名，保存 Python 风格，因为 Redis 数据是给后端用的
         news_data = [NewsItemBase.model_validate(item).model_dump(mode="json", by_alias=False) for item in news_list]
-        await set_cache_news_list(category_id, page, limit, news_data)
+        cache_result = await set_cache_news_list(category_id, page, page_size, news_data)
+        print(f"[缓存写入] 分类ID:{category_id}, 页码:{page}, 每页:{page_size}, 写入结果:{cache_result}, 数据条数:{len(news_data)}")
 
     return news_list
 

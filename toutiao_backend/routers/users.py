@@ -15,31 +15,26 @@ router = APIRouter(prefix="/api/user", tags=["users"])
 
 @router.post("/register")
 async def register(user_data: UserRequest, db: AsyncSession = Depends(get_db)):  # 用户信息 和 db
+    # 新增兜底校验，双重防护
+    if not user_data.username.strip() or not user_data.password.strip():
+        raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="用户名、密码不能为空")
+
     # 注册逻辑：验证用户是否存在 -> 创建用户 → 生成 Token  → 响应结果
     existing_user = await users.get_user_by_username(db, user_data.username)
     if existing_user:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="用户已存在")
     user = await users.create_user(db, user_data)
     token = await users.create_token(db, user.id)
-    # return {
-    #   "code": 200,
-    #   "message": "注册成功",
-    #   "data": {
-    #     "token": token,
-    #     "userInfo": {
-    #       "id": user.id,
-    #       "username": user.username,
-    #       "bio": user.bio,
-    #       "avatar": user.avatar
-    #     }
-    #   }
-    # }
     response_data = UserAuthResponse(token=token, user_info=UserInfoResponse.model_validate(user))
     return success_response(message="注册成功", data=response_data)
 
 
 @router.post("/login")
 async def login(user_data: UserRequest, db: AsyncSession = Depends(get_db)):
+    # 新增兜底校验，双重防护
+    if not user_data.username.strip() or not user_data.password.strip():
+        raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="用户名、密码不能为空")
+
     # 登录逻辑：验证用户是否存在 -> 验证密码 -> 生成 Token  → 响应结果
     user = await users.authenticate_user(db, user_data.username, user_data.password)
     if not user:

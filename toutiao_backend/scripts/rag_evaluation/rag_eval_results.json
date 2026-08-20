@@ -1,0 +1,2924 @@
+{
+  "summary": {
+    "total": 120,
+    "top1_recall": 0.4597208333333334,
+    "top3_recall": 0.5749991666666667,
+    "top5_recall": 0.5749991666666667,
+    "rouge_l_f1": 0.2638299999999999,
+    "vector_similarity": 0.6470925000000002,
+    "qa_accuracy": 0.6
+  },
+  "by_category": {
+    "事实查询": {
+      "count": 30,
+      "top1_recall": 0.9333333333333333,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "rouge_l_f1": 0.5279299999999999,
+      "vector_similarity": 0.8049166666666666
+    },
+    "趋势分析": {
+      "count": 30,
+      "top1_recall": 0.26388666666666666,
+      "top3_recall": 0.4833299999999999,
+      "top5_recall": 0.4833299999999999,
+      "rouge_l_f1": 0.2006666666666667,
+      "vector_similarity": 0.6275933333333333
+    },
+    "应用场景": {
+      "count": 30,
+      "top1_recall": 0.57222,
+      "top3_recall": 0.6777766666666667,
+      "top5_recall": 0.6777766666666667,
+      "rouge_l_f1": 0.21491666666666667,
+      "vector_similarity": 0.6570233333333333
+    },
+    "汇总查询": {
+      "count": 30,
+      "top1_recall": 0.06944333333333333,
+      "top3_recall": 0.13889,
+      "top5_recall": 0.13889,
+      "rouge_l_f1": 0.11180666666666668,
+      "vector_similarity": 0.4988366666666667
+    }
+  },
+  "details": [
+    {
+      "id": "RAG001",
+      "category": "事实查询",
+      "question": "社区时间银行养老模式是什么？",
+      "expected_news_ids": [
+        95
+      ],
+      "retrieved_ids": [
+        95,
+        373,
+        393
+      ],
+      "answer_preview": "社区时间银行养老模式是指低龄老人（60岁以上）为高龄老人（80岁以上）提供服务，并将所提供的服务时间存储起来，未来可以用这些时间兑换其他服务。参与者认为这种互助方式能够让社区更加温暖。",
+      "golden_answer_preview": "【社区推广“时间银行”养老】低龄老人服务高龄老人，存储服务时间兑换",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.386,
+      "rouge_l_precision": 0.2619,
+      "rouge_l_recall": 0.7333,
+      "vector_similarity": 0.8784
+    },
+    {
+      "id": "RAG002",
+      "category": "事实查询",
+      "question": "2023年我国GDP同比增长多少？",
+      "expected_news_ids": [
+        4
+      ],
+      "retrieved_ids": [
+        4,
+        34,
+        351
+      ],
+      "answer_preview": "2023年我国GDP同比增长5.2%。",
+      "golden_answer_preview": "【2023年我国GDP同比增长5.2%】经济总量超126万亿元，国民经济回升向好，高质量发展扎实推进。",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.5333,
+      "rouge_l_precision": 1.0,
+      "rouge_l_recall": 0.3636,
+      "vector_similarity": 0.9098
+    },
+    {
+      "id": "RAG003",
+      "category": "事实查询",
+      "question": "央行降准幅度是多少个百分点？",
+      "expected_news_ids": [
+        5
+      ],
+      "retrieved_ids": [
+        5,
+        353,
+        376
+      ],
+      "answer_preview": "央行降准幅度为0.5个百分点。",
+      "golden_answer_preview": "【央行宣布降准0.5个百分点】释放长期资金约1万亿元，保持流动性合理充裕，支持实体经济。",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.3922,
+      "rouge_l_precision": 0.7692,
+      "rouge_l_recall": 0.2632,
+      "vector_similarity": 0.9077
+    },
+    {
+      "id": "RAG004",
+      "category": "事实查询",
+      "question": "春节假期国内旅游出游人次有多少？",
+      "expected_news_ids": [
+        7
+      ],
+      "retrieved_ids": [
+        7,
+        9,
+        130
+      ],
+      "answer_preview": "春节假期国内旅游出游4.74亿人次。",
+      "golden_answer_preview": "【春节假期国内旅游出游4.74亿人次】按可比口径较2019年同期增长19.0%，旅游收入6326.87亿元。",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.5161,
+      "rouge_l_precision": 1.0,
+      "rouge_l_recall": 0.3478,
+      "vector_similarity": 0.8538
+    },
+    {
+      "id": "RAG005",
+      "category": "事实查询",
+      "question": "C919国产大飞机在哪里演示飞行？",
+      "expected_news_ids": [
+        6
+      ],
+      "retrieved_ids": [
+        6,
+        109,
+        164
+      ],
+      "answer_preview": "C919国产大飞机将在新加坡进行演示飞行。",
+      "golden_answer_preview": "【C919国产大飞机开启东南亚演示飞行】首次飞抵新加坡航展，展示我国民用航空工业新成就。",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.4333,
+      "rouge_l_precision": 0.65,
+      "rouge_l_recall": 0.325,
+      "vector_similarity": 0.8035
+    },
+    {
+      "id": "RAG006",
+      "category": "事实查询",
+      "question": "我国在量子计算领域有什么突破？",
+      "expected_news_ids": [
+        8
+      ],
+      "retrieved_ids": [
+        300,
+        8,
+        340
+      ],
+      "answer_preview": "我国在量子计算领域取得了多个突破，包括：\n\n1. 中国科学技术大学团队研发的\"祖冲之三号\"量子计算机，处理特定任务的速度比经典超算快1000万倍，采用超导量子芯片，实现100个量子比特的稳定操控。\n\n2. 研究团队成功构建的\"九章三号\"光量子计算原型机，处理高斯玻色取样数学问题时，其速度比全球最快的超级计算机快一亿亿倍，复杂度提升百万倍。\n\n3. 推出了全球首个量子计算云平台\"量子通\"，向公众开放",
+      "golden_answer_preview": "【我国科学家在量子计算领域取得新突破】成功研制“九章三号”光量子计算原型机，处理特定问题速度大幅提升。",
+      "top1_recall": 0.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.2869,
+      "rouge_l_precision": 0.1777,
+      "rouge_l_recall": 0.7447,
+      "vector_similarity": 0.8031
+    },
+    {
+      "id": "RAG007",
+      "category": "事实查询",
+      "question": "2024年中央一号文件发布了吗？",
+      "expected_news_ids": [
+        23
+      ],
+      "retrieved_ids": [
+        23,
+        1,
+        34
+      ],
+      "answer_preview": "2024年中央一号文件已经发布，聚焦推进乡村全面振兴，提出确保国家粮食安全和防止规模性返贫等底线任务。",
+      "golden_answer_preview": "【2024年中央一号文件发布】聚焦推进乡村全面振兴，提出确保国家粮食安全、防止规模性返贫等底线任务。",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.9677,
+      "rouge_l_precision": 0.9375,
+      "rouge_l_recall": 1.0,
+      "vector_similarity": 0.7424
+    },
+    {
+      "id": "RAG008",
+      "category": "事实查询",
+      "question": "中国航天员乘组完成什么任务？",
+      "expected_news_ids": [
+        22
+      ],
+      "retrieved_ids": [
+        22,
+        164
+      ],
+      "answer_preview": "中国航天员乘组完成了在轨轮换任务，并在此期间开展了多项空间科学实验与技术试验，以及空间站平台的维护照料等任务。",
+      "golden_answer_preview": "【中国航天员乘组完成在轨轮换】神舟十七号乘组与神舟十八号乘组在空间站顺利完成在轨轮换任务。",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.5,
+      "rouge_l_f1": 0.4043,
+      "rouge_l_precision": 0.3654,
+      "rouge_l_recall": 0.4524,
+      "vector_similarity": 0.7715
+    },
+    {
+      "id": "RAG009",
+      "category": "事实查询",
+      "question": "中国乒乓球队世乒赛成绩如何？",
+      "expected_news_ids": [
+        262
+      ],
+      "retrieved_ids": [
+        262,
+        267,
+        278
+      ],
+      "answer_preview": "中国乒乓球队在世乒赛中包揽男女单打冠军，王楚钦和孙颖莎分别夺冠。王楚钦在男单决赛中以4-2战胜日本选手张本智和，孙颖莎以4-0横扫队友王曼昱。中国队已连续10届世乒赛包揽全部金牌，并在本届世乒赛中共获5金，创单届最多。孙颖莎成为首位实现世乒赛女单三连冠的选手。",
+      "golden_answer_preview": "【中国乒乓球队包揽世乒赛冠军】男女单打双冠王",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.2143,
+      "rouge_l_precision": 0.125,
+      "rouge_l_recall": 0.75,
+      "vector_similarity": 0.6636
+    },
+    {
+      "id": "RAG010",
+      "category": "事实查询",
+      "question": "中国女足亚洲杯夺冠了吗？",
+      "expected_news_ids": [
+        269
+      ],
+      "retrieved_ids": [
+        269,
+        285,
+        294
+      ],
+      "answer_preview": "中国女足在亚洲杯决赛中以3-2战胜日本队，时隔16年重夺亚洲杯冠军。",
+      "golden_answer_preview": "【中国女足亚洲杯夺冠】时隔16年再登顶",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.5,
+      "rouge_l_precision": 0.3871,
+      "rouge_l_recall": 0.7059,
+      "vector_similarity": 0.7567
+    },
+    {
+      "id": "RAG011",
+      "category": "事实查询",
+      "question": "NBA总决赛哪支球队夺冠？",
+      "expected_news_ids": [
+        258
+      ],
+      "retrieved_ids": [
+        272,
+        258,
+        284
+      ],
+      "answer_preview": "洛杉矶湖人队在NBA总决赛中夺冠。",
+      "golden_answer_preview": "【NBA总决赛湖人队夺冠】詹姆斯生涯第四冠",
+      "top1_recall": 0.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.4571,
+      "rouge_l_precision": 0.5,
+      "rouge_l_recall": 0.4211,
+      "vector_similarity": 0.7582
+    },
+    {
+      "id": "RAG012",
+      "category": "事实查询",
+      "question": "英超联赛曼城夺冠了吗？",
+      "expected_news_ids": [
+        268
+      ],
+      "retrieved_ids": [
+        268,
+        261,
+        293
+      ],
+      "answer_preview": "曼城提前四轮夺得2022-2023赛季英超冠军，这是球队第五次夺冠。",
+      "golden_answer_preview": "【英超联赛曼城夺冠】提前四轮锁定冠军",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.3404,
+      "rouge_l_precision": 0.2581,
+      "rouge_l_recall": 0.5,
+      "vector_similarity": 0.7823
+    },
+    {
+      "id": "RAG013",
+      "category": "事实查询",
+      "question": "费德勒宣布退役了吗？",
+      "expected_news_ids": [
+        266
+      ],
+      "retrieved_ids": [
+        266,
+        212,
+        243
+      ],
+      "answer_preview": "费德勒正式宣布退役，结束了他的24年职业网球生涯。",
+      "golden_answer_preview": "【费德勒宣布退役】网球传奇谢幕",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.5,
+      "rouge_l_precision": 0.3913,
+      "rouge_l_recall": 0.6923,
+      "vector_similarity": 0.8081
+    },
+    {
+      "id": "RAG014",
+      "category": "事实查询",
+      "question": "C罗转会到哪个联赛？",
+      "expected_news_ids": [
+        282
+      ],
+      "retrieved_ids": [
+        282,
+        261,
+        266
+      ],
+      "answer_preview": "C罗转会到沙特联赛。",
+      "golden_answer_preview": "【C罗转会沙特联赛】创历史天价转会",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.6667,
+      "rouge_l_precision": 0.8889,
+      "rouge_l_recall": 0.5333,
+      "vector_similarity": 0.7848
+    },
+    {
+      "id": "RAG015",
+      "category": "事实查询",
+      "question": "OpenAI发布GPT-4.5了吗？",
+      "expected_news_ids": [
+        314
+      ],
+      "retrieved_ids": [
+        314,
+        322,
+        312
+      ],
+      "answer_preview": "OpenAI正式发布了GPT-4.5。",
+      "golden_answer_preview": "【OpenAI发布GPT-4.5】多模态能力突破",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.7222,
+      "rouge_l_precision": 0.8125,
+      "rouge_l_recall": 0.65,
+      "vector_similarity": 0.8898
+    },
+    {
+      "id": "RAG016",
+      "category": "事实查询",
+      "question": "SpaceX星舰第三次试飞成功了吗？",
+      "expected_news_ids": [
+        302
+      ],
+      "retrieved_ids": [
+        302,
+        325,
+        3
+      ],
+      "answer_preview": "成功了，SpaceX星舰完成了第三次试飞，首次实现火箭第一级在大气层内可控回收。",
+      "golden_answer_preview": "【SpaceX星舰第三次试飞成功】火箭回收技术再突破",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.5574,
+      "rouge_l_precision": 0.4595,
+      "rouge_l_recall": 0.7083,
+      "vector_similarity": 0.8044
+    },
+    {
+      "id": "RAG017",
+      "category": "事实查询",
+      "question": "英伟达发布AI芯片H100了吗？",
+      "expected_news_ids": [
+        312
+      ],
+      "retrieved_ids": [
+        312,
+        322,
+        378
+      ],
+      "answer_preview": "英伟达已发布AI芯片H100。",
+      "golden_answer_preview": "【英伟达发布AI芯片H100】算力提升3倍",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.7879,
+      "rouge_l_precision": 0.9286,
+      "rouge_l_recall": 0.6842,
+      "vector_similarity": 0.895
+    },
+    {
+      "id": "RAG018",
+      "category": "事实查询",
+      "question": "特斯拉发布AI机器人Optimus了吗？",
+      "expected_news_ids": [
+        335
+      ],
+      "retrieved_ids": [
+        335,
+        328,
+        341
+      ],
+      "answer_preview": "是的，特斯拉发布了AI机器人Optimus，并进行了首次公开演示。",
+      "golden_answer_preview": "【特斯拉发布AI机器人Optimus】首次公开演示",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.8679,
+      "rouge_l_precision": 0.7667,
+      "rouge_l_recall": 1.0,
+      "vector_similarity": 0.8531
+    },
+    {
+      "id": "RAG019",
+      "category": "事实查询",
+      "question": "特斯拉Q2财报表现如何？",
+      "expected_news_ids": [
+        352
+      ],
+      "retrieved_ids": [
+        352,
+        347,
+        335
+      ],
+      "answer_preview": "特斯拉2023年Q2财报表现超预期，营收210亿美元，净利润2.3亿美元，同比增长12.3%。电动车销量达30.5万辆，同比增长25%。股价盘后上涨8.5%。",
+      "golden_answer_preview": "【特斯拉Q2财报超预期】净利润增长12.3%",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.4337,
+      "rouge_l_precision": 0.2769,
+      "rouge_l_recall": 1.0,
+      "vector_similarity": 0.7952
+    },
+    {
+      "id": "RAG020",
+      "category": "事实查询",
+      "question": "苹果Q3营收创新高了吗？",
+      "expected_news_ids": [
+        361
+      ],
+      "retrieved_ids": [
+        361,
+        322,
+        396
+      ],
+      "answer_preview": "苹果Q3营收创历史新高，达到940亿美元。",
+      "golden_answer_preview": "【苹果Q3营收创历史新高】服务业务增长强劲",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.5789,
+      "rouge_l_precision": 0.5789,
+      "rouge_l_recall": 0.5789,
+      "vector_similarity": 0.8167
+    },
+    {
+      "id": "RAG021",
+      "category": "事实查询",
+      "question": "全球气候峰会达成什么协议？",
+      "expected_news_ids": [
+        153
+      ],
+      "retrieved_ids": [
+        153,
+        175,
+        171
+      ],
+      "answer_preview": "全球气候峰会达成的协议是195个国家承诺到2030年将全球碳排放减少50%。该协议由欧盟、美国和中国共同推动，预计每年减少10亿吨二氧化碳排放。",
+      "golden_answer_preview": "【全球气候峰会达成历史性协议】195国承诺2030年碳排放减半",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.5208,
+      "rouge_l_precision": 0.3731,
+      "rouge_l_recall": 0.8621,
+      "vector_similarity": 0.748
+    },
+    {
+      "id": "RAG022",
+      "category": "事实查询",
+      "question": "美国发布AI监管法案了吗？",
+      "expected_news_ids": [
+        154
+      ],
+      "retrieved_ids": [
+        154,
+        386,
+        363
+      ],
+      "answer_preview": "美国联邦政府正式公布《人工智能监管法案》，成为全球首个制定全面AI监管框架的国家。",
+      "golden_answer_preview": "【美国发布全球首个AI监管法案】规范高风险领域AI应用",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.3548,
+      "rouge_l_precision": 0.2973,
+      "rouge_l_recall": 0.44,
+      "vector_similarity": 0.7328
+    },
+    {
+      "id": "RAG023",
+      "category": "事实查询",
+      "question": "NASA发现火星什么？",
+      "expected_news_ids": [
+        158
+      ],
+      "retrieved_ids": [
+        158,
+        318,
+        302
+      ],
+      "answer_preview": "NASA发现火星南极冰盖下存在液态水湖，面积达20平方公里。这一发现为寻找火星微生物生命提供关键证据。",
+      "golden_answer_preview": "【NASA发现火星存在液态水】为寻找外星生命提供关键证据",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.6757,
+      "rouge_l_precision": 0.5208,
+      "rouge_l_recall": 0.9615,
+      "vector_similarity": 0.618
+    },
+    {
+      "id": "RAG024",
+      "category": "事实查询",
+      "question": "中国宣布2060年什么目标？",
+      "expected_news_ids": [
+        156
+      ],
+      "retrieved_ids": [
+        156,
+        15,
+        10
+      ],
+      "answer_preview": "中国宣布2060年实现碳中和目标。",
+      "golden_answer_preview": "【中国宣布2060碳中和目标】新能源产业迎来重大机遇",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.65,
+      "rouge_l_precision": 0.8125,
+      "rouge_l_recall": 0.5417,
+      "vector_similarity": 0.8386
+    },
+    {
+      "id": "RAG025",
+      "category": "事实查询",
+      "question": "全球首个数字货币央行在哪里运营？",
+      "expected_news_ids": [
+        159
+      ],
+      "retrieved_ids": [
+        159,
+        174,
+        198
+      ],
+      "answer_preview": "全球首个数字货币央行在欧洲央行运营。",
+      "golden_answer_preview": "【全球首个数字货币央行正式运营】数字欧元将与传统货币并行",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.5581,
+      "rouge_l_precision": 0.7059,
+      "rouge_l_recall": 0.4615,
+      "vector_similarity": 0.8958
+    },
+    {
+      "id": "RAG026",
+      "category": "事实查询",
+      "question": "印尼地震引发什么预警？",
+      "expected_news_ids": [
+        160
+      ],
+      "retrieved_ids": [
+        160,
+        168,
+        200
+      ],
+      "answer_preview": "印尼地震引发了海啸预警。",
+      "golden_answer_preview": "【印度尼西亚地震引发海啸预警】3000人紧急撤离海岸线",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.5556,
+      "rouge_l_precision": 0.9091,
+      "rouge_l_recall": 0.4,
+      "vector_similarity": 0.8456
+    },
+    {
+      "id": "RAG027",
+      "category": "事实查询",
+      "question": "新疆大石峡水利枢纽工程进展？",
+      "expected_news_ids": [
+        102
+      ],
+      "retrieved_ids": [
+        102,
+        115,
+        20
+      ],
+      "answer_preview": "新疆大石峡水利枢纽工程于2025年9月20日正式下闸蓄水，现已转入运行准备阶段。该工程于2019年11月全面动工，计划于2026年全面完工，最大坝高247米，创造了混凝土面板砂砾石坝建设的世界纪录。",
+      "golden_answer_preview": "【新疆大石峡水利枢纽工程正式下闸蓄水】世界最高混凝土面板砂砾石坝下闸蓄水，转入运行准备阶段。",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.4148,
+      "rouge_l_precision": 0.3011,
+      "rouge_l_recall": 0.6667,
+      "vector_similarity": 0.846
+    },
+    {
+      "id": "RAG028",
+      "category": "事实查询",
+      "question": "我国首台15米口径望远镜启动建设了吗？",
+      "expected_news_ids": [
+        104
+      ],
+      "retrieved_ids": [
+        104,
+        44
+      ],
+      "answer_preview": "我国首台15米口径亚毫米波望远镜已于2025年9月20日在青海德令哈正式启动建设。",
+      "golden_answer_preview": "【我国首台15米口径亚毫米波望远镜启动建设】首台自主研发的15米口径亚毫米波望远镜在青海德令哈启动建设。",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.5,
+      "rouge_l_f1": 0.6067,
+      "rouge_l_precision": 0.675,
+      "rouge_l_recall": 0.551,
+      "vector_similarity": 0.8208
+    },
+    {
+      "id": "RAG029",
+      "category": "事实查询",
+      "question": "社区食堂解决了什么问题？",
+      "expected_news_ids": [
+        59
+      ],
+      "retrieved_ids": [
+        59,
+        63,
+        101
+      ],
+      "answer_preview": "社区食堂解决了老年人吃饭难的问题，为60岁以上的老人提供优惠餐食，并且为行动不便的老人提供送餐上门服务。",
+      "golden_answer_preview": "【社区食堂解决老年人吃饭难】10元两荤两素套餐惠及500余名老人",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.4051,
+      "rouge_l_precision": 0.3265,
+      "rouge_l_recall": 0.5333,
+      "vector_similarity": 0.7451
+    },
+    {
+      "id": "RAG030",
+      "category": "事实查询",
+      "question": "智能报警器守护什么人群？",
+      "expected_news_ids": [
+        90
+      ],
+      "retrieved_ids": [
+        90,
+        80,
+        82
+      ],
+      "answer_preview": "智能报警器主要守护独居老人。",
+      "golden_answer_preview": "【智能报警器守护独居老人】社区安装监测设备，异常情况自动报警",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.55,
+      "rouge_l_precision": 0.8462,
+      "rouge_l_recall": 0.4074,
+      "vector_similarity": 0.7787
+    },
+    {
+      "id": "RAG031",
+      "category": "趋势分析",
+      "question": "中国消费复苏情况如何？",
+      "expected_news_ids": [
+        377,
+        399
+      ],
+      "retrieved_ids": [
+        377,
+        389,
+        351
+      ],
+      "answer_preview": "中国消费复苏态势良好，暑期消费旺季带动消费增长，旅游收入达1.2万亿元，同比增长25%。餐饮和娱乐消费增长20%。7月社会消费品零售总额增长8.5%，创年内新高。商务部预测，三季度消费增速将达8%。",
+      "golden_answer_preview": "【中国消费复苏态势良好】暑期旅游市场火爆\n【中国文旅消费创新高】沉浸式体验受追捧",
+      "top1_recall": 0.5,
+      "top3_recall": 0.5,
+      "top5_recall": 0.5,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.3193,
+      "rouge_l_precision": 0.2262,
+      "rouge_l_recall": 0.5429,
+      "vector_similarity": 0.7628
+    },
+    {
+      "id": "RAG032",
+      "category": "趋势分析",
+      "question": "中国科技投入有哪些进展？",
+      "expected_news_ids": [
+        308,
+        330,
+        340
+      ],
+      "retrieved_ids": [
+        401,
+        300,
+        8
+      ],
+      "answer_preview": "中国科技创新投入在2023年1-7月达到了3.1万亿元，同比增长10%。企业研发投入占比75%，其中华为和腾讯的投入超过千亿。研发投入强度达2.5%，接近发达国家水平。此外，创新成果加速转化，专利申请量增长20%。",
+      "golden_answer_preview": "【中国建成全球最快超算】算力达1.5亿亿次/秒\n【中国建成全球首个AI城市】交通效率提升40%\n【中国量子计算云平台】全球首个开放平台",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.1224,
+      "rouge_l_precision": 0.0989,
+      "rouge_l_recall": 0.1607,
+      "vector_similarity": 0.7292
+    },
+    {
+      "id": "RAG033",
+      "category": "趋势分析",
+      "question": "国际社会对AI监管的态度如何？",
+      "expected_news_ids": [
+        154,
+        155
+      ],
+      "retrieved_ids": [
+        154,
+        173,
+        386
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【美国发布全球首个AI监管法案】规范高风险领域AI应用\n【欧盟通过数字税新规】针对科技巨头征收3%数字服务税",
+      "top1_recall": 0.5,
+      "top3_recall": 0.5,
+      "top5_recall": 0.5,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.0317,
+      "rouge_l_precision": 0.0667,
+      "rouge_l_recall": 0.0208,
+      "vector_similarity": 0.373
+    },
+    {
+      "id": "RAG034",
+      "category": "趋势分析",
+      "question": "中国AI技术发展有哪些趋势？",
+      "expected_news_ids": [
+        330,
+        349,
+        335
+      ],
+      "retrieved_ids": [
+        336,
+        369,
+        4
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【中国建成全球首个AI城市】交通效率提升40%\n【特斯拉发布AI机器人Optimus】首次公开演示\n【中国建成AI交通大脑】城市拥堵减少35%",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.0,
+      "rouge_l_precision": 0.0,
+      "rouge_l_recall": 0.0,
+      "vector_similarity": 0.3029
+    },
+    {
+      "id": "RAG035",
+      "category": "趋势分析",
+      "question": "特斯拉在AI领域有哪些布局？",
+      "expected_news_ids": [
+        335,
+        328,
+        341
+      ],
+      "retrieved_ids": [
+        335,
+        347,
+        352
+      ],
+      "answer_preview": "特斯拉在AI领域的布局包括发布AI机器人Optimus和推出AI能源管理系统Home Energy AI。Optimus机器人能够行走和抓取物体，完成简单家务，并采用AI视觉系统识别1000多种物体，计划在2025年量产。Home Energy AI则优化家庭能源使用，能降低电费和提升储能效率，已覆盖10万家庭。",
+      "golden_answer_preview": "【特斯拉发布AI芯片Dojo】训练速度提升10倍\n【特斯拉发布AI机器人Optimus】首次公开演示\n【特斯拉发布AI自动驾驶新功能】城市道路完全自动驾驶",
+      "top1_recall": 0.3333,
+      "top3_recall": 0.3333,
+      "top5_recall": 0.3333,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.215,
+      "rouge_l_precision": 0.1586,
+      "rouge_l_recall": 0.3333,
+      "vector_similarity": 0.7861
+    },
+    {
+      "id": "RAG036",
+      "category": "趋势分析",
+      "question": "SpaceX星舰试飞进展如何？",
+      "expected_news_ids": [
+        302,
+        325
+      ],
+      "retrieved_ids": [
+        325,
+        302,
+        3
+      ],
+      "answer_preview": "SpaceX星舰已完成第四次试飞，首次实现全箭回收，火箭在大气层内完成多次机动并精准降落在发射场。马斯克称这是太空探索的转折点。此外，第三次试飞也成功，首次实现火箭第一级在大气层内可控回收，飞行高度达120公里。SpaceX计划在2024年启动月球着陆任务。",
+      "golden_answer_preview": "【SpaceX星舰第三次试飞成功】火箭回收技术再突破\n【SpaceX星舰第四次试飞】实现全箭回收",
+      "top1_recall": 0.5,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.6667,
+      "rouge_l_f1": 0.3067,
+      "rouge_l_precision": 0.2083,
+      "rouge_l_recall": 0.5814,
+      "vector_similarity": 0.7233
+    },
+    {
+      "id": "RAG037",
+      "category": "趋势分析",
+      "question": "中国量子计算发展情况？",
+      "expected_news_ids": [
+        8,
+        340,
+        320
+      ],
+      "retrieved_ids": [
+        300,
+        340,
+        8
+      ],
+      "answer_preview": "中国在量子计算领域取得了显著进展。中国科学技术大学团队研发的\"祖冲之三号\"量子计算机实现了量子优越性，处理特定任务的速度比经典超算快1000万倍，并采用超导量子芯片稳定操控100个量子比特。此外，中国还推出了全球首个量子计算云平台\"量子通\"，向公众开放量子计算能力，支持100多种量子应用，推动量子计算的普及。另一个突破是“九章三号”光量子计算原型机，其在求解高斯玻色取样问题时的处理速度比全球最快的",
+      "golden_answer_preview": "【我国科学家在量子计算领域取得新突破】成功研制“九章三号”光量子计算原型机，处理特定问题速度大幅提升。\n【中国建成首条量子互联网】跨省安全通信\n【中国量子计算云平台】全球首个开放平台",
+      "top1_recall": 0.0,
+      "top3_recall": 0.6667,
+      "top5_recall": 0.6667,
+      "top3_precision": 0.6667,
+      "rouge_l_f1": 0.2458,
+      "rouge_l_precision": 0.1682,
+      "rouge_l_recall": 0.4568,
+      "vector_similarity": 0.757
+    },
+    {
+      "id": "RAG038",
+      "category": "趋势分析",
+      "question": "中国航天近期有什么成就？",
+      "expected_news_ids": [
+        3,
+        22,
+        120,
+        133
+      ],
+      "retrieved_ids": [
+        313,
+        121
+      ],
+      "answer_preview": "中国航天近期的成就包括成功发射\"墨子号\"量子卫星升级版，实现全球首个量子通信网络，并且成功发射云海二号02星，用于大气海洋环境探测、空间环境监测和防灾减灾等领域。",
+      "golden_answer_preview": "【我国成功发射通信技术试验卫星十一号】卫星顺利进入预定轨道，将用于开展多频段、高速率通信试验。\n【中国航天员乘组完成在轨轮换】神舟十七号乘组与神舟十八号乘组在空间站顺利完成在轨轮换任务。\n【中国—中亚机制首次元首峰会举行】进一步深化政治、经贸、安全、人文等领域合作，共促地区发展繁荣。\n【我国成功发射高分十二号04星】用于国土普查、城市规划、路网设计等领域，长征四号丙运载火箭执行任务。",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.1893,
+      "rouge_l_precision": 0.3108,
+      "rouge_l_recall": 0.1361,
+      "vector_similarity": 0.7955
+    },
+    {
+      "id": "RAG039",
+      "category": "趋势分析",
+      "question": "中国体育近期表现如何？",
+      "expected_news_ids": [
+        262,
+        269
+      ],
+      "retrieved_ids": [
+        265,
+        267,
+        27
+      ],
+      "answer_preview": "中国体育近期表现出色。在世预赛中，中国男篮以85-68大胜韩国队，取得两连胜，提前锁定出线资格。乒乓球队在东京奥运会团体赛中以3-0战胜日本队成功卫冕，展现了绝对统治力。此外，中国代表团在2024冬青奥会中获得6金9银3铜，位列金牌榜第三，展现了青年运动员的风采。",
+      "golden_answer_preview": "【中国乒乓球队包揽世乒赛冠军】男女单打双冠王\n【中国女足亚洲杯夺冠】时隔16年再登顶",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.141,
+      "rouge_l_precision": 0.0924,
+      "rouge_l_recall": 0.2973,
+      "vector_similarity": 0.6844
+    },
+    {
+      "id": "RAG040",
+      "category": "趋势分析",
+      "question": "全球加密货币市场趋势？",
+      "expected_news_ids": [
+        360
+      ],
+      "retrieved_ids": [
+        386,
+        360,
+        374
+      ],
+      "answer_preview": "全球加密货币市场正在经历监管加强和机构参与度提升的趋势。尽管加密货币交易量下降15%，市场总市值仍稳定在1万亿美元，比特币价格突破6.5万美元，机构投资者持仓占比升至45%。分析师认为，监管规范化将提升市场信心，但也警告监管风险仍存，市场波动加剧。",
+      "golden_answer_preview": "【全球加密货币市值突破1万亿美元】比特币突破6.5万美元",
+      "top1_recall": 0.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.3358,
+      "rouge_l_precision": 0.2054,
+      "rouge_l_recall": 0.92,
+      "vector_similarity": 0.8225
+    },
+    {
+      "id": "RAG041",
+      "category": "趋势分析",
+      "question": "中国消费电子产业趋势？",
+      "expected_news_ids": [
+        371
+      ],
+      "retrieved_ids": [
+        396,
+        371,
+        377
+      ],
+      "answer_preview": "中国消费电子产业呈现出回暖趋势，手机出货量在2023年Q3增长5%，达到3.2亿部，尤其是华为和小米等中国品牌表现显著。高端机型的市场占比提升至35%，AI功能成为新卖点。此外，华为的Mate60系列热销，首日销量突破10万台，国产芯片的突破也带动了产业链的复苏。整体来看，消费电子板块上涨3.2%，显示出良好的市场前景。",
+      "golden_answer_preview": "【中国消费电子新品发布潮】华为Mate60系列热销",
+      "top1_recall": 0.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.2289,
+      "rouge_l_precision": 0.1329,
+      "rouge_l_recall": 0.8261,
+      "vector_similarity": 0.7128
+    },
+    {
+      "id": "RAG042",
+      "category": "趋势分析",
+      "question": "A股科技板块表现如何？",
+      "expected_news_ids": [
+        357
+      ],
+      "retrieved_ids": [
+        357,
+        394,
+        374
+      ],
+      "answer_preview": "A股科技板块今日集体上涨，创业板指涨2.8%。AI芯片和云计算概念领涨，寒武纪涨12.3%。市场对AI应用落地的预期增强，机构预测下半年科技股将跑赢大盘。",
+      "golden_answer_preview": "【A股科技板块集体上涨】AI概念股领涨",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.381,
+      "rouge_l_precision": 0.2388,
+      "rouge_l_recall": 0.9412,
+      "vector_similarity": 0.7921
+    },
+    {
+      "id": "RAG043",
+      "category": "趋势分析",
+      "question": "中国跨境电商发展情况？",
+      "expected_news_ids": [
+        367
+      ],
+      "retrieved_ids": [
+        367,
+        397,
+        385
+      ],
+      "answer_preview": "中国跨境电商发展情况良好，7月出口增长22.5%，达1500亿元，全年预计出口将突破1.5万亿元。跨境电商进出口增长25%，占外贸比重15%。海外仓数量达到2000个，覆盖100多个国家，阿里巴巴和京东加速建设海外仓。国务院还批准新增10个跨境电商综合试验区，促进区域经济均衡发展。",
+      "golden_answer_preview": "【中国跨境电商出口增长】海外仓布局加速",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.2113,
+      "rouge_l_precision": 0.12,
+      "rouge_l_recall": 0.8824,
+      "vector_similarity": 0.8046
+    },
+    {
+      "id": "RAG044",
+      "category": "趋势分析",
+      "question": "中国文旅消费趋势？",
+      "expected_news_ids": [
+        399
+      ],
+      "retrieved_ids": [
+        377,
+        399,
+        390
+      ],
+      "answer_preview": "中国文旅消费呈现出创新高的趋势。7月文旅消费收入达到1.5万亿元，同比增长28%。沉浸式体验和数字文旅成为新热点，故宫、敦煌等景区的数字产品热销。此外，文旅消费结构升级，人均消费增长15%。文旅产业还带动了1000万人的就业，成为经济的新亮点。",
+      "golden_answer_preview": "【中国文旅消费创新高】沉浸式体验受追捧",
+      "top1_recall": 0.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.224,
+      "rouge_l_precision": 0.1296,
+      "rouge_l_recall": 0.8235,
+      "vector_similarity": 0.7568
+    },
+    {
+      "id": "RAG045",
+      "category": "趋势分析",
+      "question": "中国超算发展水平如何？",
+      "expected_news_ids": [
+        308
+      ],
+      "retrieved_ids": [
+        308,
+        10,
+        137
+      ],
+      "answer_preview": "中国的超算发展水平非常高，已建成全球最快的超级计算机“神威·太湖之光”，其峰值算力达到1.5亿亿次/秒。中国在国际超算榜单TOP500中占据170席，领先美国。此外，该超算系统采用自主可控芯片，能够同时处理1000万项科学计算任务，主要用于气候模拟和基因测序。",
+      "golden_answer_preview": "【中国建成全球最快超算】算力达1.5亿亿次/秒",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.2754,
+      "rouge_l_precision": 0.1597,
+      "rouge_l_recall": 1.0,
+      "vector_similarity": 0.7736
+    },
+    {
+      "id": "RAG046",
+      "category": "趋势分析",
+      "question": "中国智能城市建设进展？",
+      "expected_news_ids": [
+        330,
+        349
+      ],
+      "retrieved_ids": [
+        330,
+        107,
+        349
+      ],
+      "answer_preview": "中国在智能城市建设方面取得了显著进展，深圳已建成全球首个AI城市，通过AI系统优化交通和能源，交通拥堵减少40%，能源消耗降低25%。此外，上海也建成了AI交通大脑，实时优化交通信号，城市拥堵减少35%，平均通行速度提升25%。这两个城市的建设标志着智慧城市和智慧交通的标杆。",
+      "golden_answer_preview": "【中国建成全球首个AI城市】交通效率提升40%\n【中国建成AI交通大脑】城市拥堵减少35%",
+      "top1_recall": 0.5,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.6667,
+      "rouge_l_f1": 0.3975,
+      "rouge_l_precision": 0.2602,
+      "rouge_l_recall": 0.8421,
+      "vector_similarity": 0.7346
+    },
+    {
+      "id": "RAG047",
+      "category": "趋势分析",
+      "question": "中国新能源发展有哪些进展？",
+      "expected_news_ids": [
+        156,
+        108,
+        105
+      ],
+      "retrieved_ids": [
+        156,
+        375,
+        356
+      ],
+      "answer_preview": "中国新能源发展取得了以下进展：\n\n1. **碳中和目标**：中国宣布将在2060年实现碳中和，计划在2030年前达到碳达峰，这将推动光伏、风电等新能源产业的发展，并预计创造500万个绿色就业岗位。\n\n2. **新能源汽车出口**：7月新能源汽车出口量达到25万辆，同比增长55%，其中欧洲市场占比60%。比亚迪和蔚来在海外销量增长30%。\n\n3. **新能源汽车渗透率**：根据数据显示，7月新能源汽",
+      "golden_answer_preview": "【全国首座500千伏全自主可控变电站投运】西泉变电站实现全链条国产化，提升新能源电力送出能力。\n【国家电投广东廉江核电项目冷却塔建设进展顺利】项目规划建设6台三代核电机组，助力能源绿色转型。\n【中国宣布2060碳中和目标】新能源产业迎来重大机遇",
+      "top1_recall": 0.3333,
+      "top3_recall": 0.3333,
+      "top5_recall": 0.3333,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.1437,
+      "rouge_l_precision": 0.1071,
+      "rouge_l_recall": 0.2182,
+      "vector_similarity": 0.7858
+    },
+    {
+      "id": "RAG048",
+      "category": "趋势分析",
+      "question": "国际碳中和进展如何？",
+      "expected_news_ids": [
+        153,
+        156
+      ],
+      "retrieved_ids": [
+        156,
+        398,
+        202
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【全球气候峰会达成历史性协议】195国承诺2030年碳排放减半\n【中国宣布2060碳中和目标】新能源产业迎来重大机遇",
+      "top1_recall": 0.5,
+      "top3_recall": 0.5,
+      "top5_recall": 0.5,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.0294,
+      "rouge_l_precision": 0.0667,
+      "rouge_l_recall": 0.0189,
+      "vector_similarity": 0.3479
+    },
+    {
+      "id": "RAG049",
+      "category": "趋势分析",
+      "question": "中国量子互联网建设情况？",
+      "expected_news_ids": [
+        320
+      ],
+      "retrieved_ids": [
+        320,
+        340,
+        326
+      ],
+      "answer_preview": "中国在合肥建成了首条量子互联网，实现了北京至上海的量子安全通信。该网络采用量子密钥分发技术，能够抵御任何黑客攻击，并已接入10家金融机构，传输数据量达到100TB/天。量子互联网将保障金融、政务等关键领域的安全。",
+      "golden_answer_preview": "【中国建成首条量子互联网】跨省安全通信",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.2632,
+      "rouge_l_precision": 0.1546,
+      "rouge_l_recall": 0.8824,
+      "vector_similarity": 0.7135
+    },
+    {
+      "id": "RAG050",
+      "category": "趋势分析",
+      "question": "中国娱乐圈近期动态？",
+      "expected_news_ids": [
+        241,
+        253
+      ],
+      "retrieved_ids": [
+        21,
+        255
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【周杰伦新专辑《最伟大的作品》】艺术与音乐的完美融合\n【王菲演唱会重燃热潮】经典歌曲重现舞台",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.037,
+      "rouge_l_precision": 0.0667,
+      "rouge_l_recall": 0.0256,
+      "vector_similarity": 0.3796
+    },
+    {
+      "id": "RAG051",
+      "category": "趋势分析",
+      "question": "中国大型基建工程进展？",
+      "expected_news_ids": [
+        102,
+        124
+      ],
+      "retrieved_ids": [
+        10,
+        16,
+        108
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【新疆大石峡水利枢纽工程正式下闸蓄水】世界最高混凝土面板砂砾石坝下闸蓄水，转入运行准备阶段。\n【我国首条高速飞车全尺寸试验线完成运行试验】未来时速可达1000公里，为超高速轨道交通技术发展奠定基础。",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.019,
+      "rouge_l_precision": 0.0667,
+      "rouge_l_recall": 0.0111,
+      "vector_similarity": 0.3208
+    },
+    {
+      "id": "RAG052",
+      "category": "趋势分析",
+      "question": "中国科技领域获奖情况？",
+      "expected_news_ids": [
+        131
+      ],
+      "retrieved_ids": [
+        28,
+        401
+      ],
+      "answer_preview": "81名个人和50个团队获得了“国家卓越工程师”称号，表彰他们在重大工程建设、装备制造和关键技术攻关等方面的卓越成就。",
+      "golden_answer_preview": "【国家卓越工程师奖表彰大会举行】81名个人和50个团队获表彰，激励广大工程师为科技自立自强奋斗。",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.3636,
+      "rouge_l_precision": 0.3273,
+      "rouge_l_recall": 0.4091,
+      "vector_similarity": 0.5457
+    },
+    {
+      "id": "RAG053",
+      "category": "趋势分析",
+      "question": "中国两会近期有什么议程？",
+      "expected_news_ids": [
+        135,
+        134,
+        140
+      ],
+      "retrieved_ids": [
+        2,
+        31
+      ],
+      "answer_preview": "中国两会近期的议程包括审议政府工作报告、计划报告、预算报告以及国务院机构改革方案等多项重要文件。",
+      "golden_answer_preview": "【全国政协十四届二次会议开幕】听取和审议政协全国委员会常务委员会工作报告和提案工作情况的报告。\n【十四届全国人大二次会议开幕】听取和审议政府工作报告，审查计划报告和预算报告。\n【全国两会代表委员通道集中采访活动举行】多位代表委员畅谈履职故事，回应社会关切，展现履职风采。",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.2651,
+      "rouge_l_precision": 0.4889,
+      "rouge_l_recall": 0.1818,
+      "vector_similarity": 0.8157
+    },
+    {
+      "id": "RAG054",
+      "category": "趋势分析",
+      "question": "中国外交近期活动？",
+      "expected_news_ids": [
+        125,
+        120,
+        143
+      ],
+      "retrieved_ids": [
+        192,
+        397,
+        120
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【中国—中亚机制首次元首峰会举行】进一步深化政治、经贸、安全、人文等领域合作，共促地区发展繁荣。\n【2025博鳌亚洲论坛年会举行】主题为“世界大变局：共襄全球治理盛举 合奏一带一路强音”。\n【中国—中亚机制升级为元首峰会】进一步深化政治、经贸、安全、人文等领域合作，共促地区发展繁荣。",
+      "top1_recall": 0.0,
+      "top3_recall": 0.3333,
+      "top5_recall": 0.3333,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.0147,
+      "rouge_l_precision": 0.0667,
+      "rouge_l_recall": 0.0083,
+      "vector_similarity": 0.3587
+    },
+    {
+      "id": "RAG055",
+      "category": "趋势分析",
+      "question": "中国汽车智能化发展情况？",
+      "expected_news_ids": [
+        341,
+        107
+      ],
+      "retrieved_ids": [
+        356,
+        107,
+        375
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【中国标准智能市域列车在京雄快线亮相】列车应用智能控制等前沿技术，提升市域铁路运营水平。\n【特斯拉发布AI自动驾驶新功能】城市道路完全自动驾驶",
+      "top1_recall": 0.0,
+      "top3_recall": 0.5,
+      "top5_recall": 0.5,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.0253,
+      "rouge_l_precision": 0.0667,
+      "rouge_l_recall": 0.0156,
+      "vector_similarity": 0.3261
+    },
+    {
+      "id": "RAG056",
+      "category": "趋势分析",
+      "question": "中国老年人服务发展趋势？",
+      "expected_news_ids": [
+        59,
+        95,
+        90
+      ],
+      "retrieved_ids": [
+        53,
+        95,
+        393
+      ],
+      "answer_preview": "中国老年人服务的发展趋势包括以下几个方面：\n\n1. **数字技能培训**：社区开展老年人数字技能培训，帮助老人掌握智能手机使用，促进他们融入数字生活。\n\n2. **互助养老模式**：推广“时间银行”养老模式，低龄老人服务高龄老人，增强社区互助精神。\n\n3. **养老产业投资增长**：养老产业投资显著增长，2023年达到5000亿元，居家养老和社区养老成为重点发展方向。\n\n4. **银发经济潜力**",
+      "golden_answer_preview": "【社区食堂解决老年人吃饭难】10元两荤两素套餐惠及500余名老人\n【智能报警器守护独居老人】社区安装监测设备，异常情况自动报警\n【社区推广“时间银行”养老】低龄老人服务高龄老人，存储服务时间兑换",
+      "top1_recall": 0.0,
+      "top3_recall": 0.3333,
+      "top5_recall": 0.3333,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.1905,
+      "rouge_l_precision": 0.1316,
+      "rouge_l_recall": 0.3448,
+      "vector_similarity": 0.8119
+    },
+    {
+      "id": "RAG057",
+      "category": "趋势分析",
+      "question": "中国好人好事典型有哪些？",
+      "expected_news_ids": [
+        52,
+        51,
+        58,
+        69
+      ],
+      "retrieved_ids": [
+        51,
+        92,
+        52
+      ],
+      "answer_preview": "哈尔滨市2025年“冰城好人”中，有45位先进典型获表彰，涵盖孝老爱亲、见义勇为、诚实守信等类型。其中包括坚守十年诠释“执子之手”的郭玉杰和机场跪地救人的“白衣天使”林林等人。",
+      "golden_answer_preview": "【哈尔滨市2025年\"冰城好人\"先进事迹发布】45位来自各行各业的先进典型获表彰，涵盖孝老爱亲、见义勇为、诚实守信等类型\n【2025\"感动上海\"年度人物揭晓】10位平民英雄获奖，包括守护病妻23年的技师、扮演山西家庭\"儿子\"的民警等感人故事\n【公交司机拾金不昧获点赞】万元现金完整归还失主，彰显职业美德\n【小学生捡到钱包交还失主】千元现金和证件完整归还，学校公开表扬",
+      "top1_recall": 0.25,
+      "top3_recall": 0.5,
+      "top5_recall": 0.5,
+      "top3_precision": 0.6667,
+      "rouge_l_f1": 0.3983,
+      "rouge_l_precision": 0.5854,
+      "rouge_l_recall": 0.3019,
+      "vector_similarity": 0.5462
+    },
+    {
+      "id": "RAG058",
+      "category": "趋势分析",
+      "question": "中国残疾人就业帮扶情况？",
+      "expected_news_ids": [
+        64,
+        84
+      ],
+      "retrieved_ids": [
+        64,
+        93,
+        84
+      ],
+      "answer_preview": "中国残疾人就业帮扶计划正在积极推进，50家企业提供了300个适配岗位，并进行技能培训，帮助残疾人实现就业。",
+      "golden_answer_preview": "【残疾人就业帮扶计划启动】50家企业提供300个适配岗位，进行技能培训\n【盲人按摩师创业故事感人】开办三家分店，带动15名视障人士就业",
+      "top1_recall": 0.5,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.6667,
+      "rouge_l_f1": 0.6055,
+      "rouge_l_precision": 0.6735,
+      "rouge_l_recall": 0.55,
+      "vector_similarity": 0.824
+    },
+    {
+      "id": "RAG059",
+      "category": "趋势分析",
+      "question": "中国应急救灾能力发展？",
+      "expected_news_ids": [
+        62,
+        68,
+        80
+      ],
+      "retrieved_ids": [
+        83,
+        184,
+        56
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【交警雨中推车视频走红网络】早高峰冒雨帮助故障车辆，保障交通畅通\n【居民扑灭初期火灾避免事故】及时发现并正确灭火，消防部门予以表彰\n【民警深夜救助走失老人】利用人脸识别系统联系家属，安全送回家中",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.0396,
+      "rouge_l_precision": 0.1333,
+      "rouge_l_recall": 0.0233,
+      "vector_similarity": 0.364
+    },
+    {
+      "id": "RAG060",
+      "category": "趋势分析",
+      "question": "国际重大地缘政治事件？",
+      "expected_news_ids": [
+        157,
+        160
+      ],
+      "retrieved_ids": [
+        45,
+        125
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【俄罗斯与乌克兰签署临时停火协议】缓解顿巴斯地区人道危机\n【印度尼西亚地震引发海啸预警】3000人紧急撤离海岸线",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.0,
+      "rouge_l_precision": 0.0,
+      "rouge_l_recall": 0.0,
+      "vector_similarity": 0.3767
+    },
+    {
+      "id": "RAG061",
+      "category": "应用场景",
+      "question": "AI技术在交通领域有什么应用？",
+      "expected_news_ids": [
+        349,
+        330
+      ],
+      "retrieved_ids": [
+        349,
+        330,
+        182
+      ],
+      "answer_preview": "AI技术在交通领域的应用包括实时优化交通信号、预测拥堵并提前调整交通流量、以及支持自动驾驶出租车的运营。例如，上海的AI交通大脑通过优化信号减少了35%的城市拥堵，而深圳的AI城市则提升了交通效率40%。",
+      "golden_answer_preview": "【中国建成全球首个AI城市】交通效率提升40%\n【中国建成AI交通大脑】城市拥堵减少35%",
+      "top1_recall": 0.5,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.6667,
+      "rouge_l_f1": 0.2273,
+      "rouge_l_precision": 0.1596,
+      "rouge_l_recall": 0.3947,
+      "vector_similarity": 0.7787
+    },
+    {
+      "id": "RAG062",
+      "category": "应用场景",
+      "question": "AI在医疗健康领域的应用有哪些？",
+      "expected_news_ids": [
+        96,
+        90
+      ],
+      "retrieved_ids": [
+        346,
+        170,
+        301
+      ],
+      "answer_preview": "AI在医疗健康领域的应用包括：\n\n1. AI辅助诊断：通过分析CT影像进行疾病诊断，提升诊断准确率。例如，全球首个AI医疗诊断系统能够在10秒内分析CT影像，准确率超过95%。\n\n2. 早期癌症筛查：AI系统可用于早期识别肺癌等癌症病变，帮助提高早期检测的准确性。\n\n3. 规范诊断流程：中国发布的AI医疗诊断新标准规范了AI辅助诊断流程，涵盖数据安全和准确性要求，已在300家医院应用，提升了诊断准",
+      "golden_answer_preview": "【智能报警器守护独居老人】社区安装监测设备，异常情况自动报警\n【乡村医生坚守山区40年】徒步出诊里程绕地球两圈，守护千名村民健康",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.0382,
+      "rouge_l_precision": 0.0244,
+      "rouge_l_recall": 0.0877,
+      "vector_similarity": 0.7806
+    },
+    {
+      "id": "RAG063",
+      "category": "应用场景",
+      "question": "智能技术在养老场景中的应用？",
+      "expected_news_ids": [
+        90,
+        95,
+        59
+      ],
+      "retrieved_ids": [
+        53,
+        90,
+        83
+      ],
+      "answer_preview": "智能技术在养老场景中的应用包括为独居老人安装智能报警器，以监测跌倒、火灾等风险，提升生活安全性。此外，社区还开展老年人智能手机培训，帮助老人掌握数字技能，融入数字生活。",
+      "golden_answer_preview": "【社区食堂解决老年人吃饭难】10元两荤两素套餐惠及500余名老人\n【智能报警器守护独居老人】社区安装监测设备，异常情况自动报警\n【社区推广“时间银行”养老】低龄老人服务高龄老人，存储服务时间兑换",
+      "top1_recall": 0.0,
+      "top3_recall": 0.3333,
+      "top5_recall": 0.3333,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.1963,
+      "rouge_l_precision": 0.2105,
+      "rouge_l_recall": 0.1839,
+      "vector_similarity": 0.847
+    },
+    {
+      "id": "RAG064",
+      "category": "应用场景",
+      "question": "量子计算有哪些应用场景？",
+      "expected_news_ids": [
+        340,
+        8,
+        320
+      ],
+      "retrieved_ids": [
+        340,
+        167,
+        8
+      ],
+      "answer_preview": "量子计算的应用场景包括药物研发和复杂金融模型计算。此外，量子计算云平台“量子通”支持100多种量子应用。",
+      "golden_answer_preview": "【我国科学家在量子计算领域取得新突破】成功研制“九章三号”光量子计算原型机，处理特定问题速度大幅提升。\n【中国建成首条量子互联网】跨省安全通信\n【中国量子计算云平台】全球首个开放平台",
+      "top1_recall": 0.3333,
+      "top3_recall": 0.6667,
+      "top5_recall": 0.6667,
+      "top3_precision": 0.6667,
+      "rouge_l_f1": 0.2154,
+      "rouge_l_precision": 0.2857,
+      "rouge_l_recall": 0.1728,
+      "vector_similarity": 0.8392
+    },
+    {
+      "id": "RAG065",
+      "category": "应用场景",
+      "question": "AI芯片在哪些场景应用？",
+      "expected_news_ids": [
+        312,
+        328
+      ],
+      "retrieved_ids": [
+        336,
+        322,
+        312
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【英伟达发布AI芯片H100】算力提升3倍\n【特斯拉发布AI芯片Dojo】训练速度提升10倍",
+      "top1_recall": 0.0,
+      "top3_recall": 0.5,
+      "top5_recall": 0.5,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.0,
+      "rouge_l_precision": 0.0,
+      "rouge_l_recall": 0.0,
+      "vector_similarity": 0.2362
+    },
+    {
+      "id": "RAG066",
+      "category": "应用场景",
+      "question": "AI机器人在哪些领域应用？",
+      "expected_news_ids": [
+        335,
+        111
+      ],
+      "retrieved_ids": [
+        111,
+        335,
+        167
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【中国—东盟博览会人形机器人表演引关注】多款机器人展示精准操作能力，体现人工智能与机器人技术融合。\n【特斯拉发布AI机器人Optimus】首次公开演示",
+      "top1_recall": 0.5,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.6667,
+      "rouge_l_f1": 0.0241,
+      "rouge_l_precision": 0.0667,
+      "rouge_l_recall": 0.0147,
+      "vector_similarity": 0.2556
+    },
+    {
+      "id": "RAG067",
+      "category": "应用场景",
+      "question": "AI自动驾驶技术应用情况？",
+      "expected_news_ids": [
+        341
+      ],
+      "retrieved_ids": [
+        341,
+        182,
+        305
+      ],
+      "answer_preview": "特斯拉的FSD V13系统已在美国加州开放，支持城市道路完全自动驾驶，覆盖1000多个城市，成功率提升至95%。此外，德国通过了全球首个自动驾驶技术法规，允许L4级自动驾驶车辆在特定区域运营。",
+      "golden_answer_preview": "【特斯拉发布AI自动驾驶新功能】城市道路完全自动驾驶",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.2523,
+      "rouge_l_precision": 0.1609,
+      "rouge_l_recall": 0.5833,
+      "vector_similarity": 0.6778
+    },
+    {
+      "id": "RAG068",
+      "category": "应用场景",
+      "question": "AI视频生成工具有什么用？",
+      "expected_news_ids": [
+        331
+      ],
+      "retrieved_ids": [
+        331,
+        337,
+        327
+      ],
+      "answer_preview": "AI视频生成工具Sora可以在10秒内生成高质量的1080p视频，用户只需输入文本即可生成复杂场景的视频。这项技术被认为将改变影视制作行业，已向创作者开放，首批用户生成了超过10万部视频。",
+      "golden_answer_preview": "【OpenAI发布AI视频生成工具】10秒生成高质量视频",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.313,
+      "rouge_l_precision": 0.2022,
+      "rouge_l_recall": 0.6923,
+      "vector_similarity": 0.7211
+    },
+    {
+      "id": "RAG069",
+      "category": "应用场景",
+      "question": "AI翻译模型应用在哪些场景？",
+      "expected_news_ids": [
+        333
+      ],
+      "retrieved_ids": [
+        333,
+        314,
+        316
+      ],
+      "answer_preview": "AI翻译模型可以应用在跨国会议、购物和旅游等场景。",
+      "golden_answer_preview": "【谷歌发布AI翻译新模型】实时翻译准确率98%",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.2791,
+      "rouge_l_precision": 0.2609,
+      "rouge_l_recall": 0.3,
+      "vector_similarity": 0.77
+    },
+    {
+      "id": "RAG070",
+      "category": "应用场景",
+      "question": "AI社交分析工具有什么功能？",
+      "expected_news_ids": [
+        344
+      ],
+      "retrieved_ids": [
+        344,
+        337,
+        192
+      ],
+      "answer_preview": "AI社交分析工具SocialAI可以预测用户行为，帮助平台优化内容推荐。该工具在测试中预测准确率达90%，并已用于Facebook和Instagram，日均分析超过10亿用户数据。",
+      "golden_answer_preview": "【Meta发布AI社交分析工具】用户行为预测准确率90%",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.3486,
+      "rouge_l_precision": 0.2262,
+      "rouge_l_recall": 0.76,
+      "vector_similarity": 0.775
+    },
+    {
+      "id": "RAG071",
+      "category": "应用场景",
+      "question": "数字货币央行运营的应用场景？",
+      "expected_news_ids": [
+        159
+      ],
+      "retrieved_ids": [
+        159,
+        174,
+        198
+      ],
+      "answer_preview": "数字货币央行的应用场景包括与传统货币并行使用，支持跨境支付和金融普惠。",
+      "golden_answer_preview": "【全球首个数字货币央行正式运营】数字欧元将与传统货币并行",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.4407,
+      "rouge_l_precision": 0.3939,
+      "rouge_l_recall": 0.5,
+      "vector_similarity": 0.834
+    },
+    {
+      "id": "RAG072",
+      "category": "应用场景",
+      "question": "智能报警器在独居老人守护中的应用？",
+      "expected_news_ids": [
+        90
+      ],
+      "retrieved_ids": [
+        90,
+        80,
+        53
+      ],
+      "answer_preview": "智能报警器在独居老人守护中应用于监测跌倒、火灾等风险，能够在异常情况发生时自动报警，从而提高老人的生活安全性，让家属更加放心。",
+      "golden_answer_preview": "【智能报警器守护独居老人】社区安装监测设备，异常情况自动报警",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.4471,
+      "rouge_l_precision": 0.3276,
+      "rouge_l_recall": 0.7037,
+      "vector_similarity": 0.9007
+    },
+    {
+      "id": "RAG073",
+      "category": "应用场景",
+      "question": "AI在城市管理中的应用？",
+      "expected_news_ids": [
+        330,
+        349
+      ],
+      "retrieved_ids": [
+        330,
+        349,
+        314
+      ],
+      "answer_preview": "AI在城市管理中的应用包括深圳建成的全球首个AI城市，通过AI系统优化交通和能源，提升交通效率40%和降低能源消耗25%。此外，上海的AI交通大脑实时优化交通信号，减少城市拥堵35%和提升平均通行速度25%。这些系统能够预测拥堵并提前调整信号，从而减少交通事故。",
+      "golden_answer_preview": "【中国建成全球首个AI城市】交通效率提升40%\n【中国建成AI交通大脑】城市拥堵减少35%",
+      "top1_recall": 0.5,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.6667,
+      "rouge_l_f1": 0.3694,
+      "rouge_l_precision": 0.2437,
+      "rouge_l_recall": 0.7632,
+      "vector_similarity": 0.7519
+    },
+    {
+      "id": "RAG074",
+      "category": "应用场景",
+      "question": "量子纠缠分发在通信中的应用？",
+      "expected_news_ids": [
+        117
+      ],
+      "retrieved_ids": [
+        117,
+        326,
+        313
+      ],
+      "answer_preview": "量子纠缠分发在通信中的应用主要体现在构建广域量子网络和推动量子通信的实际应用上。通过实现高精度的量子纠缠分发，可以为量子通信网络提供安全性和效率，保障金融、政务等数据的安全传输。",
+      "golden_answer_preview": "【我国科学家实现百公里高精度量子纠缠分发】为构建广域量子网络奠定坚实基础，推动量子通信应用。",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.3492,
+      "rouge_l_precision": 0.2619,
+      "rouge_l_recall": 0.5238,
+      "vector_similarity": 0.8583
+    },
+    {
+      "id": "RAG075",
+      "category": "应用场景",
+      "question": "量子计算云平台的应用场景？",
+      "expected_news_ids": [
+        340
+      ],
+      "retrieved_ids": [
+        340,
+        167,
+        300
+      ],
+      "answer_preview": "量子计算云平台支持100+量子应用，包括药物研发。",
+      "golden_answer_preview": "【中国量子计算云平台】全球首个开放平台",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.359,
+      "rouge_l_precision": 0.3182,
+      "rouge_l_recall": 0.4118,
+      "vector_similarity": 0.773
+    },
+    {
+      "id": "RAG076",
+      "category": "应用场景",
+      "question": "智能市域列车在城际交通中的应用？",
+      "expected_news_ids": [
+        107
+      ],
+      "retrieved_ids": [
+        107,
+        330,
+        349
+      ],
+      "answer_preview": "智能市域列车应用于城际交通中，通过智能控制和障碍物检测等前沿技术，提升市域铁路的运营水平。该列车在京雄快线亮相，最高运行时速可达200公里，旨在服务于京津冀协同发展。",
+      "golden_answer_preview": "【中国标准智能市域列车在京雄快线亮相】列车应用智能控制等前沿技术，提升市域铁路运营水平。",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.4615,
+      "rouge_l_precision": 0.3506,
+      "rouge_l_recall": 0.675,
+      "vector_similarity": 0.8093
+    },
+    {
+      "id": "RAG077",
+      "category": "应用场景",
+      "question": "高速飞车在交通中的应用？",
+      "expected_news_ids": [
+        124
+      ],
+      "retrieved_ids": [
+        44
+      ],
+      "answer_preview": "高速飞车将为我国未来轨道交通发展提供重要技术支撑，具有广阔的应用前景。未来目标时速可达1000公里以上，可能在城市间快速运输、长途旅行等领域发挥重要作用。",
+      "golden_answer_preview": "【我国首条高速飞车全尺寸试验线完成运行试验】未来时速可达1000公里，为超高速轨道交通技术发展奠定基础。",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.3,
+      "rouge_l_precision": 0.25,
+      "rouge_l_recall": 0.375,
+      "vector_similarity": 0.7503
+    },
+    {
+      "id": "RAG078",
+      "category": "应用场景",
+      "question": "变电站自主可控技术应用？",
+      "expected_news_ids": [
+        105
+      ],
+      "retrieved_ids": [
+        105,
+        305,
+        90
+      ],
+      "answer_preview": "西泉变电站实现了电气、保护设备的核心材料、关键芯片、操作系统、数据库乃至技术标准体系的全链条国产化，提升了新能源电力的送出能力。",
+      "golden_answer_preview": "【全国首座500千伏全自主可控变电站投运】西泉变电站实现全链条国产化，提升新能源电力送出能力。",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.4752,
+      "rouge_l_precision": 0.4138,
+      "rouge_l_recall": 0.5581,
+      "vector_similarity": 0.5951
+    },
+    {
+      "id": "RAG079",
+      "category": "应用场景",
+      "question": "核电项目冷却塔建设技术应用？",
+      "expected_news_ids": [
+        108
+      ],
+      "retrieved_ids": [
+        108,
+        102,
+        105
+      ],
+      "answer_preview": "核电项目冷却塔建设采用“国和”系列技术。",
+      "golden_answer_preview": "【国家电投广东廉江核电项目冷却塔建设进展顺利】项目规划建设6台三代核电机组，助力能源绿色转型。",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.2903,
+      "rouge_l_precision": 0.4737,
+      "rouge_l_recall": 0.2093,
+      "vector_similarity": 0.8796
+    },
+    {
+      "id": "RAG080",
+      "category": "应用场景",
+      "question": "AI芯片在算力基础设施中的应用？",
+      "expected_news_ids": [
+        312,
+        328,
+        308
+      ],
+      "retrieved_ids": [
+        312,
+        16,
+        324
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【中国建成全球最快超算】算力达1.5亿亿次/秒\n【英伟达发布AI芯片H100】算力提升3倍\n【特斯拉发布AI芯片Dojo】训练速度提升10倍",
+      "top1_recall": 0.3333,
+      "top3_recall": 0.3333,
+      "top5_recall": 0.3333,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.0,
+      "rouge_l_precision": 0.0,
+      "rouge_l_recall": 0.0,
+      "vector_similarity": 0.272
+    },
+    {
+      "id": "RAG081",
+      "category": "应用场景",
+      "question": "跨境电商在中国出口中的应用？",
+      "expected_news_ids": [
+        367
+      ],
+      "retrieved_ids": [
+        367,
+        397,
+        385
+      ],
+      "answer_preview": "跨境电商在中国出口中应用广泛，7月跨境电商出口增长22.5%，达1500亿元，占外贸比重的15%。它成为外贸的新引擎，带动物流、支付等配套产业的发展。预计全年出口将突破1.5万亿元，跨境电商交易额在2023年预计将突破2万亿元。",
+      "golden_answer_preview": "【中国跨境电商出口增长】海外仓布局加速",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.1864,
+      "rouge_l_precision": 0.1089,
+      "rouge_l_recall": 0.6471,
+      "vector_similarity": 0.7565
+    },
+    {
+      "id": "RAG082",
+      "category": "应用场景",
+      "question": "消费电子在新品发布中的应用？",
+      "expected_news_ids": [
+        371
+      ],
+      "retrieved_ids": [
+        371,
+        396,
+        132
+      ],
+      "answer_preview": "消费电子在新品发布中主要体现在华为Mate60 Pro的发布，该产品搭载自研的麒麟9000S芯片，首日销量突破10万台。此外，小米和OPPO也跟进发布新品，显示出消费电子市场的活跃和竞争。整体来看，消费电子板块上涨3.2%，创年内新高，反映出国产芯片的突破带动了产业链的复苏。",
+      "golden_answer_preview": "【中国消费电子新品发布潮】华为Mate60系列热销",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.2297,
+      "rouge_l_precision": 0.136,
+      "rouge_l_recall": 0.7391,
+      "vector_similarity": 0.7291
+    },
+    {
+      "id": "RAG083",
+      "category": "应用场景",
+      "question": "AI在音乐产业中的应用？",
+      "expected_news_ids": [
+        241,
+        225
+      ],
+      "retrieved_ids": [
+        314,
+        394,
+        183
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【周深《光亮》公益演唱会】致敬抗疫英雄\n【周杰伦新专辑《最伟大的作品》】艺术与音乐的完美融合",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.0385,
+      "rouge_l_precision": 0.0667,
+      "rouge_l_recall": 0.027,
+      "vector_similarity": 0.3072
+    },
+    {
+      "id": "RAG084",
+      "category": "应用场景",
+      "question": "AI在影视创作中的应用？",
+      "expected_news_ids": [
+        218,
+        226
+      ],
+      "retrieved_ids": [
+        331,
+        337,
+        232
+      ],
+      "answer_preview": "OpenAI推出的AI视频生成工具Sora可以在10秒内生成高质量的1080p视频，支持复杂场景的创建。这一工具的推出被认为将改变影视制作行业，已向创作者开放，首批用户生成了超过10万部视频。",
+      "golden_answer_preview": "【《流浪地球3》概念图曝光】太空电梯场景震撼全球\n【《流浪地球》导演新作《深空》】科幻新标杆即将上映",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.0462,
+      "rouge_l_precision": 0.033,
+      "rouge_l_recall": 0.0769,
+      "vector_similarity": 0.6555
+    },
+    {
+      "id": "RAG085",
+      "category": "应用场景",
+      "question": "AI在体育赛事分析中的应用？",
+      "expected_news_ids": [
+        258,
+        268
+      ],
+      "retrieved_ids": [
+        344,
+        314,
+        192
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【NBA总决赛湖人队夺冠】詹姆斯生涯第四冠\n【英超联赛曼城夺冠】提前四轮锁定冠军",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.0,
+      "rouge_l_precision": 0.0,
+      "rouge_l_recall": 0.0,
+      "vector_similarity": 0.3228
+    },
+    {
+      "id": "RAG086",
+      "category": "应用场景",
+      "question": "AI在社交网络中的应用？",
+      "expected_news_ids": [
+        344
+      ],
+      "retrieved_ids": [
+        344,
+        309,
+        334
+      ],
+      "answer_preview": "Meta推出的AI社交分析工具SocialAI可预测用户行为，预测准确率达到90%。该工具帮助平台优化内容推荐，已在Facebook和Instagram上应用，日均分析超过10亿用户数据。此外，工具的使用使得广告转化率提升了25%。",
+      "golden_answer_preview": "【Meta发布AI社交分析工具】用户行为预测准确率90%",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.3485,
+      "rouge_l_precision": 0.215,
+      "rouge_l_recall": 0.92,
+      "vector_similarity": 0.6741
+    },
+    {
+      "id": "RAG087",
+      "category": "应用场景",
+      "question": "智能技术在消防应急中的应用？",
+      "expected_news_ids": [
+        68
+      ],
+      "retrieved_ids": [
+        68,
+        83,
+        56
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【居民扑灭初期火灾避免事故】及时发现并正确灭火，消防部门予以表彰",
+      "top1_recall": 1.0,
+      "top3_recall": 1.0,
+      "top5_recall": 1.0,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.0455,
+      "rouge_l_precision": 0.0667,
+      "rouge_l_recall": 0.0345,
+      "vector_similarity": 0.3183
+    },
+    {
+      "id": "RAG088",
+      "category": "应用场景",
+      "question": "AI在金融财报分析中的应用？",
+      "expected_news_ids": [
+        352,
+        361
+      ],
+      "retrieved_ids": [
+        394,
+        344,
+        369
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【特斯拉Q2财报超预期】净利润增长12.3%\n【苹果Q3营收创历史新高】服务业务增长强劲",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.0385,
+      "rouge_l_precision": 0.0667,
+      "rouge_l_recall": 0.027,
+      "vector_similarity": 0.3392
+    },
+    {
+      "id": "RAG089",
+      "category": "应用场景",
+      "question": "AI在医疗诊断中的应用？",
+      "expected_news_ids": [
+        96
+      ],
+      "retrieved_ids": [
+        170,
+        346,
+        323
+      ],
+      "answer_preview": "AI在医疗诊断中的应用主要体现在以下几个方面：\n\n1. **辅助诊断**：全球首个AI医疗诊断系统已获FDA批准，能够在10秒内分析CT影像，准确率达到95.2%，用于早期癌症筛查，预计每年可挽救10万生命。\n\n2. **影像分析**：谷歌DeepMind发布的AI医疗影像系统可自动分析X光片诊断肺炎，准确率为95%。该系统与10家医院合作，日均处理10万张影像，诊断速度比医生快5倍，错误率降低4",
+      "golden_answer_preview": "【乡村医生坚守山区40年】徒步出诊里程绕地球两圈，守护千名村民健康",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.0608,
+      "rouge_l_precision": 0.0343,
+      "rouge_l_recall": 0.2667,
+      "vector_similarity": 0.8085
+    },
+    {
+      "id": "RAG090",
+      "category": "应用场景",
+      "question": "AI在内容审核监管中的应用？",
+      "expected_news_ids": [
+        154,
+        155
+      ],
+      "retrieved_ids": [
+        321,
+        154,
+        314
+      ],
+      "answer_preview": "Meta推出的AI内容审核系统AI-Mod能够自动识别虚假信息，准确率达到98%，并已在Facebook和Instagram上部署，实时过滤不当内容。这一系统显著提高了审核效率，测试显示其效率比人工审核提升10倍，错误率降低60%。此外，系统每天处理10亿条内容，已减少30%的虚假信息传播。",
+      "golden_answer_preview": "【美国发布全球首个AI监管法案】规范高风险领域AI应用\n【欧盟通过数字税新规】针对科技巨头征收3%数字服务税",
+      "top1_recall": 0.0,
+      "top3_recall": 0.5,
+      "top5_recall": 0.5,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.0667,
+      "rouge_l_precision": 0.0455,
+      "rouge_l_recall": 0.125,
+      "vector_similarity": 0.6941
+    },
+    {
+      "id": "RAG091",
+      "category": "汇总查询",
+      "question": "近期国际重大事件有哪些？",
+      "expected_news_ids": [
+        153,
+        157,
+        158,
+        160
+      ],
+      "retrieved_ids": [
+        45,
+        125
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【全球气候峰会达成历史性协议】195国承诺2030年碳排放减半\n【俄罗斯与乌克兰签署临时停火协议】缓解顿巴斯地区人道危机\n【NASA发现火星存在液态水】为寻找外星生命提供关键证据\n【印度尼西亚地震引发海啸预警】3000人紧急撤离海岸线",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.0165,
+      "rouge_l_precision": 0.0667,
+      "rouge_l_recall": 0.0094,
+      "vector_similarity": 0.3928
+    },
+    {
+      "id": "RAG092",
+      "category": "汇总查询",
+      "question": "中国航天近期有哪些成就？",
+      "expected_news_ids": [
+        3,
+        22,
+        120,
+        133
+      ],
+      "retrieved_ids": [
+        313,
+        121
+      ],
+      "answer_preview": "中国航天近期的成就包括成功发射\"墨子号\"量子卫星升级版，实现全球首个量子通信网络，并已实现北京至上海的量子加密通信。此外，2025年9月8日，中国成功发射云海二号02星，用于大气海洋环境探测、空间环境监测和防灾减灾等领域。",
+      "golden_answer_preview": "【我国成功发射通信技术试验卫星十一号】卫星顺利进入预定轨道，将用于开展多频段、高速率通信试验。\n【中国航天员乘组完成在轨轮换】神舟十七号乘组与神舟十八号乘组在空间站顺利完成在轨轮换任务。\n【中国—中亚机制首次元首峰会举行】进一步深化政治、经贸、安全、人文等领域合作，共促地区发展繁荣。\n【我国成功发射高分十二号04星】用于国土普查、城市规划、路网设计等领域，长征四号丙运载火箭执行任务。",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.1852,
+      "rouge_l_precision": 0.2475,
+      "rouge_l_recall": 0.1479,
+      "vector_similarity": 0.7534
+    },
+    {
+      "id": "RAG093",
+      "category": "汇总查询",
+      "question": "中国科技创新有哪些进展？",
+      "expected_news_ids": [
+        308,
+        330,
+        340,
+        312
+      ],
+      "retrieved_ids": [
+        401,
+        300,
+        8
+      ],
+      "answer_preview": "中国科技创新的进展包括：\n\n1. 研发经费投入达到3.1万亿元，同比增长10%，企业研发投入占比75%。\n2. 中国科学技术大学团队研发的\"祖冲之三号\"量子计算机实现量子优越性，处理特定任务速度比经典超算快1000万倍。\n3. 成功研制“九章三号”光量子计算原型机，其处理速度比全球最快的超级计算机快一亿亿倍。\n4. 创新成果加速转化，专利申请量增长20%。",
+      "golden_answer_preview": "【中国建成全球最快超算】算力达1.5亿亿次/秒\n【英伟达发布AI芯片H100】算力提升3倍\n【中国建成全球首个AI城市】交通效率提升40%\n【中国量子计算云平台】全球首个开放平台",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.1511,
+      "rouge_l_precision": 0.1133,
+      "rouge_l_recall": 0.2267,
+      "vector_similarity": 0.808
+    },
+    {
+      "id": "RAG094",
+      "category": "汇总查询",
+      "question": "社会善举好人好事汇总",
+      "expected_news_ids": [
+        52,
+        51,
+        58,
+        69
+      ],
+      "retrieved_ids": [
+        51,
+        76,
+        52
+      ],
+      "answer_preview": "哈尔滨市表彰了45位来自各行各业的先进典型，涵盖孝老爱亲、见义勇为、诚实守信等类型，包括坚守十年诠释“执子之手”的郭玉杰和机场跪地救人的“白衣天使”林林。此外，上海评选出10位年度感动人物，如守护病妻23年的技师龚建强和扮演山西家庭“儿子”的民警姜经纬。这些社会善举和好人好事展现了平凡人的不平凡故事。",
+      "golden_answer_preview": "【哈尔滨市2025年\"冰城好人\"先进事迹发布】45位来自各行各业的先进典型获表彰，涵盖孝老爱亲、见义勇为、诚实守信等类型\n【2025\"感动上海\"年度人物揭晓】10位平民英雄获奖，包括守护病妻23年的技师、扮演山西家庭\"儿子\"的民警等感人故事\n【公交司机拾金不昧获点赞】万元现金完整归还失主，彰显职业美德\n【小学生捡到钱包交还失主】千元现金和证件完整归还，学校公开表扬",
+      "top1_recall": 0.25,
+      "top3_recall": 0.5,
+      "top5_recall": 0.5,
+      "top3_precision": 0.6667,
+      "rouge_l_f1": 0.4319,
+      "rouge_l_precision": 0.4577,
+      "rouge_l_recall": 0.4088,
+      "vector_similarity": 0.5499
+    },
+    {
+      "id": "RAG095",
+      "category": "汇总查询",
+      "question": "中国老年人服务相关新闻汇总",
+      "expected_news_ids": [
+        59,
+        95,
+        90,
+        96
+      ],
+      "retrieved_ids": [
+        53,
+        95,
+        59
+      ],
+      "answer_preview": "社区近期开展了多项老年人服务活动，包括：\n\n1. **数字技能培训**：某社区服务中心为期一周的智能手机培训，帮助百余名老人掌握微信视频通话、网上挂号和防诈骗知识，促进他们融入数字生活。\n\n2. **“时间银行”养老模式**：社区试点“时间银行”，鼓励60岁老人服务80岁老人，存储服务时间可兑换其他服务，增强社区互助氛围。\n\n3. **社区食堂**：开设公益食堂，为60岁以上老人提供10元的两荤两",
+      "golden_answer_preview": "【社区食堂解决老年人吃饭难】10元两荤两素套餐惠及500余名老人\n【智能报警器守护独居老人】社区安装监测设备，异常情况自动报警\n【社区推广“时间银行”养老】低龄老人服务高龄老人，存储服务时间兑换\n【乡村医生坚守山区40年】徒步出诊里程绕地球两圈，守护千名村民健康",
+      "top1_recall": 0.0,
+      "top3_recall": 0.5,
+      "top5_recall": 0.5,
+      "top3_precision": 0.6667,
+      "rouge_l_f1": 0.2315,
+      "rouge_l_precision": 0.1856,
+      "rouge_l_recall": 0.3077,
+      "vector_similarity": 0.6761
+    },
+    {
+      "id": "RAG096",
+      "category": "汇总查询",
+      "question": "中国重大工程进展汇总",
+      "expected_news_ids": [
+        102,
+        124,
+        105,
+        108
+      ],
+      "retrieved_ids": [
+        10,
+        102,
+        21
+      ],
+      "answer_preview": "中国重大工程的进展包括：\n\n1. **新疆大石峡水利枢纽工程**：该工程于2025年9月20日正式下闸蓄水，转入运行准备阶段。它是国家重大水利工程，位于新疆阿克苏地区，最大坝高247米，创造了混凝土面板砂砾石坝建设的世界纪录。工程于2019年11月全面动工，计划在2026年全面完工，预计将显著提升区域水资源调控能力。\n\n2. **“十四五”规划实施中期评估**：国家发改委发布的评估报告显示，20项",
+      "golden_answer_preview": "【新疆大石峡水利枢纽工程正式下闸蓄水】世界最高混凝土面板砂砾石坝下闸蓄水，转入运行准备阶段。\n【全国首座500千伏全自主可控变电站投运】西泉变电站实现全链条国产化，提升新能源电力送出能力。\n【国家电投广东廉江核电项目冷却塔建设进展顺利】项目规划建设6台三代核电机组，助力能源绿色转型。\n【我国首条高速飞车全尺寸试验线完成运行试验】未来时速可达1000公里，为超高速轨道交通技术发展奠定基础。",
+      "top1_recall": 0.0,
+      "top3_recall": 0.25,
+      "top5_recall": 0.25,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.2265,
+      "rouge_l_precision": 0.1967,
+      "rouge_l_recall": 0.267,
+      "vector_similarity": 0.8231
+    },
+    {
+      "id": "RAG097",
+      "category": "汇总查询",
+      "question": "中国AI产业相关新闻汇总",
+      "expected_news_ids": [
+        330,
+        349,
+        335,
+        312
+      ],
+      "retrieved_ids": [
+        336,
+        4,
+        389
+      ],
+      "answer_preview": "中国工信部发布了AI芯片扶持政策，计划投入1000亿元支持芯片研发，重点支持7nm以下制程和AI专用芯片。政策包括税收减免和人才引进，预计到2025年实现AI芯片自给率80%。这一政策将推动华为、寒武纪等企业快速发展，首批10家芯片企业已获得资金支持。",
+      "golden_answer_preview": "【英伟达发布AI芯片H100】算力提升3倍\n【中国建成全球首个AI城市】交通效率提升40%\n【特斯拉发布AI机器人Optimus】首次公开演示\n【中国建成AI交通大脑】城市拥堵减少35%",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.1624,
+      "rouge_l_precision": 0.1368,
+      "rouge_l_recall": 0.2,
+      "vector_similarity": 0.5416
+    },
+    {
+      "id": "RAG098",
+      "category": "汇总查询",
+      "question": "中国外交活动汇总",
+      "expected_news_ids": [
+        125,
+        120,
+        143,
+        148
+      ],
+      "retrieved_ids": [
+        120,
+        192,
+        140
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【中国—中亚机制首次元首峰会举行】进一步深化政治、经贸、安全、人文等领域合作，共促地区发展繁荣。\n【2025博鳌亚洲论坛年会举行】主题为“世界大变局：共襄全球治理盛举 合奏一带一路强音”。\n【中国—中亚机制升级为元首峰会】进一步深化政治、经贸、安全、人文等领域合作，共促地区发展繁荣。\n【2025博鳌亚洲论坛年会举行】主题为“世界大变局：共襄全球治理盛举 合奏一带一路强音”。",
+      "top1_recall": 0.25,
+      "top3_recall": 0.25,
+      "top5_recall": 0.25,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.0114,
+      "rouge_l_precision": 0.0667,
+      "rouge_l_recall": 0.0062,
+      "vector_similarity": 0.2435
+    },
+    {
+      "id": "RAG099",
+      "category": "汇总查询",
+      "question": "国际AI监管政策汇总",
+      "expected_news_ids": [
+        154,
+        155
+      ],
+      "retrieved_ids": [
+        154,
+        386,
+        336
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【美国发布全球首个AI监管法案】规范高风险领域AI应用\n【欧盟通过数字税新规】针对科技巨头征收3%数字服务税",
+      "top1_recall": 0.5,
+      "top3_recall": 0.5,
+      "top5_recall": 0.5,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.0317,
+      "rouge_l_precision": 0.0667,
+      "rouge_l_recall": 0.0208,
+      "vector_similarity": 0.3085
+    },
+    {
+      "id": "RAG100",
+      "category": "汇总查询",
+      "question": "中国消费市场动态汇总",
+      "expected_news_ids": [
+        377,
+        399,
+        132
+      ],
+      "retrieved_ids": [
+        377,
+        359,
+        132
+      ],
+      "answer_preview": "中国消费市场动态主要包括以下几个方面：\n\n1. **消费复苏态势良好**：暑期旅游市场火爆，旅游收入达1.2万亿元，同比增长25%。热门旅游目的地包括上海、成都和西安。酒店预订量增长40%，机票价格回升15%，餐饮和娱乐消费增长20%。商务部预测三季度消费增速将达8%。\n\n2. **消费券拉动零售额增长**：全国30个城市发放消费券，拉动零售额增长15.3%。北京、上海、广州的消费券发放总额超过2",
+      "golden_answer_preview": "【2025年“消费促进年”活动启动】商务部组织开展系列促消费活动，激发有潜能的消费，稳定和扩大传统消费。\n【中国消费复苏态势良好】暑期旅游市场火爆\n【中国文旅消费创新高】沉浸式体验受追捧",
+      "top1_recall": 0.3333,
+      "top3_recall": 0.6667,
+      "top5_recall": 0.6667,
+      "top3_precision": 0.6667,
+      "rouge_l_f1": 0.2211,
+      "rouge_l_precision": 0.1409,
+      "rouge_l_recall": 0.5122,
+      "vector_similarity": 0.7869
+    },
+    {
+      "id": "RAG101",
+      "category": "汇总查询",
+      "question": "特斯拉近期动态汇总",
+      "expected_news_ids": [
+        335,
+        328,
+        341,
+        352
+      ],
+      "retrieved_ids": [
+        352,
+        341,
+        305
+      ],
+      "answer_preview": "特斯拉近期动态包括：\n\n1. **Q2财报**：2023年第二季度财报显示，特斯拉营收210亿美元，净利润2.3亿美元，超出市场预期。电动车销量达到30.5万辆，同比增长25%。CEO马斯克提到上海工厂产能恢复是关键，股价在盘后上涨8.5%。机构预测全年交付量将达150万辆，并宣布在德国新建超级工厂，投资10亿欧元。\n\n2. **AI自动驾驶新功能**：特斯拉发布FSD V13系统，支持城市道路的",
+      "golden_answer_preview": "【特斯拉发布AI芯片Dojo】训练速度提升10倍\n【特斯拉发布AI机器人Optimus】首次公开演示\n【特斯拉发布AI自动驾驶新功能】城市道路完全自动驾驶\n【特斯拉Q2财报超预期】净利润增长12.3%",
+      "top1_recall": 0.25,
+      "top3_recall": 0.5,
+      "top5_recall": 0.5,
+      "top3_precision": 0.6667,
+      "rouge_l_f1": 0.1718,
+      "rouge_l_precision": 0.1084,
+      "rouge_l_recall": 0.4138,
+      "vector_similarity": 0.7374
+    },
+    {
+      "id": "RAG102",
+      "category": "汇总查询",
+      "question": "中国量子技术相关新闻汇总",
+      "expected_news_ids": [
+        8,
+        320,
+        340,
+        117
+      ],
+      "retrieved_ids": [
+        8,
+        326,
+        300
+      ],
+      "answer_preview": "1. 中国科学家成功研制“九章三号”光量子计算原型机，处理特定问题的速度比全球最快的超级计算机快一亿亿倍，复杂度提升百万倍。\n\n2. 中国量子通信网络已连接100个城市，实现全国范围的量子安全通信，采用\"京沪干线\"技术，传输距离达2000公里，日均处理数据量达100TB，比传统加密快10倍。\n\n3. 中国科学技术大学团队研发的\"祖冲之三号\"量子计算机在处理特定任务时速度比经典超算快1000万倍，采",
+      "golden_answer_preview": "【我国科学家在量子计算领域取得新突破】成功研制“九章三号”光量子计算原型机，处理特定问题速度大幅提升。\n【我国科学家实现百公里高精度量子纠缠分发】为构建广域量子网络奠定坚实基础，推动量子通信应用。\n【中国建成首条量子互联网】跨省安全通信\n【中国量子计算云平台】全球首个开放平台",
+      "top1_recall": 0.25,
+      "top3_recall": 0.25,
+      "top5_recall": 0.25,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.3104,
+      "rouge_l_precision": 0.2453,
+      "rouge_l_recall": 0.4228,
+      "vector_similarity": 0.6643
+    },
+    {
+      "id": "RAG103",
+      "category": "汇总查询",
+      "question": "中国体育赛事成绩汇总",
+      "expected_news_ids": [
+        262,
+        269,
+        258,
+        272
+      ],
+      "retrieved_ids": [
+        267,
+        27,
+        276
+      ],
+      "answer_preview": "中国乒乓球队在东京奥运会乒乓球团体赛中以3-0战胜日本队，成功卫冕金牌，连续三届奥运会包揽乒乓球所有金牌，共获4枚金牌。2024年江原道冬青奥会，中国代表团获得6金9银3铜，金牌榜排名第三，展现了优秀的竞技水平。中国网球公开赛中，郑钦文晋级八强，这是她本赛季首次进入WTA1000赛事八强。",
+      "golden_answer_preview": "【NBA总决赛湖人队夺冠】詹姆斯生涯第四冠\n【中国乒乓球队包揽世乒赛冠军】男女单打双冠王\n【中国女足亚洲杯夺冠】时隔16年再登顶\n【CBA总决赛广东队夺冠】第11冠创历史",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.1353,
+      "rouge_l_precision": 0.1053,
+      "rouge_l_recall": 0.1892,
+      "vector_similarity": 0.554
+    },
+    {
+      "id": "RAG104",
+      "category": "汇总查询",
+      "question": "中国娱乐圈近期动态汇总",
+      "expected_news_ids": [
+        241,
+        253,
+        218,
+        225
+      ],
+      "retrieved_ids": [
+        255,
+        21
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【《流浪地球3》概念图曝光】太空电梯场景震撼全球\n【周深《光亮》公益演唱会】致敬抗疫英雄\n【周杰伦新专辑《最伟大的作品》】艺术与音乐的完美融合\n【王菲演唱会重燃热潮】经典歌曲重现舞台",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.0225,
+      "rouge_l_precision": 0.0667,
+      "rouge_l_recall": 0.0135,
+      "vector_similarity": 0.2981
+    },
+    {
+      "id": "RAG105",
+      "category": "汇总查询",
+      "question": "中国重大会议活动汇总",
+      "expected_news_ids": [
+        135,
+        134,
+        125,
+        140
+      ],
+      "retrieved_ids": [
+        21,
+        135
+      ],
+      "answer_preview": "近期中国召开了两场重要会议： \n\n1. 全国生态环境保护大会，强调以高品质生态环境支撑高质量发展，推进美丽中国建设，提出要打好污染防治攻坚战，促进绿色转型。\n\n2. 第十四届全国人民代表大会第二次会议，听取和审议政府工作报告，审查计划报告和预算报告，国务院总理李强代表国务院作报告。",
+      "golden_answer_preview": "【2025博鳌亚洲论坛年会举行】主题为“世界大变局：共襄全球治理盛举 合奏一带一路强音”。\n【全国政协十四届二次会议开幕】听取和审议政协全国委员会常务委员会工作报告和提案工作情况的报告。\n【十四届全国人大二次会议开幕】听取和审议政府工作报告，审查计划报告和预算报告。\n【全国两会代表委员通道集中采访活动举行】多位代表委员畅谈履职故事，回应社会关切，展现履职风采。",
+      "top1_recall": 0.0,
+      "top3_recall": 0.25,
+      "top5_recall": 0.25,
+      "top3_precision": 0.5,
+      "rouge_l_f1": 0.3039,
+      "rouge_l_precision": 0.3525,
+      "rouge_l_recall": 0.2671,
+      "vector_similarity": 0.6669
+    },
+    {
+      "id": "RAG106",
+      "category": "汇总查询",
+      "question": "国际科技新闻汇总",
+      "expected_news_ids": [
+        302,
+        312,
+        314,
+        325
+      ],
+      "retrieved_ids": [
+        401,
+        125
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【SpaceX星舰第三次试飞成功】火箭回收技术再突破\n【英伟达发布AI芯片H100】算力提升3倍\n【OpenAI发布GPT-4.5】多模态能力突破\n【SpaceX星舰第四次试飞】实现全箭回收",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.0412,
+      "rouge_l_precision": 0.1333,
+      "rouge_l_recall": 0.0244,
+      "vector_similarity": 0.4342
+    },
+    {
+      "id": "RAG107",
+      "category": "汇总查询",
+      "question": "中国新能源相关新闻汇总",
+      "expected_news_ids": [
+        156,
+        108,
+        105,
+        107
+      ],
+      "retrieved_ids": [
+        156,
+        356,
+        395
+      ],
+      "answer_preview": "中国在联合国大会宣布2060年实现碳中和目标，计划2030年前碳达峰，这将推动光伏、风电等新能源产业的发展，预计创造500万个绿色就业岗位。\n\n此外，中国新能源汽车的渗透率已突破35%，7月销量达70万辆，创历史新高。政府的补贴政策将延续至2024年，充电桩建设也在加速，充电桩数量已达1020万台，同比增长55%。预计到2025年，充电桩数量将超过2000万，有助于推动电动车的普及。",
+      "golden_answer_preview": "【全国首座500千伏全自主可控变电站投运】西泉变电站实现全链条国产化，提升新能源电力送出能力。\n【中国标准智能市域列车在京雄快线亮相】列车应用智能控制等前沿技术，提升市域铁路运营水平。\n【国家电投广东廉江核电项目冷却塔建设进展顺利】项目规划建设6台三代核电机组，助力能源绿色转型。\n【中国宣布2060碳中和目标】新能源产业迎来重大机遇",
+      "top1_recall": 0.25,
+      "top3_recall": 0.25,
+      "top5_recall": 0.25,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.1238,
+      "rouge_l_precision": 0.1156,
+      "rouge_l_recall": 0.1333,
+      "vector_similarity": 0.6047
+    },
+    {
+      "id": "RAG108",
+      "category": "汇总查询",
+      "question": "中国社会民生服务汇总",
+      "expected_news_ids": [
+        59,
+        95,
+        64,
+        84
+      ],
+      "retrieved_ids": [
+        137,
+        34,
+        25
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【社区食堂解决老年人吃饭难】10元两荤两素套餐惠及500余名老人\n【残疾人就业帮扶计划启动】50家企业提供300个适配岗位，进行技能培训\n【盲人按摩师创业故事感人】开办三家分店，带动15名视障人士就业\n【社区推广“时间银行”养老】低龄老人服务高龄老人，存储服务时间兑换",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.0,
+      "rouge_l_precision": 0.0,
+      "rouge_l_recall": 0.0,
+      "vector_similarity": 0.2923
+    },
+    {
+      "id": "RAG109",
+      "category": "汇总查询",
+      "question": "中国应急救援相关新闻汇总",
+      "expected_news_ids": [
+        62,
+        68,
+        80,
+        94
+      ],
+      "retrieved_ids": [
+        83,
+        184,
+        56
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【交警雨中推车视频走红网络】早高峰冒雨帮助故障车辆，保障交通畅通\n【居民扑灭初期火灾避免事故】及时发现并正确灭火，消防部门予以表彰\n【民警深夜救助走失老人】利用人脸识别系统联系家属，安全送回家中\n【市民成功救助受伤夜鹭】国家保护动物送至动物园救治，恢复良好",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.0312,
+      "rouge_l_precision": 0.1333,
+      "rouge_l_recall": 0.0177,
+      "vector_similarity": 0.3897
+    },
+    {
+      "id": "RAG110",
+      "category": "汇总查询",
+      "question": "中国科技领域表彰汇总",
+      "expected_news_ids": [
+        131,
+        8,
+        117
+      ],
+      "retrieved_ids": [
+        28,
+        401
+      ],
+      "answer_preview": "81名个人和50个团队在国家卓越工程师奖表彰大会上获表彰，激励广大工程师为科技自立自强奋斗。受表彰的工程师和团队在重大工程建设、装备制造、关键技术攻关等方面取得了卓越成就。",
+      "golden_answer_preview": "【我国科学家在量子计算领域取得新突破】成功研制“九章三号”光量子计算原型机，处理特定问题速度大幅提升。\n【我国科学家实现百公里高精度量子纠缠分发】为构建广域量子网络奠定坚实基础，推动量子通信应用。\n【国家卓越工程师奖表彰大会举行】81名个人和50个团队获表彰，激励广大工程师为科技自立自强奋斗。",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.2991,
+      "rouge_l_precision": 0.3951,
+      "rouge_l_recall": 0.2406,
+      "vector_similarity": 0.6326
+    },
+    {
+      "id": "RAG111",
+      "category": "汇总查询",
+      "question": "国际重大灾害事件汇总",
+      "expected_news_ids": [
+        160,
+        157
+      ],
+      "retrieved_ids": [
+        163,
+        168,
+        184
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【俄罗斯与乌克兰签署临时停火协议】缓解顿巴斯地区人道危机\n【印度尼西亚地震引发海啸预警】3000人紧急撤离海岸线",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.0,
+      "rouge_l_precision": 0.0,
+      "rouge_l_recall": 0.0,
+      "vector_similarity": 0.3373
+    },
+    {
+      "id": "RAG112",
+      "category": "汇总查询",
+      "question": "中国文化产业动态汇总",
+      "expected_news_ids": [
+        50,
+        241,
+        249
+      ],
+      "retrieved_ids": [
+        399,
+        21,
+        377
+      ],
+      "answer_preview": "中国文化产业近期动态包括：\n\n1. 文旅消费创新高：7月文旅消费收入达1.5万亿元，同比增长28%。沉浸式体验和数字文旅成为新热点，故宫、敦煌等景区的数字产品热销。人均消费增长15%，文旅产业带动就业1000万人。\n\n2. 暑期消费复苏：暑期旅游市场表现火爆，旅游收入达1.2万亿元，同比增长25%。热门目的地包括上海、成都和西安，酒店预订量增长40%，机票价格回升15%。餐饮和娱乐消费增长20%。",
+      "golden_answer_preview": "【中国电影2024年春节档票房创影史新高】总票房突破80亿元，观影人次达1.63亿，国产影片表现强势。\n【周杰伦新专辑《最伟大的作品》】艺术与音乐的完美融合\n【《流浪地球3》概念图曝光】太空电梯场景震撼全球",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.1281,
+      "rouge_l_precision": 0.0928,
+      "rouge_l_recall": 0.2069,
+      "vector_similarity": 0.6687
+    },
+    {
+      "id": "RAG113",
+      "category": "汇总查询",
+      "question": "中国交通基础设施汇总",
+      "expected_news_ids": [
+        6,
+        107,
+        124
+      ],
+      "retrieved_ids": [
+        349,
+        16,
+        330
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【C919国产大飞机开启东南亚演示飞行】首次飞抵新加坡航展，展示我国民用航空工业新成就。\n【中国标准智能市域列车在京雄快线亮相】列车应用智能控制等前沿技术，提升市域铁路运营水平。\n【我国首条高速飞车全尺寸试验线完成运行试验】未来时速可达1000公里，为超高速轨道交通技术发展奠定基础。",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.014,
+      "rouge_l_precision": 0.0667,
+      "rouge_l_recall": 0.0078,
+      "vector_similarity": 0.2665
+    },
+    {
+      "id": "RAG114",
+      "category": "汇总查询",
+      "question": "中国民生实事汇总",
+      "expected_news_ids": [
+        55,
+        59,
+        95,
+        90
+      ],
+      "retrieved_ids": [
+        137,
+        34,
+        353
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【老旧小区加装电梯工程竣工】居民告别爬楼难，20户老年人直接受益\n【社区食堂解决老年人吃饭难】10元两荤两素套餐惠及500余名老人\n【智能报警器守护独居老人】社区安装监测设备，异常情况自动报警\n【社区推广“时间银行”养老】低龄老人服务高龄老人，存储服务时间兑换",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.0,
+      "rouge_l_precision": 0.0,
+      "rouge_l_recall": 0.0,
+      "vector_similarity": 0.2903
+    },
+    {
+      "id": "RAG115",
+      "category": "汇总查询",
+      "question": "中国科技基础研究汇总",
+      "expected_news_ids": [
+        104,
+        117,
+        113
+      ],
+      "retrieved_ids": [
+        401,
+        8,
+        16
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【我国首台15米口径亚毫米波望远镜启动建设】首台自主研发的15米口径亚毫米波望远镜在青海德令哈启动建设。\n【我国科学家在珠穆朗玛峰开展多学科综合科考】研究全球变化下珠峰地区生态环境变化及应对策略。\n【我国科学家实现百公里高精度量子纠缠分发】为构建广域量子网络奠定坚实基础，推动量子通信应用。",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.0135,
+      "rouge_l_precision": 0.0667,
+      "rouge_l_recall": 0.0075,
+      "vector_similarity": 0.3024
+    },
+    {
+      "id": "RAG116",
+      "category": "汇总查询",
+      "question": "中国航天与国际航天对比汇总",
+      "expected_news_ids": [
+        3,
+        22,
+        302,
+        325
+      ],
+      "retrieved_ids": [
+        382,
+        370,
+        22
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【我国成功发射通信技术试验卫星十一号】卫星顺利进入预定轨道，将用于开展多频段、高速率通信试验。\n【中国航天员乘组完成在轨轮换】神舟十七号乘组与神舟十八号乘组在空间站顺利完成在轨轮换任务。\n【SpaceX星舰第三次试飞成功】火箭回收技术再突破\n【SpaceX星舰第四次试飞】实现全箭回收",
+      "top1_recall": 0.0,
+      "top3_recall": 0.25,
+      "top5_recall": 0.25,
+      "top3_precision": 0.3333,
+      "rouge_l_f1": 0.0282,
+      "rouge_l_precision": 0.1333,
+      "rouge_l_recall": 0.0157,
+      "vector_similarity": 0.319
+    },
+    {
+      "id": "RAG117",
+      "category": "汇总查询",
+      "question": "中国与国际科技新闻汇总",
+      "expected_news_ids": [
+        308,
+        312,
+        314,
+        154
+      ],
+      "retrieved_ids": [
+        401,
+        364,
+        391
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【美国发布全球首个AI监管法案】规范高风险领域AI应用\n【中国建成全球最快超算】算力达1.5亿亿次/秒\n【英伟达发布AI芯片H100】算力提升3倍\n【OpenAI发布GPT-4.5】多模态能力突破",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.0204,
+      "rouge_l_precision": 0.0667,
+      "rouge_l_recall": 0.012,
+      "vector_similarity": 0.4205
+    },
+    {
+      "id": "RAG118",
+      "category": "汇总查询",
+      "question": "中国与国际体育新闻汇总",
+      "expected_news_ids": [
+        262,
+        269,
+        258,
+        268
+      ],
+      "retrieved_ids": [
+        45,
+        27,
+        391
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【NBA总决赛湖人队夺冠】詹姆斯生涯第四冠\n【中国乒乓球队包揽世乒赛冠军】男女单打双冠王\n【英超联赛曼城夺冠】提前四轮锁定冠军\n【中国女足亚洲杯夺冠】时隔16年再登顶",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.0,
+      "rouge_l_precision": 0.0,
+      "rouge_l_recall": 0.0,
+      "vector_similarity": 0.3789
+    },
+    {
+      "id": "RAG119",
+      "category": "汇总查询",
+      "question": "中国与国际娱乐新闻汇总",
+      "expected_news_ids": [
+        241,
+        253,
+        243,
+        247
+      ],
+      "retrieved_ids": [
+        183,
+        399,
+        7
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【周杰伦新专辑《最伟大的作品》】艺术与音乐的完美融合\n【泰勒·斯威夫特时代巡演】单场10万人创北美纪录\n【Netflix《鱿鱼游戏2》官宣】全球粉丝期待值飙升\n【王菲演唱会重燃热潮】经典歌曲重现舞台",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.0202,
+      "rouge_l_precision": 0.0667,
+      "rouge_l_recall": 0.0119,
+      "vector_similarity": 0.4072
+    },
+    {
+      "id": "RAG120",
+      "category": "汇总查询",
+      "question": "中国与国际财经新闻汇总",
+      "expected_news_ids": [
+        357,
+        360,
+        361,
+        377
+      ],
+      "retrieved_ids": [
+        379,
+        34,
+        137
+      ],
+      "answer_preview": "根据现有新闻资料，无法回答该问题。",
+      "golden_answer_preview": "【A股科技板块集体上涨】AI概念股领涨\n【全球加密货币市值突破1万亿美元】比特币突破6.5万美元\n【苹果Q3营收创历史新高】服务业务增长强劲\n【中国消费复苏态势良好】暑期旅游市场火爆",
+      "top1_recall": 0.0,
+      "top3_recall": 0.0,
+      "top5_recall": 0.0,
+      "top3_precision": 0.0,
+      "rouge_l_f1": 0.0213,
+      "rouge_l_precision": 0.0667,
+      "rouge_l_recall": 0.0127,
+      "vector_similarity": 0.4163
+    }
+  ]
+}

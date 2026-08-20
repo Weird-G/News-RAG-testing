@@ -1,12 +1,23 @@
 from typing import Optional
 
 from pydantic import BaseModel, Field, ConfigDict
-
+from pydantic import BaseModel, Field
 
 class UserRequest(BaseModel):
-    username: str
-    password: str
-
+    # 用户名：1-8位，只能大小写字母+数字
+    username: str = Field(
+        min_length=1,
+        max_length=8,
+        pattern=r"^[A-Za-z0-9]+$",
+        description="用户名，1~8位，仅允许字母、数字，不能含特殊符号/空格"
+    )
+    # 密码：3-8位，仅字母+数字
+    password: str = Field(
+        min_length=3,
+        max_length=8,
+        pattern=r"^[A-Za-z0-9]+$",
+        description="密码，3~8位，仅允许字母、数字，不能含特殊符号/空格"
+    )
 
 # user_info 对应的类：基础类 + Info 类（id、用户名）
 class UserInfoBase(BaseModel):

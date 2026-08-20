@@ -1,0 +1,82 @@
+# =============================================================================
+# docker-compose.yml — 一键本地启动：MySQL + Redis + FastAPI 后端
+# 用法:
+#   docker compose up -d         # 后台启动
+#   docker compose down -v       # 卸载 + 清空数据卷
+# 第一次启动后需手动建表: 导入项目的 SQL 初始化脚本到 MySQL news_app 库
+# =============================================================================
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: toutiao-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: news_app
+      TZ: Asia/Shanghai
+    ports:
+      - "3306:3306"
+    volumes:
+      - toutiao_mysql_data:/var/lib/mysql
+      # 如果你有 init.sql 放到 ./scripts/sql/ 下，第一次启动会自动建表
+      # - ./scripts/sql:/docker-entrypoint-initdb.d:ro
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: toutiao-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - toutiao_redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: toutiao-backend
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    environment:
+      # compose 内部用 service 名做 hostname，对应上面 mysql / redis
+      DATABASE_URL: mysql+aiomysql://root:root@mysql:3306/news_app?charset=utf8mb4
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_DB: 0
+      JWT_SECRET: ${JWT_SECRET:-change-me-please-use-a-random-string}
+      JWT_ALGORITHM: HS256
+      JWT_EXPIRE_MINUTES: 1440
+      LLM_BASE_URL: ${LLM_BASE_URL:-https://api.closeai-asia.com/v1}
+      LLM_API_KEY: ${LLM_API_KEY:-replace-with-your-own-key}
+      LLM_MODEL: ${LLM_MODEL:-gpt-4o-mini}
+      HF_ENDPOINT: https://hf-mirror.com
+      HF_HUB_DISABLE_XET: "1"
+    volumes:
+      # 向量库 / BGE 模型 / 测试报告 挂载到宿主机，重建容器不丢
+      - ./chroma_data:/app/chroma_data
+      - ./vector_store/bge_model:/app/vector_store/bge_model
+      - ./test_reports:/app/test_reports
+
+volumes:
+  toutiao_mysql_data:
+  toutiao_redis_data:

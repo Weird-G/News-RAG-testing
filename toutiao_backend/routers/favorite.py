@@ -51,12 +51,7 @@ async def get_favorite_list(
         user: User = Depends(get_current_user),
         db: AsyncSession = Depends(get_db)
 ):
-    rows, total = await favorite.get_favorite_list(db, user.id, page, page_size)
-    favorite_list = [{
-        **news.__dict__,
-        "favorite_time": favorite_time,
-        "favorite_id": favorite_id
-    } for news, favorite_time, favorite_id in rows]
+    favorite_list, total = await favorite.get_favorite_list(db, user.id, page, page_size)
     has_more = total > page * page_size
 
     data = FavoriteListResponse(list=favorite_list, total=total, hasMore=has_more)
@@ -70,4 +65,3 @@ async def clear_favorite(
 ):
     count = await favorite.remove_all_favorites(db, user.id)
     return success_response(message=f"清空了{count}条记录")
-

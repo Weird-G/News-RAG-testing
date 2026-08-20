@@ -29,6 +29,16 @@ async def set_cache_news_list(category_id: Optional[int], page: int, size: int, 
     key = f"{NEWS_LIST_PREFIX}{category_part}:{page}:{size}"
     return await set_cache(key, news_list, expire)
 
+# 缓存分类总数key
+NEWS_COUNT_PREFIX = "news_count:"
+
+async def get_cache_news_count(category_id:int):
+    key = f"{NEWS_COUNT_PREFIX}{category_id}"
+    return await get_json_cache(key)
+
+async def set_cache_news_count(category_id:int, total:int, expire:int=1800):
+    key = f"{NEWS_COUNT_PREFIX}{category_id}"
+    return await set_cache(key, total, expire)
 
 # 读取缓存-新闻列表
 async def get_cache_news_list(category_id: Optional[int], page: int, size: int):
@@ -36,6 +46,13 @@ async def get_cache_news_list(category_id: Optional[int], page: int, size: int):
     key = f"{NEWS_LIST_PREFIX}{category_part}:{page}:{size}"
     return await get_json_cache(key)
 
+# async def get_cache_news_list(category_id: Optional[int], page: int, size: int):
+#     category_part = category_id if category_id is not None else "all"
+#     key = f"{NEWS_LIST_PREFIX}{category_part}:{page}:{size}"
+#     cache_data = await get_json_cache(key)
+#     # 新增打印，看Redis是否读到缓存
+#     print(f"查询Key:{key}, Redis读取缓存结果:{cache_data}")
+#     return cache_data
 
 async def get_cached_news_detail(news_id: int) -> Optional[Dict[str, Any]]:
     """

@@ -1,0 +1,2662 @@
+{
+  "comparison": [
+    {
+      "chunk_size": 300,
+      "chroma_count": 403,
+      "summary": {
+        "top1_recall": 0.9333333333333333,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "rouge_l_f1": 0.5240833333333333,
+        "vector_similarity": 0.8183599999999999,
+        "qa_accuracy": 1.0
+      },
+      "by_category": {
+        "事实查询": {
+          "count": 30,
+          "top3_recall": 1.0,
+          "rouge_l_f1": 0.5240833333333333
+        }
+      }
+    },
+    {
+      "chunk_size": 500,
+      "chroma_count": 403,
+      "summary": {
+        "top1_recall": 0.9,
+        "top3_recall": 0.9666666666666667,
+        "top5_recall": 0.9666666666666667,
+        "rouge_l_f1": 0.5146566666666668,
+        "vector_similarity": 0.7976933333333333,
+        "qa_accuracy": 0.9666666666666667
+      },
+      "by_category": {
+        "事实查询": {
+          "count": 30,
+          "top3_recall": 0.9666666666666667,
+          "rouge_l_f1": 0.5146566666666668
+        }
+      }
+    },
+    {
+      "chunk_size": 800,
+      "chroma_count": 403,
+      "summary": {
+        "top1_recall": 0.9333333333333333,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "rouge_l_f1": 0.5152566666666667,
+        "vector_similarity": 0.8150933333333332,
+        "qa_accuracy": 1.0
+      },
+      "by_category": {
+        "事实查询": {
+          "count": 30,
+          "top3_recall": 1.0,
+          "rouge_l_f1": 0.5152566666666667
+        }
+      }
+    },
+    {
+      "chunk_size": 1000,
+      "chroma_count": 403,
+      "summary": {
+        "top1_recall": 0.9,
+        "top3_recall": 0.9666666666666667,
+        "top5_recall": 0.9666666666666667,
+        "rouge_l_f1": 0.4896,
+        "vector_similarity": 0.7959599999999999,
+        "qa_accuracy": 0.9666666666666667
+      },
+      "by_category": {
+        "事实查询": {
+          "count": 30,
+          "top3_recall": 0.9666666666666667,
+          "rouge_l_f1": 0.4896
+        }
+      }
+    }
+  ],
+  "details_by_chunk_size": {
+    "300": [
+      {
+        "id": "RAG001",
+        "category": "事实查询",
+        "question": "社区时间银行养老模式是什么？",
+        "expected_news_ids": [
+          95
+        ],
+        "retrieved_ids": [
+          95
+        ],
+        "answer_preview": "社区时间银行养老模式是指低龄老人（60岁）为高龄老人（80岁）提供服务，并通过存储服务时间来进行兑换。这种模式旨在促进社区内的互助，增强社区的温暖感。",
+        "golden_answer_preview": "【社区推广“时间银行”养老】低龄老人服务高龄老人，存储服务时间兑换",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.4948,
+        "rouge_l_precision": 0.3582,
+        "rouge_l_recall": 0.8,
+        "vector_similarity": 0.8843
+      },
+      {
+        "id": "RAG002",
+        "category": "事实查询",
+        "question": "2023年我国GDP同比增长多少？",
+        "expected_news_ids": [
+          4
+        ],
+        "retrieved_ids": [
+          4,
+          34,
+          351
+        ],
+        "answer_preview": "2023年我国GDP同比增长5.2%。",
+        "golden_answer_preview": "【2023年我国GDP同比增长5.2%】经济总量超126万亿元，国民经济回升向好，高质量发展扎实推进。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.3333,
+        "rouge_l_f1": 0.5333,
+        "rouge_l_precision": 1.0,
+        "rouge_l_recall": 0.3636,
+        "vector_similarity": 0.9098
+      },
+      {
+        "id": "RAG003",
+        "category": "事实查询",
+        "question": "央行降准幅度是多少个百分点？",
+        "expected_news_ids": [
+          5
+        ],
+        "retrieved_ids": [
+          5,
+          353
+        ],
+        "answer_preview": "央行降准幅度为0.5个百分点。",
+        "golden_answer_preview": "【央行宣布降准0.5个百分点】释放长期资金约1万亿元，保持流动性合理充裕，支持实体经济。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.3922,
+        "rouge_l_precision": 0.7692,
+        "rouge_l_recall": 0.2632,
+        "vector_similarity": 0.9077
+      },
+      {
+        "id": "RAG004",
+        "category": "事实查询",
+        "question": "春节假期国内旅游出游人次有多少？",
+        "expected_news_ids": [
+          7
+        ],
+        "retrieved_ids": [
+          7
+        ],
+        "answer_preview": "春节假期国内旅游出游4.74亿人次。",
+        "golden_answer_preview": "【春节假期国内旅游出游4.74亿人次】按可比口径较2019年同期增长19.0%，旅游收入6326.87亿元。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.5161,
+        "rouge_l_precision": 1.0,
+        "rouge_l_recall": 0.3478,
+        "vector_similarity": 0.8538
+      },
+      {
+        "id": "RAG005",
+        "category": "事实查询",
+        "question": "C919国产大飞机在哪里演示飞行？",
+        "expected_news_ids": [
+          6
+        ],
+        "retrieved_ids": [
+          6
+        ],
+        "answer_preview": "C919国产大飞机将在新加坡进行演示飞行。",
+        "golden_answer_preview": "【C919国产大飞机开启东南亚演示飞行】首次飞抵新加坡航展，展示我国民用航空工业新成就。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.4333,
+        "rouge_l_precision": 0.65,
+        "rouge_l_recall": 0.325,
+        "vector_similarity": 0.8035
+      },
+      {
+        "id": "RAG006",
+        "category": "事实查询",
+        "question": "我国在量子计算领域有什么突破？",
+        "expected_news_ids": [
+          8
+        ],
+        "retrieved_ids": [
+          300,
+          8,
+          340
+        ],
+        "answer_preview": "我国在量子计算领域取得了多个突破，包括：\n\n1. 中国科学技术大学团队研发的\"祖冲之三号\"量子计算机，处理特定任务的速度比经典超算快1000万倍，采用超导量子芯片，实现100个量子比特的稳定操控。\n\n2. 研究团队成功构建的\"九章三号\"光量子计算原型机，处理高斯玻色取样数学问题的速度比全球最快的超级计算机快一亿亿倍，复杂度提升百万倍。\n\n3. 推出了全球首个量子计算云平台\"量子通\"，向公众开放量子",
+        "golden_answer_preview": "【我国科学家在量子计算领域取得新突破】成功研制“九章三号”光量子计算原型机，处理特定问题速度大幅提升。",
+        "top1_recall": 0.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.3333,
+        "rouge_l_f1": 0.2869,
+        "rouge_l_precision": 0.1777,
+        "rouge_l_recall": 0.7447,
+        "vector_similarity": 0.8035
+      },
+      {
+        "id": "RAG007",
+        "category": "事实查询",
+        "question": "2024年中央一号文件发布了吗？",
+        "expected_news_ids": [
+          23
+        ],
+        "retrieved_ids": [
+          23
+        ],
+        "answer_preview": "2024年中央一号文件已经发布。",
+        "golden_answer_preview": "【2024年中央一号文件发布】聚焦推进乡村全面振兴，提出确保国家粮食安全、防止规模性返贫等底线任务。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.4333,
+        "rouge_l_precision": 0.8667,
+        "rouge_l_recall": 0.2889,
+        "vector_similarity": 0.9367
+      },
+      {
+        "id": "RAG008",
+        "category": "事实查询",
+        "question": "中国航天员乘组完成什么任务？",
+        "expected_news_ids": [
+          22
+        ],
+        "retrieved_ids": [
+          22
+        ],
+        "answer_preview": "中国航天员乘组完成了在轨轮换任务，并在驻留期间开展了多项空间科学实验与技术试验，以及空间站平台的维护照料等任务。",
+        "golden_answer_preview": "【中国航天员乘组完成在轨轮换】神舟十七号乘组与神舟十八号乘组在空间站顺利完成在轨轮换任务。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.4,
+        "rouge_l_precision": 0.3585,
+        "rouge_l_recall": 0.4524,
+        "vector_similarity": 0.7593
+      },
+      {
+        "id": "RAG009",
+        "category": "事实查询",
+        "question": "中国乒乓球队世乒赛成绩如何？",
+        "expected_news_ids": [
+          262
+        ],
+        "retrieved_ids": [
+          262,
+          267
+        ],
+        "answer_preview": "中国乒乓球队在世乒赛中包揽男女单打冠军，王楚钦和孙颖莎分别夺冠。王楚钦在男单决赛中以4-2战胜日本选手张本智和，孙颖莎以4-0横扫队友王曼昱。中国队已连续10届世乒赛包揽全部金牌，并在本届世乒赛中共获5金，创单届最多。孙颖莎成为首位实现世乒赛女单三连冠的选手。",
+        "golden_answer_preview": "【中国乒乓球队包揽世乒赛冠军】男女单打双冠王",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.2143,
+        "rouge_l_precision": 0.125,
+        "rouge_l_recall": 0.75,
+        "vector_similarity": 0.6636
+      },
+      {
+        "id": "RAG010",
+        "category": "事实查询",
+        "question": "中国女足亚洲杯夺冠了吗？",
+        "expected_news_ids": [
+          269
+        ],
+        "retrieved_ids": [
+          269,
+          285
+        ],
+        "answer_preview": "中国女足在亚洲杯决赛中以3-2战胜日本队，时隔16年重夺亚洲杯冠军。",
+        "golden_answer_preview": "【中国女足亚洲杯夺冠】时隔16年再登顶",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.5,
+        "rouge_l_precision": 0.3871,
+        "rouge_l_recall": 0.7059,
+        "vector_similarity": 0.7567
+      },
+      {
+        "id": "RAG011",
+        "category": "事实查询",
+        "question": "NBA总决赛哪支球队夺冠？",
+        "expected_news_ids": [
+          258
+        ],
+        "retrieved_ids": [
+          272,
+          258,
+          284
+        ],
+        "answer_preview": "洛杉矶湖人队在NBA总决赛中夺冠。",
+        "golden_answer_preview": "【NBA总决赛湖人队夺冠】詹姆斯生涯第四冠",
+        "top1_recall": 0.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.3333,
+        "rouge_l_f1": 0.4571,
+        "rouge_l_precision": 0.5,
+        "rouge_l_recall": 0.4211,
+        "vector_similarity": 0.7582
+      },
+      {
+        "id": "RAG012",
+        "category": "事实查询",
+        "question": "英超联赛曼城夺冠了吗？",
+        "expected_news_ids": [
+          268
+        ],
+        "retrieved_ids": [
+          268
+        ],
+        "answer_preview": "是的，曼城提前四轮夺得2022-2023赛季英超冠军。",
+        "golden_answer_preview": "【英超联赛曼城夺冠】提前四轮锁定冠军",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.4,
+        "rouge_l_precision": 0.3333,
+        "rouge_l_recall": 0.5,
+        "vector_similarity": 0.8111
+      },
+      {
+        "id": "RAG013",
+        "category": "事实查询",
+        "question": "费德勒宣布退役了吗？",
+        "expected_news_ids": [
+          266
+        ],
+        "retrieved_ids": [
+          266
+        ],
+        "answer_preview": "费德勒已正式宣布退役，结束了他的职业网球生涯。",
+        "golden_answer_preview": "【费德勒宣布退役】网球传奇谢幕",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.5294,
+        "rouge_l_precision": 0.4286,
+        "rouge_l_recall": 0.6923,
+        "vector_similarity": 0.8441
+      },
+      {
+        "id": "RAG014",
+        "category": "事实查询",
+        "question": "C罗转会到哪个联赛？",
+        "expected_news_ids": [
+          282
+        ],
+        "retrieved_ids": [
+          282
+        ],
+        "answer_preview": "C罗转会到沙特联赛。",
+        "golden_answer_preview": "【C罗转会沙特联赛】创历史天价转会",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.6667,
+        "rouge_l_precision": 0.8889,
+        "rouge_l_recall": 0.5333,
+        "vector_similarity": 0.7848
+      },
+      {
+        "id": "RAG015",
+        "category": "事实查询",
+        "question": "OpenAI发布GPT-4.5了吗？",
+        "expected_news_ids": [
+          314
+        ],
+        "retrieved_ids": [
+          314
+        ],
+        "answer_preview": "是的，OpenAI已正式发布GPT-4.5。",
+        "golden_answer_preview": "【OpenAI发布GPT-4.5】多模态能力突破",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.6842,
+        "rouge_l_precision": 0.7222,
+        "rouge_l_recall": 0.65,
+        "vector_similarity": 0.8986
+      },
+      {
+        "id": "RAG016",
+        "category": "事实查询",
+        "question": "SpaceX星舰第三次试飞成功了吗？",
+        "expected_news_ids": [
+          302
+        ],
+        "retrieved_ids": [
+          302,
+          325
+        ],
+        "answer_preview": "成功了。SpaceX星舰完成了第三次试飞，首次实现火箭第一级在大气层内可控回收。",
+        "golden_answer_preview": "【SpaceX星舰第三次试飞成功】火箭回收技术再突破",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.5574,
+        "rouge_l_precision": 0.4595,
+        "rouge_l_recall": 0.7083,
+        "vector_similarity": 0.8179
+      },
+      {
+        "id": "RAG017",
+        "category": "事实查询",
+        "question": "英伟达发布AI芯片H100了吗？",
+        "expected_news_ids": [
+          312
+        ],
+        "retrieved_ids": [
+          312
+        ],
+        "answer_preview": "英伟达发布了AI芯片H100。",
+        "golden_answer_preview": "【英伟达发布AI芯片H100】算力提升3倍",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.7879,
+        "rouge_l_precision": 0.9286,
+        "rouge_l_recall": 0.6842,
+        "vector_similarity": 0.8925
+      },
+      {
+        "id": "RAG018",
+        "category": "事实查询",
+        "question": "特斯拉发布AI机器人Optimus了吗？",
+        "expected_news_ids": [
+          335
+        ],
+        "retrieved_ids": [
+          335
+        ],
+        "answer_preview": "是的，特斯拉发布了AI机器人Optimus，并进行了首次公开演示。",
+        "golden_answer_preview": "【特斯拉发布AI机器人Optimus】首次公开演示",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.8679,
+        "rouge_l_precision": 0.7667,
+        "rouge_l_recall": 1.0,
+        "vector_similarity": 0.8531
+      },
+      {
+        "id": "RAG019",
+        "category": "事实查询",
+        "question": "特斯拉Q2财报表现如何？",
+        "expected_news_ids": [
+          352
+        ],
+        "retrieved_ids": [
+          352
+        ],
+        "answer_preview": "特斯拉2023年Q2财报表现超出市场预期，营收为210亿美元，净利润为2.3亿美元，净利润增长12.3%。电动车销量达到30.5万辆，同比增长25%。股价在盘后上涨8.5%。",
+        "golden_answer_preview": "【特斯拉Q2财报超预期】净利润增长12.3%",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.3956,
+        "rouge_l_precision": 0.2466,
+        "rouge_l_recall": 1.0,
+        "vector_similarity": 0.7905
+      },
+      {
+        "id": "RAG020",
+        "category": "事实查询",
+        "question": "苹果Q3营收创新高了吗？",
+        "expected_news_ids": [
+          361
+        ],
+        "retrieved_ids": [
+          361
+        ],
+        "answer_preview": "是的，苹果Q3营收创历史新高，达940亿美元。",
+        "golden_answer_preview": "【苹果Q3营收创历史新高】服务业务增长强劲",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.5641,
+        "rouge_l_precision": 0.55,
+        "rouge_l_recall": 0.5789,
+        "vector_similarity": 0.8321
+      },
+      {
+        "id": "RAG021",
+        "category": "事实查询",
+        "question": "全球气候峰会达成什么协议？",
+        "expected_news_ids": [
+          153
+        ],
+        "retrieved_ids": [
+          153,
+          175
+        ],
+        "answer_preview": "全球气候峰会达成的协议是195个国家承诺到2030年将全球碳排放减少50%。",
+        "golden_answer_preview": "【全球气候峰会达成历史性协议】195国承诺2030年碳排放减半",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.7692,
+        "rouge_l_precision": 0.6944,
+        "rouge_l_recall": 0.8621,
+        "vector_similarity": 0.7307
+      },
+      {
+        "id": "RAG022",
+        "category": "事实查询",
+        "question": "美国发布AI监管法案了吗？",
+        "expected_news_ids": [
+          154
+        ],
+        "retrieved_ids": [
+          154
+        ],
+        "answer_preview": "是的，美国已经发布了全球首个AI监管法案。",
+        "golden_answer_preview": "【美国发布全球首个AI监管法案】规范高风险领域AI应用",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.6364,
+        "rouge_l_precision": 0.7368,
+        "rouge_l_recall": 0.56,
+        "vector_similarity": 0.874
+      },
+      {
+        "id": "RAG023",
+        "category": "事实查询",
+        "question": "NASA发现火星什么？",
+        "expected_news_ids": [
+          158
+        ],
+        "retrieved_ids": [
+          158,
+          318
+        ],
+        "answer_preview": "NASA发现火星南极冰盖下存在液态水湖，面积达20平方公里，并在火星南极发现大量水冰，证实火星存在液态水。",
+        "golden_answer_preview": "【NASA发现火星存在液态水】为寻找外星生命提供关键证据",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.4,
+        "rouge_l_precision": 0.3061,
+        "rouge_l_recall": 0.5769,
+        "vector_similarity": 0.6178
+      },
+      {
+        "id": "RAG024",
+        "category": "事实查询",
+        "question": "中国宣布2060年什么目标？",
+        "expected_news_ids": [
+          156
+        ],
+        "retrieved_ids": [
+          156
+        ],
+        "answer_preview": "中国宣布2060年实现碳中和目标。",
+        "golden_answer_preview": "【中国宣布2060碳中和目标】新能源产业迎来重大机遇",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.65,
+        "rouge_l_precision": 0.8125,
+        "rouge_l_recall": 0.5417,
+        "vector_similarity": 0.8386
+      },
+      {
+        "id": "RAG025",
+        "category": "事实查询",
+        "question": "全球首个数字货币央行在哪里运营？",
+        "expected_news_ids": [
+          159
+        ],
+        "retrieved_ids": [
+          159,
+          174,
+          198
+        ],
+        "answer_preview": "全球首个数字货币央行在欧洲央行运营。",
+        "golden_answer_preview": "【全球首个数字货币央行正式运营】数字欧元将与传统货币并行",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.3333,
+        "rouge_l_f1": 0.5581,
+        "rouge_l_precision": 0.7059,
+        "rouge_l_recall": 0.4615,
+        "vector_similarity": 0.8958
+      },
+      {
+        "id": "RAG026",
+        "category": "事实查询",
+        "question": "印尼地震引发什么预警？",
+        "expected_news_ids": [
+          160
+        ],
+        "retrieved_ids": [
+          160
+        ],
+        "answer_preview": "印尼地震引发了海啸预警。",
+        "golden_answer_preview": "【印度尼西亚地震引发海啸预警】3000人紧急撤离海岸线",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.5556,
+        "rouge_l_precision": 0.9091,
+        "rouge_l_recall": 0.4,
+        "vector_similarity": 0.8456
+      },
+      {
+        "id": "RAG027",
+        "category": "事实查询",
+        "question": "新疆大石峡水利枢纽工程进展？",
+        "expected_news_ids": [
+          102
+        ],
+        "retrieved_ids": [
+          102
+        ],
+        "answer_preview": "新疆大石峡水利枢纽工程于2025年9月20日正式下闸蓄水，转入运行准备阶段。该工程于2019年11月全面动工，计划在2026年全面完工。",
+        "golden_answer_preview": "【新疆大石峡水利枢纽工程正式下闸蓄水】世界最高混凝土面板砂砾石坝下闸蓄水，转入运行准备阶段。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.4717,
+        "rouge_l_precision": 0.3906,
+        "rouge_l_recall": 0.5952,
+        "vector_similarity": 0.8414
+      },
+      {
+        "id": "RAG028",
+        "category": "事实查询",
+        "question": "我国首台15米口径望远镜启动建设了吗？",
+        "expected_news_ids": [
+          104
+        ],
+        "retrieved_ids": [
+          104
+        ],
+        "answer_preview": "我国首台15米口径亚毫米波望远镜已于2025年9月20日在青海德令哈正式启动建设。",
+        "golden_answer_preview": "【我国首台15米口径亚毫米波望远镜启动建设】首台自主研发的15米口径亚毫米波望远镜在青海德令哈启动建设。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.6067,
+        "rouge_l_precision": 0.675,
+        "rouge_l_recall": 0.551,
+        "vector_similarity": 0.8208
+      },
+      {
+        "id": "RAG029",
+        "category": "事实查询",
+        "question": "社区食堂解决了什么问题？",
+        "expected_news_ids": [
+          59
+        ],
+        "retrieved_ids": [
+          59
+        ],
+        "answer_preview": "社区食堂解决了老年人吃饭难的问题，为60岁以上的老人提供优惠餐食，并为行动不便的老人提供送餐上门服务。",
+        "golden_answer_preview": "【社区食堂解决老年人吃饭难】10元两荤两素套餐惠及500余名老人",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.4103,
+        "rouge_l_precision": 0.3333,
+        "rouge_l_recall": 0.5333,
+        "vector_similarity": 0.7456
+      },
+      {
+        "id": "RAG030",
+        "category": "事实查询",
+        "question": "智能报警器守护什么人群？",
+        "expected_news_ids": [
+          90
+        ],
+        "retrieved_ids": [
+          90
+        ],
+        "answer_preview": "智能报警器主要守护独居老人。",
+        "golden_answer_preview": "【智能报警器守护独居老人】社区安装监测设备，异常情况自动报警",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.55,
+        "rouge_l_precision": 0.8462,
+        "rouge_l_recall": 0.4074,
+        "vector_similarity": 0.7787
+      }
+    ],
+    "500": [
+      {
+        "id": "RAG001",
+        "category": "事实查询",
+        "question": "社区时间银行养老模式是什么？",
+        "expected_news_ids": [
+          95
+        ],
+        "retrieved_ids": [],
+        "answer_preview": "向量库中暂无新闻数据，请先执行同步操作。",
+        "golden_answer_preview": "【社区推广“时间银行”养老】低龄老人服务高龄老人，存储服务时间兑换",
+        "top1_recall": 0.0,
+        "top3_recall": 0.0,
+        "top5_recall": 0.0,
+        "top3_precision": 0.0,
+        "rouge_l_f1": 0.0417,
+        "rouge_l_precision": 0.0556,
+        "rouge_l_recall": 0.0333,
+        "vector_similarity": 0.3323
+      },
+      {
+        "id": "RAG002",
+        "category": "事实查询",
+        "question": "2023年我国GDP同比增长多少？",
+        "expected_news_ids": [
+          4
+        ],
+        "retrieved_ids": [
+          4,
+          34,
+          351
+        ],
+        "answer_preview": "2023年我国GDP同比增长5.2%。",
+        "golden_answer_preview": "【2023年我国GDP同比增长5.2%】经济总量超126万亿元，国民经济回升向好，高质量发展扎实推进。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.3333,
+        "rouge_l_f1": 0.5333,
+        "rouge_l_precision": 1.0,
+        "rouge_l_recall": 0.3636,
+        "vector_similarity": 0.9098
+      },
+      {
+        "id": "RAG003",
+        "category": "事实查询",
+        "question": "央行降准幅度是多少个百分点？",
+        "expected_news_ids": [
+          5
+        ],
+        "retrieved_ids": [
+          5,
+          353
+        ],
+        "answer_preview": "央行降准幅度分别为0.5个百分点和0.25个百分点。",
+        "golden_answer_preview": "【央行宣布降准0.5个百分点】释放长期资金约1万亿元，保持流动性合理充裕，支持实体经济。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.3279,
+        "rouge_l_precision": 0.4348,
+        "rouge_l_recall": 0.2632,
+        "vector_similarity": 0.9084
+      },
+      {
+        "id": "RAG004",
+        "category": "事实查询",
+        "question": "春节假期国内旅游出游人次有多少？",
+        "expected_news_ids": [
+          7
+        ],
+        "retrieved_ids": [
+          7
+        ],
+        "answer_preview": "春节假期国内旅游出游4.74亿人次。",
+        "golden_answer_preview": "【春节假期国内旅游出游4.74亿人次】按可比口径较2019年同期增长19.0%，旅游收入6326.87亿元。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.5161,
+        "rouge_l_precision": 1.0,
+        "rouge_l_recall": 0.3478,
+        "vector_similarity": 0.8538
+      },
+      {
+        "id": "RAG005",
+        "category": "事实查询",
+        "question": "C919国产大飞机在哪里演示飞行？",
+        "expected_news_ids": [
+          6
+        ],
+        "retrieved_ids": [
+          6
+        ],
+        "answer_preview": "C919国产大飞机将在新加坡进行演示飞行。",
+        "golden_answer_preview": "【C919国产大飞机开启东南亚演示飞行】首次飞抵新加坡航展，展示我国民用航空工业新成就。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.4333,
+        "rouge_l_precision": 0.65,
+        "rouge_l_recall": 0.325,
+        "vector_similarity": 0.8035
+      },
+      {
+        "id": "RAG006",
+        "category": "事实查询",
+        "question": "我国在量子计算领域有什么突破？",
+        "expected_news_ids": [
+          8
+        ],
+        "retrieved_ids": [
+          300,
+          8,
+          340
+        ],
+        "answer_preview": "我国在量子计算领域取得了多个突破，包括：\n\n1. 中国科学技术大学团队研发的\"祖冲之三号\"量子计算机，处理特定任务的速度比经典超算快1000万倍。\n2. 成功研制的“九章三号”光量子计算原型机，处理高斯玻色取样数学问题的速度比全球最快的超级计算机快一亿亿倍。\n3. 推出了全球首个量子计算云平台\"量子通\"，向公众开放量子计算能力，支持100多种量子应用。",
+        "golden_answer_preview": "【我国科学家在量子计算领域取得新突破】成功研制“九章三号”光量子计算原型机，处理特定问题速度大幅提升。",
+        "top1_recall": 0.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.3333,
+        "rouge_l_f1": 0.3682,
+        "rouge_l_precision": 0.2403,
+        "rouge_l_recall": 0.7872,
+        "vector_similarity": 0.8002
+      },
+      {
+        "id": "RAG007",
+        "category": "事实查询",
+        "question": "2024年中央一号文件发布了吗？",
+        "expected_news_ids": [
+          23
+        ],
+        "retrieved_ids": [
+          23
+        ],
+        "answer_preview": "2024年中央一号文件已经发布。",
+        "golden_answer_preview": "【2024年中央一号文件发布】聚焦推进乡村全面振兴，提出确保国家粮食安全、防止规模性返贫等底线任务。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.4333,
+        "rouge_l_precision": 0.8667,
+        "rouge_l_recall": 0.2889,
+        "vector_similarity": 0.9367
+      },
+      {
+        "id": "RAG008",
+        "category": "事实查询",
+        "question": "中国航天员乘组完成什么任务？",
+        "expected_news_ids": [
+          22
+        ],
+        "retrieved_ids": [
+          22
+        ],
+        "answer_preview": "中国航天员乘组完成了在轨轮换任务，并在驻留期间开展了多项空间科学实验与技术试验，以及空间站平台的维护照料等任务。",
+        "golden_answer_preview": "【中国航天员乘组完成在轨轮换】神舟十七号乘组与神舟十八号乘组在空间站顺利完成在轨轮换任务。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.4,
+        "rouge_l_precision": 0.3585,
+        "rouge_l_recall": 0.4524,
+        "vector_similarity": 0.7593
+      },
+      {
+        "id": "RAG009",
+        "category": "事实查询",
+        "question": "中国乒乓球队世乒赛成绩如何？",
+        "expected_news_ids": [
+          262
+        ],
+        "retrieved_ids": [
+          262,
+          267
+        ],
+        "answer_preview": "中国乒乓球队在世乒赛中包揽男女单打冠军，王楚钦和孙颖莎分别夺冠。王楚钦在男单决赛中以4-2战胜日本选手张本智和，孙颖莎以4-0横扫队友王曼昱。中国队已连续10届世乒赛包揽全部金牌，并在本届世乒赛中共获5金，创单届最多。孙颖莎成为首位实现世乒赛女单三连冠的选手。",
+        "golden_answer_preview": "【中国乒乓球队包揽世乒赛冠军】男女单打双冠王",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.2143,
+        "rouge_l_precision": 0.125,
+        "rouge_l_recall": 0.75,
+        "vector_similarity": 0.6636
+      },
+      {
+        "id": "RAG010",
+        "category": "事实查询",
+        "question": "中国女足亚洲杯夺冠了吗？",
+        "expected_news_ids": [
+          269
+        ],
+        "retrieved_ids": [
+          269,
+          285
+        ],
+        "answer_preview": "中国女足在亚洲杯决赛中以3-2战胜日本队，时隔16年重夺亚洲杯冠军。",
+        "golden_answer_preview": "【中国女足亚洲杯夺冠】时隔16年再登顶",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.5,
+        "rouge_l_precision": 0.3871,
+        "rouge_l_recall": 0.7059,
+        "vector_similarity": 0.7567
+      },
+      {
+        "id": "RAG011",
+        "category": "事实查询",
+        "question": "NBA总决赛哪支球队夺冠？",
+        "expected_news_ids": [
+          258
+        ],
+        "retrieved_ids": [
+          272,
+          258,
+          284
+        ],
+        "answer_preview": "洛杉矶湖人队在NBA总决赛中以4-2击败波士顿凯尔特人，夺得队史第18座总冠军奖杯。",
+        "golden_answer_preview": "【NBA总决赛湖人队夺冠】詹姆斯生涯第四冠",
+        "top1_recall": 0.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.3333,
+        "rouge_l_f1": 0.3448,
+        "rouge_l_precision": 0.2564,
+        "rouge_l_recall": 0.5263,
+        "vector_similarity": 0.6795
+      },
+      {
+        "id": "RAG012",
+        "category": "事实查询",
+        "question": "英超联赛曼城夺冠了吗？",
+        "expected_news_ids": [
+          268
+        ],
+        "retrieved_ids": [
+          268
+        ],
+        "answer_preview": "曼城已经提前四轮夺得2022-2023赛季英超冠军。",
+        "golden_answer_preview": "【英超联赛曼城夺冠】提前四轮锁定冠军",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.4,
+        "rouge_l_precision": 0.3333,
+        "rouge_l_recall": 0.5,
+        "vector_similarity": 0.7911
+      },
+      {
+        "id": "RAG013",
+        "category": "事实查询",
+        "question": "费德勒宣布退役了吗？",
+        "expected_news_ids": [
+          266
+        ],
+        "retrieved_ids": [
+          266
+        ],
+        "answer_preview": "费德勒已正式宣布退役，结束了他的职业网球生涯。",
+        "golden_answer_preview": "【费德勒宣布退役】网球传奇谢幕",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.5294,
+        "rouge_l_precision": 0.4286,
+        "rouge_l_recall": 0.6923,
+        "vector_similarity": 0.8441
+      },
+      {
+        "id": "RAG014",
+        "category": "事实查询",
+        "question": "C罗转会到哪个联赛？",
+        "expected_news_ids": [
+          282
+        ],
+        "retrieved_ids": [
+          282
+        ],
+        "answer_preview": "C罗转会到沙特联赛。",
+        "golden_answer_preview": "【C罗转会沙特联赛】创历史天价转会",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.6667,
+        "rouge_l_precision": 0.8889,
+        "rouge_l_recall": 0.5333,
+        "vector_similarity": 0.7848
+      },
+      {
+        "id": "RAG015",
+        "category": "事实查询",
+        "question": "OpenAI发布GPT-4.5了吗？",
+        "expected_news_ids": [
+          314
+        ],
+        "retrieved_ids": [
+          314
+        ],
+        "answer_preview": "是的，OpenAI已正式发布GPT-4.5。",
+        "golden_answer_preview": "【OpenAI发布GPT-4.5】多模态能力突破",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.6842,
+        "rouge_l_precision": 0.7222,
+        "rouge_l_recall": 0.65,
+        "vector_similarity": 0.8986
+      },
+      {
+        "id": "RAG016",
+        "category": "事实查询",
+        "question": "SpaceX星舰第三次试飞成功了吗？",
+        "expected_news_ids": [
+          302
+        ],
+        "retrieved_ids": [
+          302,
+          325
+        ],
+        "answer_preview": "成功了。SpaceX星舰完成了第三次试飞，首次实现火箭第一级在大气层内可控回收。",
+        "golden_answer_preview": "【SpaceX星舰第三次试飞成功】火箭回收技术再突破",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.5574,
+        "rouge_l_precision": 0.4595,
+        "rouge_l_recall": 0.7083,
+        "vector_similarity": 0.8179
+      },
+      {
+        "id": "RAG017",
+        "category": "事实查询",
+        "question": "英伟达发布AI芯片H100了吗？",
+        "expected_news_ids": [
+          312
+        ],
+        "retrieved_ids": [
+          312
+        ],
+        "answer_preview": "是的，英伟达已发布AI芯片H100。",
+        "golden_answer_preview": "【英伟达发布AI芯片H100】算力提升3倍",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.7429,
+        "rouge_l_precision": 0.8125,
+        "rouge_l_recall": 0.6842,
+        "vector_similarity": 0.9074
+      },
+      {
+        "id": "RAG018",
+        "category": "事实查询",
+        "question": "特斯拉发布AI机器人Optimus了吗？",
+        "expected_news_ids": [
+          335
+        ],
+        "retrieved_ids": [
+          335
+        ],
+        "answer_preview": "是的，特斯拉发布了AI机器人Optimus，并进行了首次公开演示。",
+        "golden_answer_preview": "【特斯拉发布AI机器人Optimus】首次公开演示",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.8679,
+        "rouge_l_precision": 0.7667,
+        "rouge_l_recall": 1.0,
+        "vector_similarity": 0.8531
+      },
+      {
+        "id": "RAG019",
+        "category": "事实查询",
+        "question": "特斯拉Q2财报表现如何？",
+        "expected_news_ids": [
+          352
+        ],
+        "retrieved_ids": [
+          352
+        ],
+        "answer_preview": "特斯拉2023年Q2财报表现超预期，营收210亿美元，净利润2.3亿美元，净利润增长12.3%。电动车销量达到30.5万辆，同比增长25%。股价盘后上涨8.5%。",
+        "golden_answer_preview": "【特斯拉Q2财报超预期】净利润增长12.3%",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.4235,
+        "rouge_l_precision": 0.2687,
+        "rouge_l_recall": 1.0,
+        "vector_similarity": 0.7944
+      },
+      {
+        "id": "RAG020",
+        "category": "事实查询",
+        "question": "苹果Q3营收创新高了吗？",
+        "expected_news_ids": [
+          361
+        ],
+        "retrieved_ids": [
+          361
+        ],
+        "answer_preview": "苹果Q3营收创历史新高，达到940亿美元。",
+        "golden_answer_preview": "【苹果Q3营收创历史新高】服务业务增长强劲",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.5789,
+        "rouge_l_precision": 0.5789,
+        "rouge_l_recall": 0.5789,
+        "vector_similarity": 0.8167
+      },
+      {
+        "id": "RAG021",
+        "category": "事实查询",
+        "question": "全球气候峰会达成什么协议？",
+        "expected_news_ids": [
+          153
+        ],
+        "retrieved_ids": [
+          153,
+          175
+        ],
+        "answer_preview": "全球气候峰会达成的协议是195个国家承诺到2030年将全球碳排放减少50%。",
+        "golden_answer_preview": "【全球气候峰会达成历史性协议】195国承诺2030年碳排放减半",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.7692,
+        "rouge_l_precision": 0.6944,
+        "rouge_l_recall": 0.8621,
+        "vector_similarity": 0.7307
+      },
+      {
+        "id": "RAG022",
+        "category": "事实查询",
+        "question": "美国发布AI监管法案了吗？",
+        "expected_news_ids": [
+          154
+        ],
+        "retrieved_ids": [
+          154
+        ],
+        "answer_preview": "是的，美国已经发布了全球首个AI监管法案。",
+        "golden_answer_preview": "【美国发布全球首个AI监管法案】规范高风险领域AI应用",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.6364,
+        "rouge_l_precision": 0.7368,
+        "rouge_l_recall": 0.56,
+        "vector_similarity": 0.874
+      },
+      {
+        "id": "RAG023",
+        "category": "事实查询",
+        "question": "NASA发现火星什么？",
+        "expected_news_ids": [
+          158
+        ],
+        "retrieved_ids": [
+          158,
+          318
+        ],
+        "answer_preview": "NASA发现火星存在液态水湖，面积达20平方公里，以及大量水冰，证实火星存在液态水。这些发现为寻找外星生命提供了关键证据。",
+        "golden_answer_preview": "【NASA发现火星存在液态水】为寻找外星生命提供关键证据",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.6341,
+        "rouge_l_precision": 0.4643,
+        "rouge_l_recall": 1.0,
+        "vector_similarity": 0.7069
+      },
+      {
+        "id": "RAG024",
+        "category": "事实查询",
+        "question": "中国宣布2060年什么目标？",
+        "expected_news_ids": [
+          156
+        ],
+        "retrieved_ids": [
+          156
+        ],
+        "answer_preview": "中国宣布2060年实现碳中和目标。",
+        "golden_answer_preview": "【中国宣布2060碳中和目标】新能源产业迎来重大机遇",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.65,
+        "rouge_l_precision": 0.8125,
+        "rouge_l_recall": 0.5417,
+        "vector_similarity": 0.8386
+      },
+      {
+        "id": "RAG025",
+        "category": "事实查询",
+        "question": "全球首个数字货币央行在哪里运营？",
+        "expected_news_ids": [
+          159
+        ],
+        "retrieved_ids": [
+          159,
+          174,
+          198
+        ],
+        "answer_preview": "全球首个数字货币央行在欧洲央行运营，数字欧元系统于2023年9月正式上线。",
+        "golden_answer_preview": "【全球首个数字货币央行正式运营】数字欧元将与传统货币并行",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.3333,
+        "rouge_l_f1": 0.5574,
+        "rouge_l_precision": 0.4857,
+        "rouge_l_recall": 0.6538,
+        "vector_similarity": 0.8315
+      },
+      {
+        "id": "RAG026",
+        "category": "事实查询",
+        "question": "印尼地震引发什么预警？",
+        "expected_news_ids": [
+          160
+        ],
+        "retrieved_ids": [
+          160
+        ],
+        "answer_preview": "印尼地震引发了海啸预警。",
+        "golden_answer_preview": "【印度尼西亚地震引发海啸预警】3000人紧急撤离海岸线",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.5556,
+        "rouge_l_precision": 0.9091,
+        "rouge_l_recall": 0.4,
+        "vector_similarity": 0.8456
+      },
+      {
+        "id": "RAG027",
+        "category": "事实查询",
+        "question": "新疆大石峡水利枢纽工程进展？",
+        "expected_news_ids": [
+          102
+        ],
+        "retrieved_ids": [
+          102
+        ],
+        "answer_preview": "新疆大石峡水利枢纽工程于2025年9月20日正式下闸蓄水，现已转入运行准备阶段。该工程计划于2026年全面完工。",
+        "golden_answer_preview": "【新疆大石峡水利枢纽工程正式下闸蓄水】世界最高混凝土面板砂砾石坝下闸蓄水，转入运行准备阶段。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.5263,
+        "rouge_l_precision": 0.4717,
+        "rouge_l_recall": 0.5952,
+        "vector_similarity": 0.8348
+      },
+      {
+        "id": "RAG028",
+        "category": "事实查询",
+        "question": "我国首台15米口径望远镜启动建设了吗？",
+        "expected_news_ids": [
+          104
+        ],
+        "retrieved_ids": [
+          104
+        ],
+        "answer_preview": "我国首台15米口径亚毫米波望远镜已于2025年9月20日在青海德令哈正式启动建设。",
+        "golden_answer_preview": "【我国首台15米口径亚毫米波望远镜启动建设】首台自主研发的15米口径亚毫米波望远镜在青海德令哈启动建设。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.6067,
+        "rouge_l_precision": 0.675,
+        "rouge_l_recall": 0.551,
+        "vector_similarity": 0.8208
+      },
+      {
+        "id": "RAG029",
+        "category": "事实查询",
+        "question": "社区食堂解决了什么问题？",
+        "expected_news_ids": [
+          59
+        ],
+        "retrieved_ids": [
+          59
+        ],
+        "answer_preview": "社区食堂解决了老年人吃饭难的问题，特别是针对60岁以上的老人提供优惠餐食，并为行动不便的老人提供送餐上门服务。",
+        "golden_answer_preview": "【社区食堂解决老年人吃饭难】10元两荤两素套餐惠及500余名老人",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.3902,
+        "rouge_l_precision": 0.3077,
+        "rouge_l_recall": 0.5333,
+        "vector_similarity": 0.7573
+      },
+      {
+        "id": "RAG030",
+        "category": "事实查询",
+        "question": "智能报警器守护什么人群？",
+        "expected_news_ids": [
+          90
+        ],
+        "retrieved_ids": [
+          90
+        ],
+        "answer_preview": "智能报警器主要守护独居老人。",
+        "golden_answer_preview": "【智能报警器守护独居老人】社区安装监测设备，异常情况自动报警",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.55,
+        "rouge_l_precision": 0.8462,
+        "rouge_l_recall": 0.4074,
+        "vector_similarity": 0.7787
+      }
+    ],
+    "800": [
+      {
+        "id": "RAG001",
+        "category": "事实查询",
+        "question": "社区时间银行养老模式是什么？",
+        "expected_news_ids": [
+          95
+        ],
+        "retrieved_ids": [
+          95
+        ],
+        "answer_preview": "社区时间银行养老模式是指低龄老人（60岁以上）为高龄老人（80岁以上）提供服务，并将所提供的服务时间进行存储，未来可以用这些存储的时间兑换其他服务。这种模式旨在通过互助的方式，增强社区的温暖感。",
+        "golden_answer_preview": "【社区推广“时间银行”养老】低龄老人服务高龄老人，存储服务时间兑换",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.3729,
+        "rouge_l_precision": 0.25,
+        "rouge_l_recall": 0.7333,
+        "vector_similarity": 0.8752
+      },
+      {
+        "id": "RAG002",
+        "category": "事实查询",
+        "question": "2023年我国GDP同比增长多少？",
+        "expected_news_ids": [
+          4
+        ],
+        "retrieved_ids": [
+          4,
+          34,
+          351
+        ],
+        "answer_preview": "2023年我国GDP同比增长5.2%。",
+        "golden_answer_preview": "【2023年我国GDP同比增长5.2%】经济总量超126万亿元，国民经济回升向好，高质量发展扎实推进。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.3333,
+        "rouge_l_f1": 0.5333,
+        "rouge_l_precision": 1.0,
+        "rouge_l_recall": 0.3636,
+        "vector_similarity": 0.9098
+      },
+      {
+        "id": "RAG003",
+        "category": "事实查询",
+        "question": "央行降准幅度是多少个百分点？",
+        "expected_news_ids": [
+          5
+        ],
+        "retrieved_ids": [
+          5,
+          353
+        ],
+        "answer_preview": "央行降准幅度为0.5个百分点。",
+        "golden_answer_preview": "【央行宣布降准0.5个百分点】释放长期资金约1万亿元，保持流动性合理充裕，支持实体经济。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.3922,
+        "rouge_l_precision": 0.7692,
+        "rouge_l_recall": 0.2632,
+        "vector_similarity": 0.9077
+      },
+      {
+        "id": "RAG004",
+        "category": "事实查询",
+        "question": "春节假期国内旅游出游人次有多少？",
+        "expected_news_ids": [
+          7
+        ],
+        "retrieved_ids": [
+          7
+        ],
+        "answer_preview": "春节假期国内旅游出游4.74亿人次。",
+        "golden_answer_preview": "【春节假期国内旅游出游4.74亿人次】按可比口径较2019年同期增长19.0%，旅游收入6326.87亿元。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.5161,
+        "rouge_l_precision": 1.0,
+        "rouge_l_recall": 0.3478,
+        "vector_similarity": 0.8538
+      },
+      {
+        "id": "RAG005",
+        "category": "事实查询",
+        "question": "C919国产大飞机在哪里演示飞行？",
+        "expected_news_ids": [
+          6
+        ],
+        "retrieved_ids": [
+          6
+        ],
+        "answer_preview": "C919国产大飞机将在新加坡进行演示飞行。",
+        "golden_answer_preview": "【C919国产大飞机开启东南亚演示飞行】首次飞抵新加坡航展，展示我国民用航空工业新成就。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.4333,
+        "rouge_l_precision": 0.65,
+        "rouge_l_recall": 0.325,
+        "vector_similarity": 0.8035
+      },
+      {
+        "id": "RAG006",
+        "category": "事实查询",
+        "question": "我国在量子计算领域有什么突破？",
+        "expected_news_ids": [
+          8
+        ],
+        "retrieved_ids": [
+          300,
+          8,
+          340
+        ],
+        "answer_preview": "我国在量子计算领域取得了多个突破，包括：\n\n1. 中国科学技术大学团队研发的“祖冲之三号”量子计算机，处理特定任务的速度比经典超算快1000万倍，采用超导量子芯片，实现100个量子比特的稳定操控。\n\n2. 研究团队成功构建了“九章三号”光量子计算原型机，处理高斯玻色取样数学问题的速度比全球最快的超级计算机快一亿亿倍，复杂度提升百万倍。\n\n3. 中国推出全球首个量子计算云平台“量子通”，向公众开放量",
+        "golden_answer_preview": "【我国科学家在量子计算领域取得新突破】成功研制“九章三号”光量子计算原型机，处理特定问题速度大幅提升。",
+        "top1_recall": 0.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.3333,
+        "rouge_l_f1": 0.296,
+        "rouge_l_precision": 0.1823,
+        "rouge_l_recall": 0.7872,
+        "vector_similarity": 0.7999
+      },
+      {
+        "id": "RAG007",
+        "category": "事实查询",
+        "question": "2024年中央一号文件发布了吗？",
+        "expected_news_ids": [
+          23
+        ],
+        "retrieved_ids": [
+          23
+        ],
+        "answer_preview": "2024年中央一号文件已经发布。",
+        "golden_answer_preview": "【2024年中央一号文件发布】聚焦推进乡村全面振兴，提出确保国家粮食安全、防止规模性返贫等底线任务。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.4333,
+        "rouge_l_precision": 0.8667,
+        "rouge_l_recall": 0.2889,
+        "vector_similarity": 0.9367
+      },
+      {
+        "id": "RAG008",
+        "category": "事实查询",
+        "question": "中国航天员乘组完成什么任务？",
+        "expected_news_ids": [
+          22
+        ],
+        "retrieved_ids": [
+          22
+        ],
+        "answer_preview": "中国航天员乘组完成了在轨轮换任务，并在驻留期间开展了多项空间科学实验与技术试验，以及空间站平台的维护照料等任务。",
+        "golden_answer_preview": "【中国航天员乘组完成在轨轮换】神舟十七号乘组与神舟十八号乘组在空间站顺利完成在轨轮换任务。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.4,
+        "rouge_l_precision": 0.3585,
+        "rouge_l_recall": 0.4524,
+        "vector_similarity": 0.7593
+      },
+      {
+        "id": "RAG009",
+        "category": "事实查询",
+        "question": "中国乒乓球队世乒赛成绩如何？",
+        "expected_news_ids": [
+          262
+        ],
+        "retrieved_ids": [
+          262,
+          267
+        ],
+        "answer_preview": "中国乒乓球队在世乒赛中包揽男女单打冠军，王楚钦和孙颖莎分别夺冠。中国队已连续10届世乒赛包揽全部金牌，创造历史。本届世乒赛中国队共获5金，创单届最多。孙颖莎成为首位实现世乒赛女单三连冠的选手。",
+        "golden_answer_preview": "【中国乒乓球队包揽世乒赛冠军】男女单打双冠王",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.2752,
+        "rouge_l_precision": 0.1685,
+        "rouge_l_recall": 0.75,
+        "vector_similarity": 0.6796
+      },
+      {
+        "id": "RAG010",
+        "category": "事实查询",
+        "question": "中国女足亚洲杯夺冠了吗？",
+        "expected_news_ids": [
+          269
+        ],
+        "retrieved_ids": [
+          269,
+          285
+        ],
+        "answer_preview": "中国女足在亚洲杯决赛中以3-2战胜日本队，时隔16年重夺亚洲杯冠军。",
+        "golden_answer_preview": "【中国女足亚洲杯夺冠】时隔16年再登顶",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.5,
+        "rouge_l_precision": 0.3871,
+        "rouge_l_recall": 0.7059,
+        "vector_similarity": 0.7567
+      },
+      {
+        "id": "RAG011",
+        "category": "事实查询",
+        "question": "NBA总决赛哪支球队夺冠？",
+        "expected_news_ids": [
+          258
+        ],
+        "retrieved_ids": [
+          272,
+          258,
+          284
+        ],
+        "answer_preview": "洛杉矶湖人队在NBA总决赛中夺冠。",
+        "golden_answer_preview": "【NBA总决赛湖人队夺冠】詹姆斯生涯第四冠",
+        "top1_recall": 0.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.3333,
+        "rouge_l_f1": 0.4571,
+        "rouge_l_precision": 0.5,
+        "rouge_l_recall": 0.4211,
+        "vector_similarity": 0.7582
+      },
+      {
+        "id": "RAG012",
+        "category": "事实查询",
+        "question": "英超联赛曼城夺冠了吗？",
+        "expected_news_ids": [
+          268
+        ],
+        "retrieved_ids": [
+          268
+        ],
+        "answer_preview": "曼城已经提前四轮夺得2022-2023赛季英超冠军。",
+        "golden_answer_preview": "【英超联赛曼城夺冠】提前四轮锁定冠军",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.4,
+        "rouge_l_precision": 0.3333,
+        "rouge_l_recall": 0.5,
+        "vector_similarity": 0.7911
+      },
+      {
+        "id": "RAG013",
+        "category": "事实查询",
+        "question": "费德勒宣布退役了吗？",
+        "expected_news_ids": [
+          266
+        ],
+        "retrieved_ids": [
+          266
+        ],
+        "answer_preview": "费德勒正式宣布退役，结束了他的职业网球生涯。",
+        "golden_answer_preview": "【费德勒宣布退役】网球传奇谢幕",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.5455,
+        "rouge_l_precision": 0.45,
+        "rouge_l_recall": 0.6923,
+        "vector_similarity": 0.8387
+      },
+      {
+        "id": "RAG014",
+        "category": "事实查询",
+        "question": "C罗转会到哪个联赛？",
+        "expected_news_ids": [
+          282
+        ],
+        "retrieved_ids": [
+          282
+        ],
+        "answer_preview": "C罗转会到沙特联赛。",
+        "golden_answer_preview": "【C罗转会沙特联赛】创历史天价转会",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.6667,
+        "rouge_l_precision": 0.8889,
+        "rouge_l_recall": 0.5333,
+        "vector_similarity": 0.7848
+      },
+      {
+        "id": "RAG015",
+        "category": "事实查询",
+        "question": "OpenAI发布GPT-4.5了吗？",
+        "expected_news_ids": [
+          314
+        ],
+        "retrieved_ids": [
+          314
+        ],
+        "answer_preview": "是的，OpenAI已正式发布GPT-4.5。",
+        "golden_answer_preview": "【OpenAI发布GPT-4.5】多模态能力突破",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.6842,
+        "rouge_l_precision": 0.7222,
+        "rouge_l_recall": 0.65,
+        "vector_similarity": 0.8986
+      },
+      {
+        "id": "RAG016",
+        "category": "事实查询",
+        "question": "SpaceX星舰第三次试飞成功了吗？",
+        "expected_news_ids": [
+          302
+        ],
+        "retrieved_ids": [
+          302,
+          325
+        ],
+        "answer_preview": "成功了，SpaceX星舰完成了第三次试飞，首次实现火箭第一级在大气层内可控回收。",
+        "golden_answer_preview": "【SpaceX星舰第三次试飞成功】火箭回收技术再突破",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.5574,
+        "rouge_l_precision": 0.4595,
+        "rouge_l_recall": 0.7083,
+        "vector_similarity": 0.8044
+      },
+      {
+        "id": "RAG017",
+        "category": "事实查询",
+        "question": "英伟达发布AI芯片H100了吗？",
+        "expected_news_ids": [
+          312
+        ],
+        "retrieved_ids": [
+          312
+        ],
+        "answer_preview": "是的，英伟达发布了AI芯片H100。",
+        "golden_answer_preview": "【英伟达发布AI芯片H100】算力提升3倍",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.7429,
+        "rouge_l_precision": 0.8125,
+        "rouge_l_recall": 0.6842,
+        "vector_similarity": 0.9052
+      },
+      {
+        "id": "RAG018",
+        "category": "事实查询",
+        "question": "特斯拉发布AI机器人Optimus了吗？",
+        "expected_news_ids": [
+          335
+        ],
+        "retrieved_ids": [
+          335
+        ],
+        "answer_preview": "是的，特斯拉发布了AI机器人Optimus，并进行了首次公开演示。",
+        "golden_answer_preview": "【特斯拉发布AI机器人Optimus】首次公开演示",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.8679,
+        "rouge_l_precision": 0.7667,
+        "rouge_l_recall": 1.0,
+        "vector_similarity": 0.8531
+      },
+      {
+        "id": "RAG019",
+        "category": "事实查询",
+        "question": "特斯拉Q2财报表现如何？",
+        "expected_news_ids": [
+          352
+        ],
+        "retrieved_ids": [
+          352
+        ],
+        "answer_preview": "特斯拉2023年Q2财报表现超预期，营收为210亿美元，净利润为2.3亿美元，净利润增长12.3%。电动车销量达到30.5万辆，同比增长25%。股价盘后上涨8.5%。",
+        "golden_answer_preview": "【特斯拉Q2财报超预期】净利润增长12.3%",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.4138,
+        "rouge_l_precision": 0.2609,
+        "rouge_l_recall": 1.0,
+        "vector_similarity": 0.7877
+      },
+      {
+        "id": "RAG020",
+        "category": "事实查询",
+        "question": "苹果Q3营收创新高了吗？",
+        "expected_news_ids": [
+          361
+        ],
+        "retrieved_ids": [
+          361
+        ],
+        "answer_preview": "是的，苹果Q3营收创历史新高，达到940亿美元。",
+        "golden_answer_preview": "【苹果Q3营收创历史新高】服务业务增长强劲",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.55,
+        "rouge_l_precision": 0.5238,
+        "rouge_l_recall": 0.5789,
+        "vector_similarity": 0.8256
+      },
+      {
+        "id": "RAG021",
+        "category": "事实查询",
+        "question": "全球气候峰会达成什么协议？",
+        "expected_news_ids": [
+          153
+        ],
+        "retrieved_ids": [
+          153,
+          175
+        ],
+        "answer_preview": "全球气候峰会达成的协议是195个国家承诺到2030年将全球碳排放减少50%。",
+        "golden_answer_preview": "【全球气候峰会达成历史性协议】195国承诺2030年碳排放减半",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.7692,
+        "rouge_l_precision": 0.6944,
+        "rouge_l_recall": 0.8621,
+        "vector_similarity": 0.7307
+      },
+      {
+        "id": "RAG022",
+        "category": "事实查询",
+        "question": "美国发布AI监管法案了吗？",
+        "expected_news_ids": [
+          154
+        ],
+        "retrieved_ids": [
+          154
+        ],
+        "answer_preview": "是的，美国联邦政府正式公布了《人工智能监管法案》，成为全球首个制定全面AI监管框架的国家。",
+        "golden_answer_preview": "【美国发布全球首个AI监管法案】规范高风险领域AI应用",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.3385,
+        "rouge_l_precision": 0.275,
+        "rouge_l_recall": 0.44,
+        "vector_similarity": 0.746
+      },
+      {
+        "id": "RAG023",
+        "category": "事实查询",
+        "question": "NASA发现火星什么？",
+        "expected_news_ids": [
+          158
+        ],
+        "retrieved_ids": [
+          158,
+          318
+        ],
+        "answer_preview": "NASA发现火星存在液态水湖，面积达20平方公里，以及大量水冰，证实火星存在液态水。",
+        "golden_answer_preview": "【NASA发现火星存在液态水】为寻找外星生命提供关键证据",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.4375,
+        "rouge_l_precision": 0.3684,
+        "rouge_l_recall": 0.5385,
+        "vector_similarity": 0.6825
+      },
+      {
+        "id": "RAG024",
+        "category": "事实查询",
+        "question": "中国宣布2060年什么目标？",
+        "expected_news_ids": [
+          156
+        ],
+        "retrieved_ids": [
+          156
+        ],
+        "answer_preview": "中国宣布2060年实现碳中和目标。",
+        "golden_answer_preview": "【中国宣布2060碳中和目标】新能源产业迎来重大机遇",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.65,
+        "rouge_l_precision": 0.8125,
+        "rouge_l_recall": 0.5417,
+        "vector_similarity": 0.8386
+      },
+      {
+        "id": "RAG025",
+        "category": "事实查询",
+        "question": "全球首个数字货币央行在哪里运营？",
+        "expected_news_ids": [
+          159
+        ],
+        "retrieved_ids": [
+          159,
+          174,
+          198
+        ],
+        "answer_preview": "全球首个数字货币央行在欧洲央行运营。",
+        "golden_answer_preview": "【全球首个数字货币央行正式运营】数字欧元将与传统货币并行",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.3333,
+        "rouge_l_f1": 0.5581,
+        "rouge_l_precision": 0.7059,
+        "rouge_l_recall": 0.4615,
+        "vector_similarity": 0.8958
+      },
+      {
+        "id": "RAG026",
+        "category": "事实查询",
+        "question": "印尼地震引发什么预警？",
+        "expected_news_ids": [
+          160
+        ],
+        "retrieved_ids": [
+          160
+        ],
+        "answer_preview": "印尼地震引发了海啸预警。",
+        "golden_answer_preview": "【印度尼西亚地震引发海啸预警】3000人紧急撤离海岸线",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.5556,
+        "rouge_l_precision": 0.9091,
+        "rouge_l_recall": 0.4,
+        "vector_similarity": 0.8456
+      },
+      {
+        "id": "RAG027",
+        "category": "事实查询",
+        "question": "新疆大石峡水利枢纽工程进展？",
+        "expected_news_ids": [
+          102
+        ],
+        "retrieved_ids": [
+          102
+        ],
+        "answer_preview": "新疆大石峡水利枢纽工程于2025年9月20日正式下闸蓄水，转入运行准备阶段。该工程计划于2026年全面完工。",
+        "golden_answer_preview": "【新疆大石峡水利枢纽工程正式下闸蓄水】世界最高混凝土面板砂砾石坝下闸蓄水，转入运行准备阶段。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.5376,
+        "rouge_l_precision": 0.4902,
+        "rouge_l_recall": 0.5952,
+        "vector_similarity": 0.8374
+      },
+      {
+        "id": "RAG028",
+        "category": "事实查询",
+        "question": "我国首台15米口径望远镜启动建设了吗？",
+        "expected_news_ids": [
+          104
+        ],
+        "retrieved_ids": [
+          104
+        ],
+        "answer_preview": "我国首台15米口径亚毫米波望远镜已于2025年9月20日在青海德令哈正式启动建设。",
+        "golden_answer_preview": "【我国首台15米口径亚毫米波望远镜启动建设】首台自主研发的15米口径亚毫米波望远镜在青海德令哈启动建设。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.6067,
+        "rouge_l_precision": 0.675,
+        "rouge_l_recall": 0.551,
+        "vector_similarity": 0.8208
+      },
+      {
+        "id": "RAG029",
+        "category": "事实查询",
+        "question": "社区食堂解决了什么问题？",
+        "expected_news_ids": [
+          59
+        ],
+        "retrieved_ids": [
+          59
+        ],
+        "answer_preview": "社区食堂解决了老年人吃饭难的问题，特别是为60岁以上的老人提供了优惠餐食和送餐上门服务。",
+        "golden_answer_preview": "【社区食堂解决老年人吃饭难】10元两荤两素套餐惠及500余名老人",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.4167,
+        "rouge_l_precision": 0.3571,
+        "rouge_l_recall": 0.5,
+        "vector_similarity": 0.7471
+      },
+      {
+        "id": "RAG030",
+        "category": "事实查询",
+        "question": "智能报警器守护什么人群？",
+        "expected_news_ids": [
+          90
+        ],
+        "retrieved_ids": [
+          90
+        ],
+        "answer_preview": "智能报警器主要守护独居老人。",
+        "golden_answer_preview": "【智能报警器守护独居老人】社区安装监测设备，异常情况自动报警",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.55,
+        "rouge_l_precision": 0.8462,
+        "rouge_l_recall": 0.4074,
+        "vector_similarity": 0.7787
+      }
+    ],
+    "1000": [
+      {
+        "id": "RAG001",
+        "category": "事实查询",
+        "question": "社区时间银行养老模式是什么？",
+        "expected_news_ids": [
+          95
+        ],
+        "retrieved_ids": [],
+        "answer_preview": "向量库中暂无新闻数据，请先执行同步操作。",
+        "golden_answer_preview": "【社区推广“时间银行”养老】低龄老人服务高龄老人，存储服务时间兑换",
+        "top1_recall": 0.0,
+        "top3_recall": 0.0,
+        "top5_recall": 0.0,
+        "top3_precision": 0.0,
+        "rouge_l_f1": 0.0417,
+        "rouge_l_precision": 0.0556,
+        "rouge_l_recall": 0.0333,
+        "vector_similarity": 0.3323
+      },
+      {
+        "id": "RAG002",
+        "category": "事实查询",
+        "question": "2023年我国GDP同比增长多少？",
+        "expected_news_ids": [
+          4
+        ],
+        "retrieved_ids": [
+          4,
+          34,
+          351
+        ],
+        "answer_preview": "2023年我国GDP同比增长5.2%。",
+        "golden_answer_preview": "【2023年我国GDP同比增长5.2%】经济总量超126万亿元，国民经济回升向好，高质量发展扎实推进。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.3333,
+        "rouge_l_f1": 0.5333,
+        "rouge_l_precision": 1.0,
+        "rouge_l_recall": 0.3636,
+        "vector_similarity": 0.9098
+      },
+      {
+        "id": "RAG003",
+        "category": "事实查询",
+        "question": "央行降准幅度是多少个百分点？",
+        "expected_news_ids": [
+          5
+        ],
+        "retrieved_ids": [
+          5,
+          353
+        ],
+        "answer_preview": "央行降准幅度分别为0.5个百分点和0.25个百分点。",
+        "golden_answer_preview": "【央行宣布降准0.5个百分点】释放长期资金约1万亿元，保持流动性合理充裕，支持实体经济。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.3279,
+        "rouge_l_precision": 0.4348,
+        "rouge_l_recall": 0.2632,
+        "vector_similarity": 0.9084
+      },
+      {
+        "id": "RAG004",
+        "category": "事实查询",
+        "question": "春节假期国内旅游出游人次有多少？",
+        "expected_news_ids": [
+          7
+        ],
+        "retrieved_ids": [
+          7
+        ],
+        "answer_preview": "春节假期国内旅游出游4.74亿人次。",
+        "golden_answer_preview": "【春节假期国内旅游出游4.74亿人次】按可比口径较2019年同期增长19.0%，旅游收入6326.87亿元。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.5161,
+        "rouge_l_precision": 1.0,
+        "rouge_l_recall": 0.3478,
+        "vector_similarity": 0.8538
+      },
+      {
+        "id": "RAG005",
+        "category": "事实查询",
+        "question": "C919国产大飞机在哪里演示飞行？",
+        "expected_news_ids": [
+          6
+        ],
+        "retrieved_ids": [
+          6
+        ],
+        "answer_preview": "C919国产大飞机将在新加坡进行演示飞行。",
+        "golden_answer_preview": "【C919国产大飞机开启东南亚演示飞行】首次飞抵新加坡航展，展示我国民用航空工业新成就。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.4333,
+        "rouge_l_precision": 0.65,
+        "rouge_l_recall": 0.325,
+        "vector_similarity": 0.8035
+      },
+      {
+        "id": "RAG006",
+        "category": "事实查询",
+        "question": "我国在量子计算领域有什么突破？",
+        "expected_news_ids": [
+          8
+        ],
+        "retrieved_ids": [
+          300,
+          8,
+          340
+        ],
+        "answer_preview": "我国在量子计算领域取得了多个突破，包括：\n\n1. 中国科学技术大学团队研发的\"祖冲之三号\"量子计算机，处理特定任务的速度比经典超算快1000万倍，采用超导量子芯片，稳定操控100个量子比特。\n\n2. 研究团队成功构建了\"九章三号\"光量子计算原型机，处理高斯玻色取样数学问题时，其速度比全球最快的超级计算机快一亿亿倍，复杂度提升百万倍。\n\n3. 中国推出全球首个量子计算云平台\"量子通\"，向公众开放量子",
+        "golden_answer_preview": "【我国科学家在量子计算领域取得新突破】成功研制“九章三号”光量子计算原型机，处理特定问题速度大幅提升。",
+        "top1_recall": 0.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.3333,
+        "rouge_l_f1": 0.2893,
+        "rouge_l_precision": 0.1795,
+        "rouge_l_recall": 0.7447,
+        "vector_similarity": 0.811
+      },
+      {
+        "id": "RAG007",
+        "category": "事实查询",
+        "question": "2024年中央一号文件发布了吗？",
+        "expected_news_ids": [
+          23
+        ],
+        "retrieved_ids": [
+          23
+        ],
+        "answer_preview": "2024年中央一号文件已经发布。",
+        "golden_answer_preview": "【2024年中央一号文件发布】聚焦推进乡村全面振兴，提出确保国家粮食安全、防止规模性返贫等底线任务。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.4333,
+        "rouge_l_precision": 0.8667,
+        "rouge_l_recall": 0.2889,
+        "vector_similarity": 0.9367
+      },
+      {
+        "id": "RAG008",
+        "category": "事实查询",
+        "question": "中国航天员乘组完成什么任务？",
+        "expected_news_ids": [
+          22
+        ],
+        "retrieved_ids": [
+          22
+        ],
+        "answer_preview": "中国航天员乘组完成了在轨轮换任务，并在驻留期间开展了多项空间科学实验与技术试验，以及空间站平台维护照料等任务。",
+        "golden_answer_preview": "【中国航天员乘组完成在轨轮换】神舟十七号乘组与神舟十八号乘组在空间站顺利完成在轨轮换任务。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.4043,
+        "rouge_l_precision": 0.3654,
+        "rouge_l_recall": 0.4524,
+        "vector_similarity": 0.7643
+      },
+      {
+        "id": "RAG009",
+        "category": "事实查询",
+        "question": "中国乒乓球队世乒赛成绩如何？",
+        "expected_news_ids": [
+          262
+        ],
+        "retrieved_ids": [
+          262,
+          267
+        ],
+        "answer_preview": "中国乒乓球队在世乒赛中包揽男女单打冠军，王楚钦和孙颖莎分别夺冠。王楚钦在男单决赛中以4-2战胜日本选手张本智和，孙颖莎以4-0横扫队友王曼昱。中国队已连续10届世乒赛包揽全部金牌，并在本届赛事中共获5金，创单届最多。孙颖莎成为首位实现世乒赛女单三连冠的选手。",
+        "golden_answer_preview": "【中国乒乓球队包揽世乒赛冠军】男女单打双冠王",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.2158,
+        "rouge_l_precision": 0.1261,
+        "rouge_l_recall": 0.75,
+        "vector_similarity": 0.6661
+      },
+      {
+        "id": "RAG010",
+        "category": "事实查询",
+        "question": "中国女足亚洲杯夺冠了吗？",
+        "expected_news_ids": [
+          269
+        ],
+        "retrieved_ids": [
+          269,
+          285
+        ],
+        "answer_preview": "中国女足在亚洲杯决赛中以3-2战胜日本队，时隔16年重夺亚洲杯冠军。",
+        "golden_answer_preview": "【中国女足亚洲杯夺冠】时隔16年再登顶",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.5,
+        "rouge_l_precision": 0.3871,
+        "rouge_l_recall": 0.7059,
+        "vector_similarity": 0.7567
+      },
+      {
+        "id": "RAG011",
+        "category": "事实查询",
+        "question": "NBA总决赛哪支球队夺冠？",
+        "expected_news_ids": [
+          258
+        ],
+        "retrieved_ids": [
+          272,
+          258,
+          284
+        ],
+        "answer_preview": "洛杉矶湖人队在NBA总决赛中夺冠。",
+        "golden_answer_preview": "【NBA总决赛湖人队夺冠】詹姆斯生涯第四冠",
+        "top1_recall": 0.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.3333,
+        "rouge_l_f1": 0.4571,
+        "rouge_l_precision": 0.5,
+        "rouge_l_recall": 0.4211,
+        "vector_similarity": 0.7582
+      },
+      {
+        "id": "RAG012",
+        "category": "事实查询",
+        "question": "英超联赛曼城夺冠了吗？",
+        "expected_news_ids": [
+          268
+        ],
+        "retrieved_ids": [
+          268
+        ],
+        "answer_preview": "曼城已经提前四轮夺得2022-2023赛季英超冠军。",
+        "golden_answer_preview": "【英超联赛曼城夺冠】提前四轮锁定冠军",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.4,
+        "rouge_l_precision": 0.3333,
+        "rouge_l_recall": 0.5,
+        "vector_similarity": 0.7911
+      },
+      {
+        "id": "RAG013",
+        "category": "事实查询",
+        "question": "费德勒宣布退役了吗？",
+        "expected_news_ids": [
+          266
+        ],
+        "retrieved_ids": [
+          266
+        ],
+        "answer_preview": "费德勒正式宣布退役，结束了他的职业网球生涯。",
+        "golden_answer_preview": "【费德勒宣布退役】网球传奇谢幕",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.5455,
+        "rouge_l_precision": 0.45,
+        "rouge_l_recall": 0.6923,
+        "vector_similarity": 0.8387
+      },
+      {
+        "id": "RAG014",
+        "category": "事实查询",
+        "question": "C罗转会到哪个联赛？",
+        "expected_news_ids": [
+          282
+        ],
+        "retrieved_ids": [
+          282
+        ],
+        "answer_preview": "C罗转会到沙特联赛。",
+        "golden_answer_preview": "【C罗转会沙特联赛】创历史天价转会",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.6667,
+        "rouge_l_precision": 0.8889,
+        "rouge_l_recall": 0.5333,
+        "vector_similarity": 0.7848
+      },
+      {
+        "id": "RAG015",
+        "category": "事实查询",
+        "question": "OpenAI发布GPT-4.5了吗？",
+        "expected_news_ids": [
+          314
+        ],
+        "retrieved_ids": [
+          314
+        ],
+        "answer_preview": "是的，OpenAI已经正式发布了GPT-4.5。",
+        "golden_answer_preview": "【OpenAI发布GPT-4.5】多模态能力突破",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.65,
+        "rouge_l_precision": 0.65,
+        "rouge_l_recall": 0.65,
+        "vector_similarity": 0.8994
+      },
+      {
+        "id": "RAG016",
+        "category": "事实查询",
+        "question": "SpaceX星舰第三次试飞成功了吗？",
+        "expected_news_ids": [
+          302
+        ],
+        "retrieved_ids": [
+          302,
+          325
+        ],
+        "answer_preview": "成功了，SpaceX星舰完成了第三次试飞，首次实现火箭第一级在大气层内可控回收。",
+        "golden_answer_preview": "【SpaceX星舰第三次试飞成功】火箭回收技术再突破",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.5574,
+        "rouge_l_precision": 0.4595,
+        "rouge_l_recall": 0.7083,
+        "vector_similarity": 0.8044
+      },
+      {
+        "id": "RAG017",
+        "category": "事实查询",
+        "question": "英伟达发布AI芯片H100了吗？",
+        "expected_news_ids": [
+          312
+        ],
+        "retrieved_ids": [
+          312
+        ],
+        "answer_preview": "是的，英伟达发布了AI芯片H100。",
+        "golden_answer_preview": "【英伟达发布AI芯片H100】算力提升3倍",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.7429,
+        "rouge_l_precision": 0.8125,
+        "rouge_l_recall": 0.6842,
+        "vector_similarity": 0.9052
+      },
+      {
+        "id": "RAG018",
+        "category": "事实查询",
+        "question": "特斯拉发布AI机器人Optimus了吗？",
+        "expected_news_ids": [
+          335
+        ],
+        "retrieved_ids": [
+          335
+        ],
+        "answer_preview": "是的，特斯拉发布了AI机器人Optimus，并进行了首次公开演示。",
+        "golden_answer_preview": "【特斯拉发布AI机器人Optimus】首次公开演示",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.8679,
+        "rouge_l_precision": 0.7667,
+        "rouge_l_recall": 1.0,
+        "vector_similarity": 0.8531
+      },
+      {
+        "id": "RAG019",
+        "category": "事实查询",
+        "question": "特斯拉Q2财报表现如何？",
+        "expected_news_ids": [
+          352
+        ],
+        "retrieved_ids": [
+          352
+        ],
+        "answer_preview": "特斯拉2023年Q2财报表现超预期，营收210亿美元，净利润2.3亿美元，净利润增长12.3%。电动车销量达30.5万辆，同比增长25%。股价盘后上涨8.5%。",
+        "golden_answer_preview": "【特斯拉Q2财报超预期】净利润增长12.3%",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.4286,
+        "rouge_l_precision": 0.2727,
+        "rouge_l_recall": 1.0,
+        "vector_similarity": 0.797
+      },
+      {
+        "id": "RAG020",
+        "category": "事实查询",
+        "question": "苹果Q3营收创新高了吗？",
+        "expected_news_ids": [
+          361
+        ],
+        "retrieved_ids": [
+          361
+        ],
+        "answer_preview": "是的，苹果Q3营收创历史新高，达到940亿美元。",
+        "golden_answer_preview": "【苹果Q3营收创历史新高】服务业务增长强劲",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.55,
+        "rouge_l_precision": 0.5238,
+        "rouge_l_recall": 0.5789,
+        "vector_similarity": 0.8256
+      },
+      {
+        "id": "RAG021",
+        "category": "事实查询",
+        "question": "全球气候峰会达成什么协议？",
+        "expected_news_ids": [
+          153
+        ],
+        "retrieved_ids": [
+          153,
+          175
+        ],
+        "answer_preview": "全球气候峰会达成的协议是195个国家承诺到2030年将全球碳排放减少50%。该协议由欧盟、美国和中国共同推动，预计每年减少10亿吨二氧化碳排放。",
+        "golden_answer_preview": "【全球气候峰会达成历史性协议】195国承诺2030年碳排放减半",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.5208,
+        "rouge_l_precision": 0.3731,
+        "rouge_l_recall": 0.8621,
+        "vector_similarity": 0.748
+      },
+      {
+        "id": "RAG022",
+        "category": "事实查询",
+        "question": "美国发布AI监管法案了吗？",
+        "expected_news_ids": [
+          154
+        ],
+        "retrieved_ids": [
+          154
+        ],
+        "answer_preview": "是的，美国联邦政府正式公布了《人工智能监管法案》。",
+        "golden_answer_preview": "【美国发布全球首个AI监管法案】规范高风险领域AI应用",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.3043,
+        "rouge_l_precision": 0.3333,
+        "rouge_l_recall": 0.28,
+        "vector_similarity": 0.7564
+      },
+      {
+        "id": "RAG023",
+        "category": "事实查询",
+        "question": "NASA发现火星什么？",
+        "expected_news_ids": [
+          158
+        ],
+        "retrieved_ids": [
+          158,
+          318
+        ],
+        "answer_preview": "NASA发现火星存在液态水湖，面积达20平方公里，并在火星南极发现大量水冰。",
+        "golden_answer_preview": "【NASA发现火星存在液态水】为寻找外星生命提供关键证据",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.5,
+        "rouge_l_f1": 0.459,
+        "rouge_l_precision": 0.4,
+        "rouge_l_recall": 0.5385,
+        "vector_similarity": 0.6633
+      },
+      {
+        "id": "RAG024",
+        "category": "事实查询",
+        "question": "中国宣布2060年什么目标？",
+        "expected_news_ids": [
+          156
+        ],
+        "retrieved_ids": [
+          156
+        ],
+        "answer_preview": "中国宣布2060年实现碳中和目标。",
+        "golden_answer_preview": "【中国宣布2060碳中和目标】新能源产业迎来重大机遇",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.65,
+        "rouge_l_precision": 0.8125,
+        "rouge_l_recall": 0.5417,
+        "vector_similarity": 0.8386
+      },
+      {
+        "id": "RAG025",
+        "category": "事实查询",
+        "question": "全球首个数字货币央行在哪里运营？",
+        "expected_news_ids": [
+          159
+        ],
+        "retrieved_ids": [
+          159,
+          174,
+          198
+        ],
+        "answer_preview": "全球首个数字货币央行在欧洲央行运营，数字欧元系统于2023年9月正式上线。",
+        "golden_answer_preview": "【全球首个数字货币央行正式运营】数字欧元将与传统货币并行",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 0.3333,
+        "rouge_l_f1": 0.5574,
+        "rouge_l_precision": 0.4857,
+        "rouge_l_recall": 0.6538,
+        "vector_similarity": 0.8315
+      },
+      {
+        "id": "RAG026",
+        "category": "事实查询",
+        "question": "印尼地震引发什么预警？",
+        "expected_news_ids": [
+          160
+        ],
+        "retrieved_ids": [
+          160
+        ],
+        "answer_preview": "印尼地震引发了海啸预警。",
+        "golden_answer_preview": "【印度尼西亚地震引发海啸预警】3000人紧急撤离海岸线",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.5556,
+        "rouge_l_precision": 0.9091,
+        "rouge_l_recall": 0.4,
+        "vector_similarity": 0.8456
+      },
+      {
+        "id": "RAG027",
+        "category": "事实查询",
+        "question": "新疆大石峡水利枢纽工程进展？",
+        "expected_news_ids": [
+          102
+        ],
+        "retrieved_ids": [
+          102
+        ],
+        "answer_preview": "新疆大石峡水利枢纽工程于2025年9月20日正式下闸蓄水，转入运行准备阶段。该工程计划于2026年全面完工。",
+        "golden_answer_preview": "【新疆大石峡水利枢纽工程正式下闸蓄水】世界最高混凝土面板砂砾石坝下闸蓄水，转入运行准备阶段。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.5376,
+        "rouge_l_precision": 0.4902,
+        "rouge_l_recall": 0.5952,
+        "vector_similarity": 0.8374
+      },
+      {
+        "id": "RAG028",
+        "category": "事实查询",
+        "question": "我国首台15米口径望远镜启动建设了吗？",
+        "expected_news_ids": [
+          104
+        ],
+        "retrieved_ids": [
+          104
+        ],
+        "answer_preview": "我国首台15米口径亚毫米波望远镜已于2025年9月20日在青海德令哈正式启动建设。",
+        "golden_answer_preview": "【我国首台15米口径亚毫米波望远镜启动建设】首台自主研发的15米口径亚毫米波望远镜在青海德令哈启动建设。",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.6067,
+        "rouge_l_precision": 0.675,
+        "rouge_l_recall": 0.551,
+        "vector_similarity": 0.8208
+      },
+      {
+        "id": "RAG029",
+        "category": "事实查询",
+        "question": "社区食堂解决了什么问题？",
+        "expected_news_ids": [
+          59
+        ],
+        "retrieved_ids": [
+          59
+        ],
+        "answer_preview": "社区食堂解决了老年人吃饭难的问题，特别是针对60岁以上的老人提供了优惠餐食，并为行动不便的老人提供送餐上门服务。",
+        "golden_answer_preview": "【社区食堂解决老年人吃饭难】10元两荤两素套餐惠及500余名老人",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.3855,
+        "rouge_l_precision": 0.3019,
+        "rouge_l_recall": 0.5333,
+        "vector_similarity": 0.7584
+      },
+      {
+        "id": "RAG030",
+        "category": "事实查询",
+        "question": "智能报警器守护什么人群？",
+        "expected_news_ids": [
+          90
+        ],
+        "retrieved_ids": [
+          90
+        ],
+        "answer_preview": "智能报警器主要守护独居老人。",
+        "golden_answer_preview": "【智能报警器守护独居老人】社区安装监测设备，异常情况自动报警",
+        "top1_recall": 1.0,
+        "top3_recall": 1.0,
+        "top5_recall": 1.0,
+        "top3_precision": 1.0,
+        "rouge_l_f1": 0.55,
+        "rouge_l_precision": 0.8462,
+        "rouge_l_recall": 0.4074,
+        "vector_similarity": 0.7787
+      }
+    ]
+  }
+}

@@ -19,6 +19,13 @@ class RelatedNewsResponse(BaseModel):
     )
 
 
+class CategoryResponse(BaseModel):
+    id: int
+    name: str
+    sort_order: int
+    model_config = ConfigDict(from_attributes=True)
+
+
 class NewsDetailResponse(NewsItemBase):
     """
     新闻详情响应（继承自 NewsItemResponse，新增 content 和 related_news）
@@ -30,6 +37,3 @@ class NewsDetailResponse(NewsItemBase):
         populate_by_name=True,
         from_attributes=True
     )
-
-
-

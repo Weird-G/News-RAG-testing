@@ -6,7 +6,11 @@
       left-arrow
       @click-left="onClickLeft"
       fixed
-    />
+    >
+      <template #right>
+        <van-icon name="service" size="20" class="share-ai-icon" @click="shareToAI" />
+      </template>
+    </van-nav-bar>
     
     <div class="detail-content" v-if="newsStore.newsDetail.id">
       <div class="title-container">
@@ -23,6 +27,17 @@
         <span>{{ newsStore.newsDetail.author }}</span>
         <span>{{ newsStore.newsDetail.publishTime }}</span>
         <span>{{ newsStore.newsDetail.views }} 阅读</span>
+      </div>
+
+      <div class="ai-share-banner" @click="shareToAI">
+        <div class="ai-share-left">
+          <div class="ai-share-icon">🤖</div>
+          <div class="ai-share-text">
+            <div class="ai-share-title">让AI分析这篇新闻</div>
+            <div class="ai-share-desc">总结、提取关键信息、生成追问...</div>
+          </div>
+        </div>
+        <van-button type="primary" size="small" round>AI分析 →</van-button>
       </div>
       
       <div class="cover" v-if="newsStore.newsDetail.image">
@@ -58,13 +73,15 @@
 </template>
 
 <script setup>
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useNewsStore } from '../store/modules/news'
 import { useHistoryStore } from '../store/modules/history'
 import { useFavoriteStore } from '../store/modules/favorite'
 import { useUserStore } from '../store/user'
 import { showToast } from 'vant'
+import { shareNewsToAI } from '../utils/request'
+import { useAiShareStore } from '../store/modules/aiShare'
 
 const route = useRoute()
 const router = useRouter()
@@ -72,6 +89,7 @@ const newsStore = useNewsStore()
 const historyStore = useHistoryStore()
 const favoriteStore = useFavoriteStore()
 const userStore = useUserStore()
+const aiShareStore = useAiShareStore()
 
 // 获取路由参数中的新闻ID
 const newsId = computed(() => Number(route.params.id))
@@ -90,6 +108,51 @@ const onClickLeft = () => {
 // 跳转到相关新闻
 const goToRelatedNews = (id) => {
   router.push(`/news/detail/${id}`)
+}
+
+// 分享新闻给AI
+const shareToAI = async () => {
+  if (!newsStore.newsDetail.id) return
+  
+  showToast({ message: '正在分析新闻...', position: 'bottom', forbidClick: true, duration: 0 })
+  
+  try {
+    const result = await shareNewsToAI(
+      newsStore.newsDetail.id,
+      newsStore.newsDetail.title,
+      newsStore.newsDetail.content
+    )
+    
+    showToast.closeAll()
+    
+    if (result.code === 200 && result.data) {
+      const data = result.data
+      // 存储新闻完整数据到store，供AI对话框继续使用
+      aiShareStore.setSharedNews({
+        newsId: data.news_id,
+        newsTitle: data.news_title,
+        newsContent: newsStore.newsDetail.content
+      })
+      
+      router.push({
+        path: '/ai-chat',
+        query: {
+          share_news: '1',
+          news_id: data.news_id,
+          news_title: encodeURIComponent(data.news_title),
+          skill_results: encodeURIComponent(JSON.stringify(data.skill_results)),
+          formatted_text: encodeURIComponent(data.formatted_text),
+          skill_choices: encodeURIComponent(JSON.stringify(data.skill_choices || []))
+        }
+      })
+    } else {
+      showToast({ message: '分析失败，请重试', position: 'bottom' })
+    }
+  } catch (error) {
+    console.error('分享AI失败:', error)
+    showToast.closeAll()
+    showToast({ message: '网络错误，请重试', position: 'bottom' })
+  }
 }
 
 // 判断当前新闻是否已收藏
@@ -132,41 +195,51 @@ const toggleFavorite = async () => {
   }
 }
 
-// 组件挂载时获取新闻详情并添加到浏览历史
-onMounted(async () => {
-  await newsStore.getNewsDetail(newsId.value)
+// 加载新闻详情、收藏状态等数据（抽取为函数，供 watch 和 onMounted 共用）
+const loadPageData = async (id) => {
+  if (!id) return
   
-  // 添加到浏览历史
+  // 重置旧数据
+  newsStore.newsDetail = {}
+  
+  // 加载新闻详情
+  await newsStore.getNewsDetail(id)
+  
   if (newsStore.newsDetail.id) {
-    // 先调用API记录浏览历史
+    // 记录浏览历史
     if (userStore.getLoginStatus) {
       try {
-        const result = await historyStore.addHistoryApi(newsStore.newsDetail.id);
-        console.log('记录浏览历史API结果:', result);
+        await historyStore.addHistoryApi(newsStore.newsDetail.id);
       } catch (error) {
         console.error('记录浏览历史API失败:', error);
       }
     }
     
-    // 无论API是否成功，都添加到本地浏览历史
-    // historyStore.addHistory(newsStore.newsDetail);
-  }
-  
-  // 加载收藏数据
-  favoriteStore.loadFavorites()
-  
-  // 检查文章收藏状态
-  if (userStore.getLoginStatus && newsStore.newsDetail.id) {
-    const result = await favoriteStore.checkFavoriteStatusApi(newsStore.newsDetail.id)
-    if (result.success && !result.isLocal) {
-      // 如果API请求成功且不是本地状态，更新本地收藏状态
-      if (result.isFavorite && !favoriteStore.isFavorite(newsStore.newsDetail.id)) {
-        favoriteStore.addFavorite(newsStore.newsDetail)
-      } else if (!result.isFavorite && favoriteStore.isFavorite(newsStore.newsDetail.id)) {
-        favoriteStore.removeFavorite(newsStore.newsDetail.id)
+    // 加载收藏数据
+    favoriteStore.loadFavorites()
+    
+    // 检查文章收藏状态
+    if (userStore.getLoginStatus) {
+      const result = await favoriteStore.checkFavoriteStatusApi(newsStore.newsDetail.id)
+      if (result.success && !result.isLocal) {
+        if (result.isFavorite && !favoriteStore.isFavorite(newsStore.newsDetail.id)) {
+          favoriteStore.addFavorite(newsStore.newsDetail)
+        } else if (!result.isFavorite && favoriteStore.isFavorite(newsStore.newsDetail.id)) {
+          favoriteStore.removeFavorite(newsStore.newsDetail.id)
+        }
       }
     }
   }
+}
+
+// 监听路由参数变化，实现相关推荐点击跳转后重新加载数据
+watch(newsId, (newId) => {
+  if (newId) loadPageData(newId)
+})
+
+// 组件首次挂载时加载数据
+onMounted(() => {
+  loadPageData(newsId.value)
 })
 </script>
 
@@ -175,6 +248,49 @@ onMounted(async () => {
   padding-top: 46px;
   background-color: #fff;
   min-height: 100vh;
+}
+
+.share-ai-icon {
+  color: #667eea;
+  cursor: pointer;
+}
+
+.ai-share-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  border-radius: 12px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.ai-share-banner:active {
+  transform: scale(0.98);
+}
+
+.ai-share-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ai-share-icon {
+  font-size: 28px;
+}
+
+.ai-share-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.ai-share-desc {
+  font-size: 12px;
+  color: #888;
+  margin-top: 2px;
 }
 
 .detail-content {
